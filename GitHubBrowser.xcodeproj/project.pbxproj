@@ -8,12 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1A1CDABEEA979DEF00A8E01F /* libPods-GitHubBrowserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4DCAEA37E18B5A30B34855 /* libPods-GitHubBrowserTests.a */; };
+		74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */; };
+		74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */; };
+		74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */; };
+		74835C391EA26DC300BCC2B5 /* ProfileRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C321EA26DC300BCC2B5 /* ProfileRouter.m */; };
+		74835C3A1EA26DC300BCC2B5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C351EA26DC300BCC2B5 /* ProfileViewController.m */; };
+		74835C651EA26E9800BCC2B5 /* SearchModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C581EA26E9800BCC2B5 /* SearchModuleConfigurator.m */; };
+		74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C5B1EA26E9800BCC2B5 /* SearchInteractor.m */; };
+		74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C5E1EA26E9800BCC2B5 /* SearchPresenter.m */; };
+		74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C611EA26E9800BCC2B5 /* SearchRouter.m */; };
+		74835C691EA26E9800BCC2B5 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C641EA26E9800BCC2B5 /* SearchViewController.m */; };
+		74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C7D1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m */; };
+		74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C801EA2709F00BCC2B5 /* AuthenticationInteractor.m */; };
+		74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C831EA2709F00BCC2B5 /* AuthenticationPresenter.m */; };
+		74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C861EA2709F00BCC2B5 /* AuthenticationRouter.m */; };
+		74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */; };
+		74835C931EA2813300BCC2B5 /* RepositoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C921EA2813300BCC2B5 /* RepositoryTableViewCell.m */; };
+		74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */; };
+		74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */; };
 		74C16B841E9E980600A93A44 /* GitHubBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */; };
 		74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA11E9FF92500A93A44 /* AppDelegate.m */; };
 		74C16BAC1E9FF92500A93A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA31E9FF92500A93A44 /* main.m */; };
 		74C16BAD1E9FF92500A93A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BA51E9FF92500A93A44 /* Assets.xcassets */; };
 		74C16BAE1E9FF92500A93A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BA61E9FF92500A93A44 /* LaunchScreen.storyboard */; };
-		74C16BB01E9FF92500A93A44 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BAA1E9FF92500A93A44 /* Info.plist */; };
 		74C16BB81EA0040100A93A44 /* BrowserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BB71EA0040100A93A44 /* BrowserFlow.storyboard */; };
 		74C16BBA1EA0040D00A93A44 /* AuthenticationFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BB91EA0040D00A93A44 /* AuthenticationFlow.storyboard */; };
 		9206FDE4B3FDD4058DA86E98 /* libPods-GitHubBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C97CCF646312F01541605 /* libPods-GitHubBrowser.a */; };
@@ -34,6 +51,57 @@
 		1DBC2A5C72F91C8987DE364A /* Pods-GitHubBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.release.xcconfig"; sourceTree = "<group>"; };
 		330FCC17D085DB34A21E9039 /* Pods-GitHubBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		478399E39E82EBE0A2F46128 /* Pods-GitHubBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowserTests/Pods-GitHubBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74835C221EA26DC300BCC2B5 /* ProfileInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInteractorProtocol.h; sourceTree = "<group>"; };
+		74835C231EA26DC300BCC2B5 /* ProfileModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModuleProtocol.h; sourceTree = "<group>"; };
+		74835C241EA26DC300BCC2B5 /* ProfilePresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePresenterProtocol.h; sourceTree = "<group>"; };
+		74835C251EA26DC300BCC2B5 /* ProfileRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileRouterProtocol.h; sourceTree = "<group>"; };
+		74835C261EA26DC300BCC2B5 /* ProfileViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewProtocol.h; sourceTree = "<group>"; };
+		74835C281EA26DC300BCC2B5 /* ProfileModuleConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModuleConfigurator.h; sourceTree = "<group>"; };
+		74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleConfigurator.m; sourceTree = "<group>"; };
+		74835C2B1EA26DC300BCC2B5 /* ProfileInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInteractor.h; sourceTree = "<group>"; };
+		74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInteractor.m; sourceTree = "<group>"; };
+		74835C2E1EA26DC300BCC2B5 /* ProfilePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePresenter.h; sourceTree = "<group>"; };
+		74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePresenter.m; sourceTree = "<group>"; };
+		74835C311EA26DC300BCC2B5 /* ProfileRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileRouter.h; sourceTree = "<group>"; };
+		74835C321EA26DC300BCC2B5 /* ProfileRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileRouter.m; sourceTree = "<group>"; };
+		74835C341EA26DC300BCC2B5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		74835C351EA26DC300BCC2B5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		74835C511EA26E9800BCC2B5 /* SearchInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInteractorProtocol.h; sourceTree = "<group>"; };
+		74835C521EA26E9800BCC2B5 /* SearchModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModuleProtocol.h; sourceTree = "<group>"; };
+		74835C531EA26E9800BCC2B5 /* SearchPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPresenterProtocol.h; sourceTree = "<group>"; };
+		74835C541EA26E9800BCC2B5 /* SearchRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRouterProtocol.h; sourceTree = "<group>"; };
+		74835C551EA26E9800BCC2B5 /* SearchViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewProtocol.h; sourceTree = "<group>"; };
+		74835C571EA26E9800BCC2B5 /* SearchModuleConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModuleConfigurator.h; sourceTree = "<group>"; };
+		74835C581EA26E9800BCC2B5 /* SearchModuleConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModuleConfigurator.m; sourceTree = "<group>"; };
+		74835C5A1EA26E9800BCC2B5 /* SearchInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInteractor.h; sourceTree = "<group>"; };
+		74835C5B1EA26E9800BCC2B5 /* SearchInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchInteractor.m; sourceTree = "<group>"; };
+		74835C5D1EA26E9800BCC2B5 /* SearchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPresenter.h; sourceTree = "<group>"; };
+		74835C5E1EA26E9800BCC2B5 /* SearchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPresenter.m; sourceTree = "<group>"; };
+		74835C601EA26E9800BCC2B5 /* SearchRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRouter.h; sourceTree = "<group>"; };
+		74835C611EA26E9800BCC2B5 /* SearchRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRouter.m; sourceTree = "<group>"; };
+		74835C631EA26E9800BCC2B5 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		74835C641EA26E9800BCC2B5 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		74835C761EA2709F00BCC2B5 /* AuthenticationInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationInteractorProtocol.h; sourceTree = "<group>"; };
+		74835C771EA2709F00BCC2B5 /* AuthenticationModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationModuleProtocol.h; sourceTree = "<group>"; };
+		74835C781EA2709F00BCC2B5 /* AuthenticationPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationPresenterProtocol.h; sourceTree = "<group>"; };
+		74835C791EA2709F00BCC2B5 /* AuthenticationRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationRouterProtocol.h; sourceTree = "<group>"; };
+		74835C7A1EA2709F00BCC2B5 /* AuthenticationViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewProtocol.h; sourceTree = "<group>"; };
+		74835C7C1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationModuleConfigurator.h; sourceTree = "<group>"; };
+		74835C7D1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationModuleConfigurator.m; sourceTree = "<group>"; };
+		74835C7F1EA2709F00BCC2B5 /* AuthenticationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationInteractor.h; sourceTree = "<group>"; };
+		74835C801EA2709F00BCC2B5 /* AuthenticationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationInteractor.m; sourceTree = "<group>"; };
+		74835C821EA2709F00BCC2B5 /* AuthenticationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationPresenter.h; sourceTree = "<group>"; };
+		74835C831EA2709F00BCC2B5 /* AuthenticationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationPresenter.m; sourceTree = "<group>"; };
+		74835C851EA2709F00BCC2B5 /* AuthenticationRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationRouter.h; sourceTree = "<group>"; };
+		74835C861EA2709F00BCC2B5 /* AuthenticationRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationRouter.m; sourceTree = "<group>"; };
+		74835C881EA2709F00BCC2B5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
+		74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
+		74835C911EA2813300BCC2B5 /* RepositoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryTableViewCell.h; sourceTree = "<group>"; };
+		74835C921EA2813300BCC2B5 /* RepositoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryTableViewCell.m; sourceTree = "<group>"; };
+		74835C941EA2814000BCC2B5 /* UnauthorizedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthorizedTableViewCell.h; sourceTree = "<group>"; };
+		74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthorizedTableViewCell.m; sourceTree = "<group>"; };
+		74835C971EA2851D00BCC2B5 /* UserProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileHeaderView.h; sourceTree = "<group>"; };
+		74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileHeaderView.m; sourceTree = "<group>"; };
 		74C16B661E9E980600A93A44 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B7F1E9E980600A93A44 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubBrowserTests.m; sourceTree = "<group>"; };
@@ -70,6 +138,262 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74835BC71EA26B3600BCC2B5 /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				74835C4F1EA26E9800BCC2B5 /* Configuration */,
+				74835C591EA26E9800BCC2B5 /* Interactor */,
+				74835C5C1EA26E9800BCC2B5 /* Presenter */,
+				74835C5F1EA26E9800BCC2B5 /* Router */,
+				74835C621EA26E9800BCC2B5 /* View */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		74835BC81EA26B3F00BCC2B5 /* AuthenticationModule */ = {
+			isa = PBXGroup;
+			children = (
+				74835C741EA2709F00BCC2B5 /* Configuration */,
+				74835C7E1EA2709F00BCC2B5 /* Interactor */,
+				74835C811EA2709F00BCC2B5 /* Presenter */,
+				74835C841EA2709F00BCC2B5 /* Router */,
+				74835C871EA2709F00BCC2B5 /* View */,
+			);
+			path = AuthenticationModule;
+			sourceTree = "<group>";
+		};
+		74835C1F1EA26DC300BCC2B5 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				74835C201EA26DC300BCC2B5 /* Configuration */,
+				74835C2A1EA26DC300BCC2B5 /* Interactor */,
+				74835C2D1EA26DC300BCC2B5 /* Presenter */,
+				74835C301EA26DC300BCC2B5 /* Router */,
+				74835C331EA26DC300BCC2B5 /* View */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		74835C201EA26DC300BCC2B5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74835C211EA26DC300BCC2B5 /* Contract */,
+				74835C271EA26DC300BCC2B5 /* Factory */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74835C211EA26DC300BCC2B5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				74835C221EA26DC300BCC2B5 /* ProfileInteractorProtocol.h */,
+				74835C231EA26DC300BCC2B5 /* ProfileModuleProtocol.h */,
+				74835C241EA26DC300BCC2B5 /* ProfilePresenterProtocol.h */,
+				74835C251EA26DC300BCC2B5 /* ProfileRouterProtocol.h */,
+				74835C261EA26DC300BCC2B5 /* ProfileViewProtocol.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		74835C271EA26DC300BCC2B5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74835C281EA26DC300BCC2B5 /* ProfileModuleConfigurator.h */,
+				74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		74835C2A1EA26DC300BCC2B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74835C2B1EA26DC300BCC2B5 /* ProfileInteractor.h */,
+				74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74835C2D1EA26DC300BCC2B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74835C2E1EA26DC300BCC2B5 /* ProfilePresenter.h */,
+				74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74835C301EA26DC300BCC2B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74835C311EA26DC300BCC2B5 /* ProfileRouter.h */,
+				74835C321EA26DC300BCC2B5 /* ProfileRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74835C331EA26DC300BCC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74835C8F1EA27F2B00BCC2B5 /* Cells */,
+				74835C901EA27F2B00BCC2B5 /* ProfileHeader */,
+				74835C341EA26DC300BCC2B5 /* ProfileViewController.h */,
+				74835C351EA26DC300BCC2B5 /* ProfileViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74835C4F1EA26E9800BCC2B5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74835C501EA26E9800BCC2B5 /* Contract */,
+				74835C561EA26E9800BCC2B5 /* Factory */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74835C501EA26E9800BCC2B5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				74835C511EA26E9800BCC2B5 /* SearchInteractorProtocol.h */,
+				74835C521EA26E9800BCC2B5 /* SearchModuleProtocol.h */,
+				74835C531EA26E9800BCC2B5 /* SearchPresenterProtocol.h */,
+				74835C541EA26E9800BCC2B5 /* SearchRouterProtocol.h */,
+				74835C551EA26E9800BCC2B5 /* SearchViewProtocol.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		74835C561EA26E9800BCC2B5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74835C571EA26E9800BCC2B5 /* SearchModuleConfigurator.h */,
+				74835C581EA26E9800BCC2B5 /* SearchModuleConfigurator.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		74835C591EA26E9800BCC2B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74835C5A1EA26E9800BCC2B5 /* SearchInteractor.h */,
+				74835C5B1EA26E9800BCC2B5 /* SearchInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74835C5C1EA26E9800BCC2B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74835C5D1EA26E9800BCC2B5 /* SearchPresenter.h */,
+				74835C5E1EA26E9800BCC2B5 /* SearchPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74835C5F1EA26E9800BCC2B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74835C601EA26E9800BCC2B5 /* SearchRouter.h */,
+				74835C611EA26E9800BCC2B5 /* SearchRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74835C621EA26E9800BCC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74835C631EA26E9800BCC2B5 /* SearchViewController.h */,
+				74835C641EA26E9800BCC2B5 /* SearchViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74835C741EA2709F00BCC2B5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74835C751EA2709F00BCC2B5 /* Contract */,
+				74835C7B1EA2709F00BCC2B5 /* Factory */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74835C751EA2709F00BCC2B5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				74835C761EA2709F00BCC2B5 /* AuthenticationInteractorProtocol.h */,
+				74835C771EA2709F00BCC2B5 /* AuthenticationModuleProtocol.h */,
+				74835C781EA2709F00BCC2B5 /* AuthenticationPresenterProtocol.h */,
+				74835C791EA2709F00BCC2B5 /* AuthenticationRouterProtocol.h */,
+				74835C7A1EA2709F00BCC2B5 /* AuthenticationViewProtocol.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		74835C7B1EA2709F00BCC2B5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74835C7C1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.h */,
+				74835C7D1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		74835C7E1EA2709F00BCC2B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74835C7F1EA2709F00BCC2B5 /* AuthenticationInteractor.h */,
+				74835C801EA2709F00BCC2B5 /* AuthenticationInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74835C811EA2709F00BCC2B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74835C821EA2709F00BCC2B5 /* AuthenticationPresenter.h */,
+				74835C831EA2709F00BCC2B5 /* AuthenticationPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74835C841EA2709F00BCC2B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74835C851EA2709F00BCC2B5 /* AuthenticationRouter.h */,
+				74835C861EA2709F00BCC2B5 /* AuthenticationRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74835C871EA2709F00BCC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74835C881EA2709F00BCC2B5 /* AuthenticationViewController.h */,
+				74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74835C8F1EA27F2B00BCC2B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				74835C911EA2813300BCC2B5 /* RepositoryTableViewCell.h */,
+				74835C921EA2813300BCC2B5 /* RepositoryTableViewCell.m */,
+				74835C941EA2814000BCC2B5 /* UnauthorizedTableViewCell.h */,
+				74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		74835C901EA27F2B00BCC2B5 /* ProfileHeader */ = {
+			isa = PBXGroup;
+			children = (
+				74835C971EA2851D00BCC2B5 /* UserProfileHeaderView.h */,
+				74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */,
+			);
+			path = ProfileHeader;
+			sourceTree = "<group>";
+		};
 		74C16B5D1E9E980600A93A44 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +465,7 @@
 		74C16BB11EA0039D00A93A44 /* AuthenticationFlow */ = {
 			isa = PBXGroup;
 			children = (
+				74835BC81EA26B3F00BCC2B5 /* AuthenticationModule */,
 				74C16BB21EA0039D00A93A44 /* Storyboard */,
 			);
 			path = AuthenticationFlow;
@@ -157,6 +482,8 @@
 		74C16BB31EA0039D00A93A44 /* BrowserFlow */ = {
 			isa = PBXGroup;
 			children = (
+				74835C1F1EA26DC300BCC2B5 /* ProfileModule */,
+				74835BC71EA26B3600BCC2B5 /* SearchModule */,
 				74C16BB41EA0039D00A93A44 /* Storyboard */,
 			);
 			path = BrowserFlow;
@@ -280,7 +607,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C16BB01E9FF92500A93A44 /* Info.plist in Resources */,
 				74C16BB81EA0040100A93A44 /* BrowserFlow.storyboard in Resources */,
 				74C16BAD1E9FF92500A93A44 /* Assets.xcassets in Resources */,
 				74C16BBA1EA0040D00A93A44 /* AuthenticationFlow.storyboard in Resources */,
@@ -395,7 +721,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */,
+				74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */,
+				74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */,
+				74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */,
 				74C16BAC1E9FF92500A93A44 /* main.m in Sources */,
+				74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */,
+				74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */,
+				74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */,
+				74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */,
+				74835C931EA2813300BCC2B5 /* RepositoryTableViewCell.m in Sources */,
+				74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */,
+				74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */,
+				74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */,
+				74835C651EA26E9800BCC2B5 /* SearchModuleConfigurator.m in Sources */,
+				74835C3A1EA26DC300BCC2B5 /* ProfileViewController.m in Sources */,
+				74835C391EA26DC300BCC2B5 /* ProfileRouter.m in Sources */,
+				74835C691EA26E9800BCC2B5 /* SearchViewController.m in Sources */,
+				74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */,
+				74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */,
 				74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +943,7 @@
 				74C16B8A1E9E980600A93A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C16B8B1E9E980600A93A44 /* Build configuration list for PBXNativeTarget "GitHubBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +952,7 @@
 				74C16B8D1E9E980600A93A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
