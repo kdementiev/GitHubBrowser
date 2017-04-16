@@ -35,7 +35,7 @@
         <scene sceneID="5Zw-Tk-q6g">
             <objects>
                 <tableViewController id="6p1-h5-7eV" customClass="ProfileViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VxF-S6-XxD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" id="VxF-S6-XxD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.6588235294" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,8 +57,8 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kdementiev" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-NU-eDM">
-                                    <rect key="frame" x="115" y="140" width="90.5" height="19.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-NU-eDM">
+                                    <rect key="frame" x="160.5" y="140" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                     <color key="textColor" red="0.27601413600000002" green="0.38838447729999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -76,8 +76,8 @@
                                 <outlet property="userNameLabel" destination="rdc-NU-eDM" id="gja-tt-qil"/>
                             </connections>
                         </view>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gh-logo-small" id="iza-WR-sTo">
-                            <rect key="frame" x="0.0" y="406" width="320" height="80"/>
+                        <imageView key="tableFooterView" hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gh-logo-small" id="iza-WR-sTo">
+                            <rect key="frame" x="0.0" y="405" width="320" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
@@ -88,14 +88,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are not signed-in." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRr-o3-oFI">
-                                            <rect key="frame" x="80.5" y="8" width="160" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are not signed-in" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRr-o3-oFI">
+                                            <rect key="frame" x="82.5" y="8" width="155" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7f-ah-eWo">
-                                            <rect key="frame" x="126.5" y="36" width="67" height="33"/>
+                                            <rect key="frame" x="126.5" y="36" width="67" height="34"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <state key="normal" title="SIGN-IN">
@@ -108,18 +108,19 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.32549019610000002" green="0.6588235294" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="CRr-o3-oFI" firstAttribute="centerX" secondItem="xCJ-z5-7ej" secondAttribute="centerX" id="8KZ-0d-Eft"/>
-                                        <constraint firstItem="CRr-o3-oFI" firstAttribute="top" secondItem="xCJ-z5-7ej" secondAttribute="top" constant="8" id="HbL-Mj-iB0"/>
-                                        <constraint firstItem="q7f-ah-eWo" firstAttribute="centerX" secondItem="CRr-o3-oFI" secondAttribute="centerX" id="qSM-qu-OlM"/>
-                                        <constraint firstItem="q7f-ah-eWo" firstAttribute="top" secondItem="CRr-o3-oFI" secondAttribute="bottom" constant="8" id="s5m-lx-5ru"/>
+                                        <constraint firstAttribute="bottom" secondItem="q7f-ah-eWo" secondAttribute="bottom" constant="26" id="4MJ-le-GfU"/>
+                                        <constraint firstItem="CRr-o3-oFI" firstAttribute="top" secondItem="xCJ-z5-7ej" secondAttribute="top" constant="8" id="BUd-23-toN"/>
+                                        <constraint firstItem="q7f-ah-eWo" firstAttribute="centerX" secondItem="CRr-o3-oFI" secondAttribute="centerX" id="Sxn-i8-dNQ"/>
+                                        <constraint firstItem="CRr-o3-oFI" firstAttribute="centerX" secondItem="xCJ-z5-7ej" secondAttribute="centerX" id="a1q-ha-cpU"/>
+                                        <constraint firstItem="q7f-ah-eWo" firstAttribute="top" secondItem="CRr-o3-oFI" secondAttribute="bottom" constant="8" id="a2g-19-F0E"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RepositoryTableViewCell" rowHeight="83" id="hGd-0v-hEx" customClass="RepositoryTableViewCell">
-                                <rect key="frame" x="0.0" y="323" width="320" height="83"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RepositoryTableViewCell" rowHeight="82" id="hGd-0v-hEx" customClass="RepositoryTableViewCell">
+                                <rect key="frame" x="0.0" y="323" width="320" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGd-0v-hEx" id="euT-DI-ctp">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="top-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="pDK-Rf-Wgy">
@@ -163,6 +164,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Profile" image="gh-icon" id="5tN-s9-rds"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hs4-IE-p5n">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.27601413600000002" green="0.38838447729999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>

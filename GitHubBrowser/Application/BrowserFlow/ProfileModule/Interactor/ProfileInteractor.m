@@ -14,6 +14,7 @@
 
 - (void)fetchData {
     
+    [self.output userNotAuthorized];
 }
 
 @end

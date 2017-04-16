@@ -17,26 +17,33 @@
 
 #pragma mark - View Layer Feedback -
 
-- (void)onUserWantsToSignIn {
+- (void)userWantsToSignIn {
     [self.router navigateToAuthorizationScreen];
 }
 
-- (void)onUserWantsLatestData {
+- (void)userWantsLatestData {
     [self.interactor fetchData];
 }
 
 #pragma mark - Interactor Layer Feedback -
 
 - (void)userNotAuthorized {
-    
+    [self.view showUnauthorizedState];
 }
 
 - (void)userProfileReveived:(UserProfileRecord *)userProfile {
-    
+    [self.view showUserProfile:userProfile];
 }
 
 - (void)userRepositoriesReceived:(NSArray<RepositoryRecord *> *)repositories {
     
+    // Presenter decides what state we need to be shown by view layer.
+    
+    if (!repositories.count) {
+        [self.view showNoContentState];
+    }
+    
+    [self.view showRepositories:repositories];
 }
 
 @end

@@ -26,6 +26,11 @@
 		74835C931EA2813300BCC2B5 /* RepositoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C921EA2813300BCC2B5 /* RepositoryTableViewCell.m */; };
 		74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */; };
 		74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */; };
+		74A7B0EB1EA37F94008B61BE /* RepositoriesContentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0EA1EA37F94008B61BE /* RepositoriesContentProvider.m */; };
+		74A7B0EE1EA3822A008B61BE /* UnauthorizedContentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0ED1EA3822A008B61BE /* UnauthorizedContentProvider.m */; };
+		74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F21EA38975008B61BE /* RepositoryRecord.m */; };
+		74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F51EA38982008B61BE /* UserProfileRecord.m */; };
+		74A7B0FA1EA38DC1008B61BE /* UITableViewCell+Usability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F91EA38DC1008B61BE /* UITableViewCell+Usability.m */; };
 		74C16B841E9E980600A93A44 /* GitHubBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */; };
 		74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA11E9FF92500A93A44 /* AppDelegate.m */; };
 		74C16BAC1E9FF92500A93A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA31E9FF92500A93A44 /* main.m */; };
@@ -102,6 +107,16 @@
 		74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthorizedTableViewCell.m; sourceTree = "<group>"; };
 		74835C971EA2851D00BCC2B5 /* UserProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileHeaderView.h; sourceTree = "<group>"; };
 		74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileHeaderView.m; sourceTree = "<group>"; };
+		74A7B0E91EA37F94008B61BE /* RepositoriesContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesContentProvider.h; sourceTree = "<group>"; };
+		74A7B0EA1EA37F94008B61BE /* RepositoriesContentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesContentProvider.m; sourceTree = "<group>"; };
+		74A7B0EC1EA3822A008B61BE /* UnauthorizedContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthorizedContentProvider.h; sourceTree = "<group>"; };
+		74A7B0ED1EA3822A008B61BE /* UnauthorizedContentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthorizedContentProvider.m; sourceTree = "<group>"; };
+		74A7B0F11EA38975008B61BE /* RepositoryRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryRecord.h; sourceTree = "<group>"; };
+		74A7B0F21EA38975008B61BE /* RepositoryRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryRecord.m; sourceTree = "<group>"; };
+		74A7B0F41EA38982008B61BE /* UserProfileRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileRecord.h; sourceTree = "<group>"; };
+		74A7B0F51EA38982008B61BE /* UserProfileRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileRecord.m; sourceTree = "<group>"; };
+		74A7B0F81EA38DC1008B61BE /* UITableViewCell+Usability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Usability.h"; sourceTree = "<group>"; };
+		74A7B0F91EA38DC1008B61BE /* UITableViewCell+Usability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Usability.m"; sourceTree = "<group>"; };
 		74C16B661E9E980600A93A44 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B7F1E9E980600A93A44 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubBrowserTests.m; sourceTree = "<group>"; };
@@ -235,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				74835C8F1EA27F2B00BCC2B5 /* Cells */,
+				74A7B0E31EA377EE008B61BE /* ContentProviders */,
 				74835C901EA27F2B00BCC2B5 /* ProfileHeader */,
 				74835C341EA26DC300BCC2B5 /* ProfileViewController.h */,
 				74835C351EA26DC300BCC2B5 /* ProfileViewController.m */,
@@ -394,6 +410,44 @@
 			path = ProfileHeader;
 			sourceTree = "<group>";
 		};
+		74A7B0E31EA377EE008B61BE /* ContentProviders */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B0E91EA37F94008B61BE /* RepositoriesContentProvider.h */,
+				74A7B0EA1EA37F94008B61BE /* RepositoriesContentProvider.m */,
+				74A7B0EC1EA3822A008B61BE /* UnauthorizedContentProvider.h */,
+				74A7B0ED1EA3822A008B61BE /* UnauthorizedContentProvider.m */,
+			);
+			path = ContentProviders;
+			sourceTree = "<group>";
+		};
+		74A7B0EF1EA3893B008B61BE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B0F11EA38975008B61BE /* RepositoryRecord.h */,
+				74A7B0F21EA38975008B61BE /* RepositoryRecord.m */,
+				74A7B0F41EA38982008B61BE /* UserProfileRecord.h */,
+				74A7B0F51EA38982008B61BE /* UserProfileRecord.m */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		74A7B0F01EA38941008B61BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		74A7B0F71EA38D50008B61BE /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B0F81EA38DC1008B61BE /* UITableViewCell+Usability.h */,
+				74A7B0F91EA38DC1008B61BE /* UITableViewCell+Usability.m */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
 		74C16B5D1E9E980600A93A44 = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +492,9 @@
 			children = (
 				74C16BB11EA0039D00A93A44 /* AuthenticationFlow */,
 				74C16BB31EA0039D00A93A44 /* BrowserFlow */,
+				74A7B0F71EA38D50008B61BE /* CommonUI */,
+				74A7B0EF1EA3893B008B61BE /* DTO */,
+				74A7B0F01EA38941008B61BE /* Services */,
 				74C16BA01E9FF92500A93A44 /* AppDelegate.h */,
 				74C16BA11E9FF92500A93A44 /* AppDelegate.m */,
 			);
@@ -722,8 +779,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */,
+				74A7B0FA1EA38DC1008B61BE /* UITableViewCell+Usability.m in Sources */,
 				74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */,
+				74A7B0EE1EA3822A008B61BE /* UnauthorizedContentProvider.m in Sources */,
+				74A7B0EB1EA37F94008B61BE /* RepositoriesContentProvider.m in Sources */,
 				74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */,
+				74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */,
 				74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */,
 				74C16BAC1E9FF92500A93A44 /* main.m in Sources */,
 				74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */,
@@ -731,6 +792,7 @@
 				74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */,
 				74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */,
 				74835C931EA2813300BCC2B5 /* RepositoryTableViewCell.m in Sources */,
+				74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */,
 				74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */,
 				74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */,
 				74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */,

@@ -10,14 +10,22 @@
 
 // Custom views
 #import "UserProfileHeaderView.h"
-#import "UnauthorizedTableViewCell.h"
-#import "RepositoryTableViewCell.h"
 
-@interface ProfileViewController ()
+// Content providers
+#import "RepositoriesContentProvider.h"
+#import "UnauthorizedContentProvider.h"
+
+
+/*!
+ *
+ */
+@interface ProfileViewController () <UnauthorizedContentProviderDelegate>
 
 @property (weak, nonatomic) IBOutlet UserProfileHeaderView *userProfileHeaderView;
+@property (nonatomic) id<UITableViewDataSource> contentProvider;
 
 @end
+
 
 @implementation ProfileViewController
 
@@ -30,50 +38,60 @@
     [self gh_prepareTableViewAppearance];
     
     // Notify presenter layer to fetch some data.
-    [self.output onUserWantsLatestData];
+    [self.output userWantsLatestData];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self.output onUserWantsToSignIn];
+- (void)setContentProvider:(id<UITableViewDataSource>)contentProvider {
+    _contentProvider = contentProvider;
+    self.tableView.dataSource = contentProvider;
 }
+
+#pragma mark - Appearance Helpers - 
 
 - (void)gh_prepareTableViewAppearance {
     
+    // Apply table view insets accourding to bar sizes.
     CGFloat topInset = [UIApplication sharedApplication].statusBarFrame.size.height;
     CGFloat bottomInset = self.tabBarController.tabBar.bounds.size.height;
     
     self.tableView.contentInset = UIEdgeInsetsMake(topInset, 0, bottomInset, 0);
+    
+    // Allow self-sizing for cells.
+    self.tableView.estimatedRowHeight = 86;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
-
 
 #pragma - Presenter Layer Feedback -
 
 - (void)showUnauthorizedState {
-    
+    // TODO: Create unauthorized content provider
+    self.contentProvider = [UnauthorizedContentProvider contentProviderWithDelegate:self];
+    self.tableView.bounces = NO;
 }
 
 - (void)showNoContentState {
-    
+    // TODO: Create no data content provider
 }
 
 - (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories {
-    
+    // TODO: Create repositories content provider.
+    self.contentProvider = [RepositoriesContentProvider contentProviderWithRepositories:repositories];
+}
+
+- (void)showUserProfile:(UserProfileRecord *)userProfile {
+    // TODO: Apply user profile to UserProfileHeaderView
 }
 
 #pragma mark - User Input -
 
 - (IBAction)onRefreshAction:(id)sender {
-    [self.output onUserWantsLatestData];
+    [self.output userWantsLatestData];
 }
 
-#pragma mark - UITableViewDataSource -
+#pragma mark - UnauthorizedContentProviderDelegate -
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+- (void)onSignInAction {
+    [self.output userWantsToSignIn];
 }
 
 @end
