@@ -52,10 +52,18 @@
     
 }
 
+- (void)showNoContentState {
+    
+}
+
+- (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories {
+    
+}
+
 #pragma mark - User Input -
 
 - (IBAction)onRefreshAction:(id)sender {
-    
+    [self.output onUserWantsLatestData];
 }
 
 #pragma mark - UITableViewDataSource -

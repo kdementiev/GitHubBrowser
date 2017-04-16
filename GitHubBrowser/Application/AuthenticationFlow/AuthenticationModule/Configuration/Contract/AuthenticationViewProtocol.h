@@ -14,6 +14,7 @@
 
 - (void)userWantsToCancel;
 
+
 @end
 
 // Provides ability to controll view

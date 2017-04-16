@@ -25,6 +25,7 @@
 #pragma mark - User Input -
 
 - (IBAction)onCancelAction:(id)sender {
+    [self.output userWantsToCancel];
 }
 
 - (IBAction)onSignInAction:(id)sender {

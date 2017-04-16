@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class RepositoryRecord;
+
 
 // Events from view
 @protocol ProfileViewDelegate <NSObject>
@@ -25,5 +27,8 @@
 @property (nonatomic, strong) id<ProfileViewDelegate> output;
 
 - (void)showUnauthorizedState;
+- (void)showNoContentState;
+
+- (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories;
 
 @end

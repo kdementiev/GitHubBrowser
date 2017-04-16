@@ -35,6 +35,8 @@
 
     view.output = presenter;
     interactor.output = presenter;
+    
+    [router prepareWithViewController:view];
 
     // Prepare module container.
     ProfileModuleContainer *moduleContainer = [ProfileModuleContainer new];

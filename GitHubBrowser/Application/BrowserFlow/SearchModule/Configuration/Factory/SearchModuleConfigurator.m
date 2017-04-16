@@ -36,6 +36,8 @@
     view.output = presenter;
     interactor.output = presenter;
 
+    [router prepareWithViewController:view];
+    
     // Prepare module container.
     SearchModuleContainer *moduleContainer = [SearchModuleContainer new];
 
