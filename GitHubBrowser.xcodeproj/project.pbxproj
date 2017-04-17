@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1A1CDABEEA979DEF00A8E01F /* libPods-GitHubBrowserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4DCAEA37E18B5A30B34855 /* libPods-GitHubBrowserTests.a */; };
+		7411E7EF1EA5031F001D28FF /* AuthCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7E91EA5031F001D28FF /* AuthCredentials.m */; };
+		7411E7F01EA5031F001D28FF /* GitHubAithenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7EC1EA5031F001D28FF /* GitHubAithenticationService.m */; };
+		7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */; };
+		7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */; };
+		7411E7FE1EA50C5F001D28FF /* UIAlertController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */; };
 		74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */; };
 		74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */; };
 		74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */; };
@@ -31,6 +36,15 @@
 		74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F21EA38975008B61BE /* RepositoryRecord.m */; };
 		74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F51EA38982008B61BE /* UserProfileRecord.m */; };
 		74A7B0FA1EA38DC1008B61BE /* UITableViewCell+Usability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F91EA38DC1008B61BE /* UITableViewCell+Usability.m */; };
+		74A7B1001EA3E62C008B61BE /* GitHubAPINetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0FF1EA3E62C008B61BE /* GitHubAPINetworking.m */; };
+		74A7B1101EA3F18A008B61BE /* GHUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B10F1EA3F18A008B61BE /* GHUserEntity.m */; };
+		74A7B1131EA3F198008B61BE /* GHRepositoryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B1121EA3F198008B61BE /* GHRepositoryEntity.m */; };
+		74A7B1161EA3F290008B61BE /* GitHubAPIAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B1151EA3F290008B61BE /* GitHubAPIAuthentication.m */; };
+		74A7B11D1EA4B064008B61BE /* GHAuthEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B11C1EA4B064008B61BE /* GHAuthEntity.m */; };
+		74A7B1221EA4BE1E008B61BE /* TokenStorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B1211EA4BE1E008B61BE /* TokenStorageService.m */; };
+		74A7B1291EA4C370008B61BE /* MediaContentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B1281EA4C370008B61BE /* MediaContentService.m */; };
+		74A7B12C1EA4CB9D008B61BE /* InfoMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B12B1EA4CB9D008B61BE /* InfoMessageTableViewCell.m */; };
+		74A7B12F1EA4CC4F008B61BE /* NoDataContentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B12E1EA4CC4F008B61BE /* NoDataContentProvider.m */; };
 		74C16B841E9E980600A93A44 /* GitHubBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */; };
 		74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA11E9FF92500A93A44 /* AppDelegate.m */; };
 		74C16BAC1E9FF92500A93A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA31E9FF92500A93A44 /* main.m */; };
@@ -56,6 +70,18 @@
 		1DBC2A5C72F91C8987DE364A /* Pods-GitHubBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.release.xcconfig"; sourceTree = "<group>"; };
 		330FCC17D085DB34A21E9039 /* Pods-GitHubBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		478399E39E82EBE0A2F46128 /* Pods-GitHubBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowserTests/Pods-GitHubBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7411E7E81EA5031F001D28FF /* AuthCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthCredentials.h; sourceTree = "<group>"; };
+		7411E7E91EA5031F001D28FF /* AuthCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthCredentials.m; sourceTree = "<group>"; };
+		7411E7EA1EA5031F001D28FF /* AuthenticationServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationServiceProtocol.h; sourceTree = "<group>"; };
+		7411E7EB1EA5031F001D28FF /* GitHubAithenticationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubAithenticationService.h; sourceTree = "<group>"; };
+		7411E7EC1EA5031F001D28FF /* GitHubAithenticationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAithenticationService.m; sourceTree = "<group>"; };
+		7411E7EE1EA5031F001D28FF /* CredentialsValidatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsValidatorProtocol.h; sourceTree = "<group>"; };
+		7411E7F11EA50336001D28FF /* GitHubCredentialsValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCredentialsValidator.h; sourceTree = "<group>"; };
+		7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCredentialsValidator.m; sourceTree = "<group>"; };
+		7411E7F81EA50AC2001D28FF /* UITextField+ErrorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ErrorState.h"; sourceTree = "<group>"; };
+		7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ErrorState.m"; sourceTree = "<group>"; };
+		7411E7FC1EA50C5F001D28FF /* UIAlertController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alerts.h"; sourceTree = "<group>"; };
+		7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alerts.m"; sourceTree = "<group>"; };
 		74835C221EA26DC300BCC2B5 /* ProfileInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInteractorProtocol.h; sourceTree = "<group>"; };
 		74835C231EA26DC300BCC2B5 /* ProfileModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModuleProtocol.h; sourceTree = "<group>"; };
 		74835C241EA26DC300BCC2B5 /* ProfilePresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePresenterProtocol.h; sourceTree = "<group>"; };
@@ -117,6 +143,27 @@
 		74A7B0F51EA38982008B61BE /* UserProfileRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileRecord.m; sourceTree = "<group>"; };
 		74A7B0F81EA38DC1008B61BE /* UITableViewCell+Usability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Usability.h"; sourceTree = "<group>"; };
 		74A7B0F91EA38DC1008B61BE /* UITableViewCell+Usability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Usability.m"; sourceTree = "<group>"; };
+		74A7B0FE1EA3E62C008B61BE /* GitHubAPINetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubAPINetworking.h; sourceTree = "<group>"; };
+		74A7B0FF1EA3E62C008B61BE /* GitHubAPINetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPINetworking.m; sourceTree = "<group>"; };
+		74A7B10E1EA3F18A008B61BE /* GHUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUserEntity.h; sourceTree = "<group>"; };
+		74A7B10F1EA3F18A008B61BE /* GHUserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUserEntity.m; sourceTree = "<group>"; };
+		74A7B1111EA3F198008B61BE /* GHRepositoryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepositoryEntity.h; sourceTree = "<group>"; };
+		74A7B1121EA3F198008B61BE /* GHRepositoryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRepositoryEntity.m; sourceTree = "<group>"; };
+		74A7B1141EA3F290008B61BE /* GitHubAPIAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubAPIAuthentication.h; sourceTree = "<group>"; };
+		74A7B1151EA3F290008B61BE /* GitHubAPIAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIAuthentication.m; sourceTree = "<group>"; };
+		74A7B11B1EA4B064008B61BE /* GHAuthEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHAuthEntity.h; sourceTree = "<group>"; };
+		74A7B11C1EA4B064008B61BE /* GHAuthEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHAuthEntity.m; sourceTree = "<group>"; };
+		74A7B11F1EA4BD6A008B61BE /* TokenStorageServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenStorageServiceProtocol.h; sourceTree = "<group>"; };
+		74A7B1201EA4BE1E008B61BE /* TokenStorageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenStorageService.h; sourceTree = "<group>"; };
+		74A7B1211EA4BE1E008B61BE /* TokenStorageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenStorageService.m; sourceTree = "<group>"; };
+		74A7B1241EA4C152008B61BE /* MediaContentServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaContentServiceProtocol.h; sourceTree = "<group>"; };
+		74A7B1271EA4C370008B61BE /* MediaContentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaContentService.h; sourceTree = "<group>"; };
+		74A7B1281EA4C370008B61BE /* MediaContentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaContentService.m; sourceTree = "<group>"; };
+		74A7B12A1EA4CB9D008B61BE /* InfoMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoMessageTableViewCell.h; sourceTree = "<group>"; };
+		74A7B12B1EA4CB9D008B61BE /* InfoMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoMessageTableViewCell.m; sourceTree = "<group>"; };
+		74A7B12D1EA4CC4F008B61BE /* NoDataContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDataContentProvider.h; sourceTree = "<group>"; };
+		74A7B12E1EA4CC4F008B61BE /* NoDataContentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDataContentProvider.m; sourceTree = "<group>"; };
+		74A7B1351EA4F4E2008B61BE /* UserProfileNetworkingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileNetworkingProtocol.h; sourceTree = "<group>"; };
 		74C16B661E9E980600A93A44 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B7F1E9E980600A93A44 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubBrowserTests.m; sourceTree = "<group>"; };
@@ -153,6 +200,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7411E7E71EA5031F001D28FF /* AuthenticationService */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7E81EA5031F001D28FF /* AuthCredentials.h */,
+				7411E7E91EA5031F001D28FF /* AuthCredentials.m */,
+				7411E7EA1EA5031F001D28FF /* AuthenticationServiceProtocol.h */,
+				7411E7EB1EA5031F001D28FF /* GitHubAithenticationService.h */,
+				7411E7EC1EA5031F001D28FF /* GitHubAithenticationService.m */,
+			);
+			path = AuthenticationService;
+			sourceTree = "<group>";
+		};
+		7411E7ED1EA5031F001D28FF /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7EE1EA5031F001D28FF /* CredentialsValidatorProtocol.h */,
+				7411E7F11EA50336001D28FF /* GitHubCredentialsValidator.h */,
+				7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		7411E7F41EA509D3001D28FF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7F81EA50AC2001D28FF /* UITextField+ErrorState.h */,
+				7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7411E7FB1EA50C2D001D28FF /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7FC1EA50C5F001D28FF /* UIAlertController+Alerts.h */,
+				7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		74835BC71EA26B3600BCC2B5 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +258,7 @@
 				74835C741EA2709F00BCC2B5 /* Configuration */,
 				74835C7E1EA2709F00BCC2B5 /* Interactor */,
 				74835C811EA2709F00BCC2B5 /* Presenter */,
+				74A7B1171EA49625008B61BE /* Entity */,
 				74835C841EA2709F00BCC2B5 /* Router */,
 				74835C871EA2709F00BCC2B5 /* View */,
 			);
@@ -183,6 +271,7 @@
 				74835C201EA26DC300BCC2B5 /* Configuration */,
 				74835C2A1EA26DC300BCC2B5 /* Interactor */,
 				74835C2D1EA26DC300BCC2B5 /* Presenter */,
+				74A7B1331EA4DF35008B61BE /* Entity */,
 				74835C301EA26DC300BCC2B5 /* Router */,
 				74835C331EA26DC300BCC2B5 /* View */,
 			);
@@ -384,6 +473,8 @@
 		74835C871EA2709F00BCC2B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7411E7FB1EA50C2D001D28FF /* Alerts */,
+				7411E7F41EA509D3001D28FF /* CustomViews */,
 				74835C881EA2709F00BCC2B5 /* AuthenticationViewController.h */,
 				74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */,
 			);
@@ -397,6 +488,8 @@
 				74835C921EA2813300BCC2B5 /* RepositoryTableViewCell.m */,
 				74835C941EA2814000BCC2B5 /* UnauthorizedTableViewCell.h */,
 				74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */,
+				74A7B12A1EA4CB9D008B61BE /* InfoMessageTableViewCell.h */,
+				74A7B12B1EA4CB9D008B61BE /* InfoMessageTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -417,6 +510,8 @@
 				74A7B0EA1EA37F94008B61BE /* RepositoriesContentProvider.m */,
 				74A7B0EC1EA3822A008B61BE /* UnauthorizedContentProvider.h */,
 				74A7B0ED1EA3822A008B61BE /* UnauthorizedContentProvider.m */,
+				74A7B12D1EA4CC4F008B61BE /* NoDataContentProvider.h */,
+				74A7B12E1EA4CC4F008B61BE /* NoDataContentProvider.m */,
 			);
 			path = ContentProviders;
 			sourceTree = "<group>";
@@ -435,6 +530,10 @@
 		74A7B0F01EA38941008B61BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				74A7B1231EA4C144008B61BE /* MediaContentService */,
+				74A7B11E1EA4BD5A008B61BE /* TokenStorageService */,
+				74A7B0FB1EA3918B008B61BE /* GitHubAPI */,
+				74A7B0FD1EA3918B008B61BE /* NetworkingStatusService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -446,6 +545,90 @@
 				74A7B0F91EA38DC1008B61BE /* UITableViewCell+Usability.m */,
 			);
 			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		74A7B0FB1EA3918B008B61BE /* GitHubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B1341EA4E02A008B61BE /* Contract */,
+				74A7B10D1EA3F165008B61BE /* Entities */,
+				74A7B0FE1EA3E62C008B61BE /* GitHubAPINetworking.h */,
+				74A7B0FF1EA3E62C008B61BE /* GitHubAPINetworking.m */,
+				74A7B1141EA3F290008B61BE /* GitHubAPIAuthentication.h */,
+				74A7B1151EA3F290008B61BE /* GitHubAPIAuthentication.m */,
+			);
+			path = GitHubAPI;
+			sourceTree = "<group>";
+		};
+		74A7B0FD1EA3918B008B61BE /* NetworkingStatusService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingStatusService;
+			sourceTree = "<group>";
+		};
+		74A7B1031EA3EE80008B61BE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		74A7B10D1EA3F165008B61BE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B10E1EA3F18A008B61BE /* GHUserEntity.h */,
+				74A7B10F1EA3F18A008B61BE /* GHUserEntity.m */,
+				74A7B1111EA3F198008B61BE /* GHRepositoryEntity.h */,
+				74A7B1121EA3F198008B61BE /* GHRepositoryEntity.m */,
+				74A7B11B1EA4B064008B61BE /* GHAuthEntity.h */,
+				74A7B11C1EA4B064008B61BE /* GHAuthEntity.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		74A7B1171EA49625008B61BE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7E71EA5031F001D28FF /* AuthenticationService */,
+				7411E7ED1EA5031F001D28FF /* Validators */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		74A7B11E1EA4BD5A008B61BE /* TokenStorageService */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B11F1EA4BD6A008B61BE /* TokenStorageServiceProtocol.h */,
+				74A7B1201EA4BE1E008B61BE /* TokenStorageService.h */,
+				74A7B1211EA4BE1E008B61BE /* TokenStorageService.m */,
+			);
+			path = TokenStorageService;
+			sourceTree = "<group>";
+		};
+		74A7B1231EA4C144008B61BE /* MediaContentService */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B1241EA4C152008B61BE /* MediaContentServiceProtocol.h */,
+				74A7B1271EA4C370008B61BE /* MediaContentService.h */,
+				74A7B1281EA4C370008B61BE /* MediaContentService.m */,
+			);
+			path = MediaContentService;
+			sourceTree = "<group>";
+		};
+		74A7B1331EA4DF35008B61BE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B1351EA4F4E2008B61BE /* UserProfileNetworkingProtocol.h */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		74A7B1341EA4E02A008B61BE /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 		74C16B5D1E9E980600A93A44 = {
@@ -493,6 +676,7 @@
 				74C16BB11EA0039D00A93A44 /* AuthenticationFlow */,
 				74C16BB31EA0039D00A93A44 /* BrowserFlow */,
 				74A7B0F71EA38D50008B61BE /* CommonUI */,
+				74A7B1031EA3EE80008B61BE /* Entity */,
 				74A7B0EF1EA3893B008B61BE /* DTO */,
 				74A7B0F01EA38941008B61BE /* Services */,
 				74C16BA01E9FF92500A93A44 /* AppDelegate.h */,
@@ -781,27 +965,41 @@
 				74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */,
 				74A7B0FA1EA38DC1008B61BE /* UITableViewCell+Usability.m in Sources */,
 				74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */,
+				74A7B1131EA3F198008B61BE /* GHRepositoryEntity.m in Sources */,
+				7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */,
 				74A7B0EE1EA3822A008B61BE /* UnauthorizedContentProvider.m in Sources */,
 				74A7B0EB1EA37F94008B61BE /* RepositoriesContentProvider.m in Sources */,
 				74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */,
 				74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */,
+				7411E7F01EA5031F001D28FF /* GitHubAithenticationService.m in Sources */,
 				74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */,
 				74C16BAC1E9FF92500A93A44 /* main.m in Sources */,
 				74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */,
 				74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */,
 				74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */,
+				74A7B11D1EA4B064008B61BE /* GHAuthEntity.m in Sources */,
 				74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */,
+				74A7B1221EA4BE1E008B61BE /* TokenStorageService.m in Sources */,
 				74835C931EA2813300BCC2B5 /* RepositoryTableViewCell.m in Sources */,
 				74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */,
 				74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */,
+				74A7B1161EA3F290008B61BE /* GitHubAPIAuthentication.m in Sources */,
 				74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */,
+				74A7B1001EA3E62C008B61BE /* GitHubAPINetworking.m in Sources */,
 				74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */,
+				7411E7EF1EA5031F001D28FF /* AuthCredentials.m in Sources */,
 				74835C651EA26E9800BCC2B5 /* SearchModuleConfigurator.m in Sources */,
 				74835C3A1EA26DC300BCC2B5 /* ProfileViewController.m in Sources */,
+				74A7B12F1EA4CC4F008B61BE /* NoDataContentProvider.m in Sources */,
 				74835C391EA26DC300BCC2B5 /* ProfileRouter.m in Sources */,
+				74A7B12C1EA4CB9D008B61BE /* InfoMessageTableViewCell.m in Sources */,
+				7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */,
 				74835C691EA26E9800BCC2B5 /* SearchViewController.m in Sources */,
+				74A7B1101EA3F18A008B61BE /* GHUserEntity.m in Sources */,
+				74A7B1291EA4C370008B61BE /* MediaContentService.m in Sources */,
 				74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */,
 				74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */,
+				7411E7FE1EA50C5F001D28FF /* UIAlertController+Alerts.m in Sources */,
 				74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

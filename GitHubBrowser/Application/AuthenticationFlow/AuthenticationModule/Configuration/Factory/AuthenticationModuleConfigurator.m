@@ -14,6 +14,7 @@
 #import "AuthenticationPresenter.h"
 #import "AuthenticationRouter.h"
 
+#import "GitHubCredentialsValidator.h"
 
 @implementation AuthenticationModuleContainer
 @end
@@ -35,6 +36,7 @@
 
     view.output = presenter;
     interactor.output = presenter;
+    interactor.credentialsValidator = [GitHubCredentialsValidator new];
     
     [router prepareWithViewController:view];
 

@@ -9,8 +9,22 @@
 #import <Foundation/Foundation.h>
 
 @protocol AuthenticationInteractorDelegate <NSObject>
+
+- (void)twoFactorAuthenticationRequired;
+
+- (void)invalidUserName;
+- (void)invalidUserPassword;
+- (void)invalidTwoFactorCode;
+
+- (void)authenticationSuccessfullyPassed;
+- (void)authenticationFailedWithBadCredentials;
+
 @end
 
 @protocol AuthenticationInteractorProtocol <NSObject>
 @property (nonatomic, weak) id<AuthenticationInteractorDelegate> output;
+
+- (void)loginWithUserName:(NSString *)userName password:(NSString *)password;
+- (void)loginWithTwoFactorCode:(NSString *)code;
+
 @end

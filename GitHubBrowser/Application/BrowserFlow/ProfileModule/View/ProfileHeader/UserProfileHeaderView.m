@@ -18,5 +18,26 @@
 
 @implementation UserProfileHeaderView
 
+- (void)setUserAvararImage:(UIImage *)image {
+    
+    _avatarImageView.image = image;
+    
+    [UIView animateKeyframesWithDuration:1.0f
+                                   delay:1.0f
+                                 options:UIViewKeyframeAnimationOptionCalculationModeCubic
+                              animations:^{
+                                  
+                                  [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{
+                                      _avatarImageView.alpha = 0.5f;
+                                  }];
+                                  
+                                  [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+                                      _avatarImageView.alpha = 1.0f;
+                                  }];
+                                  
+                              }
+                              completion:nil];
+    
+}
 
 @end

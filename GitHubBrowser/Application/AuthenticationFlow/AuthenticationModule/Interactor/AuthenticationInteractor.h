@@ -10,6 +10,13 @@
 
 #import "AuthenticationInteractorProtocol.h"
 
+// Entity layer.
+#import "AuthenticationServiceProtocol.h"
+#import "CredentialsValidatorProtocol.h"
+
 @interface AuthenticationInteractor : NSObject<AuthenticationInteractorProtocol>
+
+@property (nonatomic) id<AuthenticationServiceProtocol> authService;
+@property (nonatomic) id<CredentialsValidatorProtocol> credentialsValidator;
 
 @end

@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class UIImage;
 @class UserProfileRecord;
 @class RepositoryRecord;
 
 
 // Events from view
 @protocol ProfileViewDelegate <NSObject>
+
+- (void)viewReadyForInteractions;
 
 - (void)userWantsToSignIn;
 - (void)userWantsLatestData;
@@ -29,6 +32,7 @@
 - (void)showUnauthorizedState;
 - (void)showNoContentState;
 
+- (void)showUserAvatar:(UIImage *)avatar;
 - (void)showUserProfile:(UserProfileRecord *)userProfile;
 - (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories;
 

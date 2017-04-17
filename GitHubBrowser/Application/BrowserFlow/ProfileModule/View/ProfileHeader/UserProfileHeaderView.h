@@ -10,4 +10,6 @@
 
 @interface UserProfileHeaderView : UIView
 
+- (void)setUserAvararImage:(UIImage *)image;
+
 @end

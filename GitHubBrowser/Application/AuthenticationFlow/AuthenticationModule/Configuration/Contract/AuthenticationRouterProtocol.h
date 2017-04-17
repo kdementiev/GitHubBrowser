@@ -13,6 +13,7 @@
 
 - (void)prepareWithViewController:(id)viewController;
 
+- (void)navigateToCreateAccount;
 - (void)navigateBack;
 
 @end

@@ -14,7 +14,7 @@
 // Content providers
 #import "RepositoriesContentProvider.h"
 #import "UnauthorizedContentProvider.h"
-
+#import "NoDataContentProvider.h"
 
 /*!
  *
@@ -38,12 +38,15 @@
     [self gh_prepareTableViewAppearance];
     
     // Notify presenter layer to fetch some data.
-    [self.output userWantsLatestData];
+    [self.output viewReadyForInteractions];
 }
 
 - (void)setContentProvider:(id<UITableViewDataSource>)contentProvider {
     _contentProvider = contentProvider;
     self.tableView.dataSource = contentProvider;
+    
+    //
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Appearance Helpers - 
@@ -71,6 +74,11 @@
 
 - (void)showNoContentState {
     // TODO: Create no data content provider
+    self.contentProvider = [NoDataContentProvider new];
+}
+
+- (void)showUserAvatar:(UIImage *)avatar {
+    [self.userProfileHeaderView setUserAvararImage:avatar];
 }
 
 - (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories {

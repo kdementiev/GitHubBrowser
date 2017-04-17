@@ -14,6 +14,8 @@
 #import "ProfilePresenter.h"
 #import "ProfileRouter.h"
 
+#import "TokenStorageService.h"
+#import "MediaContentService.h"
 
 @implementation ProfileModuleContainer
 @end
@@ -36,6 +38,11 @@
     view.output = presenter;
     interactor.output = presenter;
     
+    // Prepare with services.
+    interactor.tokenStorage = [TokenStorageService new];
+    interactor.mediaProvider = [MediaContentService new];
+    
+    //
     [router prepareWithViewController:view];
 
     // Prepare module container.

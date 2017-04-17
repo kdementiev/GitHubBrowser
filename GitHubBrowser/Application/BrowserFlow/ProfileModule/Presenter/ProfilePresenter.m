@@ -17,6 +17,10 @@
 
 #pragma mark - View Layer Feedback -
 
+- (void)viewReadyForInteractions {
+    [self.interactor prepare];
+}
+
 - (void)userWantsToSignIn {
     [self.router navigateToAuthorizationScreen];
 }
@@ -31,6 +35,10 @@
     [self.view showUnauthorizedState];
 }
 
+- (void)userAvatarReceived:(UIImage *)image {
+    [self.view showUserAvatar:image];
+}
+
 - (void)userProfileReveived:(UserProfileRecord *)userProfile {
     [self.view showUserProfile:userProfile];
 }
@@ -41,6 +49,7 @@
     
     if (!repositories.count) {
         [self.view showNoContentState];
+        return;
     }
     
     [self.view showRepositories:repositories];

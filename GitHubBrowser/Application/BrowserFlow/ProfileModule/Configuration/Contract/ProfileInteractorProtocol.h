@@ -10,11 +10,13 @@
 
 @class UserProfileRecord;
 @class RepositoryRecord;
+@class UIImage;
 
 @protocol ProfileInteractorDelegate <NSObject>
 
 - (void)userNotAuthorized;
 
+- (void)userAvatarReceived:(UIImage *)image;
 - (void)userProfileReveived:(UserProfileRecord *)userProfile;
 - (void)userRepositoriesReceived:(NSArray<RepositoryRecord *> *)repositories;
 
@@ -23,6 +25,7 @@
 @protocol ProfileInteractorProtocol <NSObject>
 @property (nonatomic, weak) id<ProfileInteractorDelegate> output;
 
+- (void)prepare;
 - (void)fetchData;
 
 @end

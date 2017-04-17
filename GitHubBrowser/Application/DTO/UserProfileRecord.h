@@ -12,9 +12,11 @@
 
 @property (nonatomic) NSString *userName;
 
-@property (nonatomic) NSInteger publicRepos;
-@property (nonatomic) NSInteger stars;
-@property (nonatomic) NSInteger followers;
-@property (nonatomic) NSInteger following;
+@property (nonatomic) NSString *avatarUrl;
+
+@property (nonatomic) NSInteger publicRepositoriesCount;
+@property (nonatomic) NSInteger starsCount;
+@property (nonatomic) NSInteger followersCount;
+@property (nonatomic) NSInteger followingCount;
 
 @end
