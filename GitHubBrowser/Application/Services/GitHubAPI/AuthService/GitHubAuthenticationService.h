@@ -1,5 +1,5 @@
 //
-//  GitHubAithenticationService.h
+//  GitHubAuthenticationService.h
 //  GitHubBrowser
 //
 //  Created by Konstantin Dementiev on 4/17/17.
@@ -10,6 +10,6 @@
 
 #import "AuthenticationServiceProtocol.h"
 
-@interface GitHubAithenticationService : NSObject
+@interface GitHubAuthenticationService : NSObject<AuthenticationServiceProtocol>
 
 @end

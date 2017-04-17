@@ -8,6 +8,8 @@
 
 #import "ProfilePresenter.h"
 
+#import "AuthenticationModuleProtocol.h"
+
 @implementation ProfilePresenter
 
 @synthesize output;
@@ -15,14 +17,24 @@
 @synthesize interactor;
 @synthesize router;
 
+#pragma mark - Authentication Module Feedback -
+
+- (void)userSuccessfullySignedIn {
+    [self.interactor prepare];
+}
+
 #pragma mark - View Layer Feedback -
 
 - (void)viewReadyForInteractions {
     [self.interactor prepare];
 }
 
+- (void)userWantsToSignOut {
+    [self.interactor performSignOut];
+}
+
 - (void)userWantsToSignIn {
-    [self.router navigateToAuthorizationScreen];
+    [self.router navigateToAuthorizationScreenWithDelegate:self];
 }
 
 - (void)userWantsLatestData {
@@ -30,6 +42,10 @@
 }
 
 #pragma mark - Interactor Layer Feedback -
+
+- (void)userAuthorized {
+    [self.view showNoContentState];
+}
 
 - (void)userNotAuthorized {
     [self.view showUnauthorizedState];

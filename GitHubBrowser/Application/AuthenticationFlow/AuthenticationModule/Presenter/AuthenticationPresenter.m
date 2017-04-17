@@ -66,8 +66,8 @@
 
 - (void)authenticationSuccessfullyPassed {
     
-    // Notify with successfully logged-in.
-    
+    // Notify with successfully signed-in.
+    [self.output userSuccessfullySignedIn];
     
     // Our job done, go back to profile.
     [self.router navigateBack];

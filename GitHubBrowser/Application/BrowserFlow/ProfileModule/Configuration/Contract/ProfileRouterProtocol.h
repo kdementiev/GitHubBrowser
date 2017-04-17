@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AuthenticationModuleDelegate;
 
 @protocol ProfileRouterProtocol <NSObject>
 
 - (void)prepareWithViewController:(id)viewController;
 
-- (void)navigateToAuthorizationScreen;
+- (void)navigateToAuthorizationScreenWithDelegate:(id<AuthenticationModuleDelegate>)delegate;
 
 @end

@@ -19,6 +19,8 @@
 - (void)viewReadyForInteractions;
 
 - (void)userWantsToSignIn;
+- (void)userWantsToSignOut;
+
 - (void)userWantsLatestData;
 
 @end

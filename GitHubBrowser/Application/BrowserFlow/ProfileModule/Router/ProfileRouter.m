@@ -30,7 +30,7 @@
     _viewController = viewController;
 }
 
-- (void)navigateToAuthorizationScreen {
+- (void)navigateToAuthorizationScreenWithDelegate:(id<AuthenticationModuleDelegate>)delegate {
     
     [_viewController performSegueWithIdentifier:@"AuthenticationFlowSegue"
                                 prepareCallback:^(UIViewController *target) {
@@ -42,7 +42,7 @@
                                     id<AuthenticationViewProtocol> view = (id<AuthenticationViewProtocol>)navigationController.topViewController;
                                     
                                     // Prepare module with view.
-                                    [AuthenticationModuleConfigurator configureteModuleWithView:view delegate:nil];
+                                    [AuthenticationModuleConfigurator configureteModuleWithView:view delegate:delegate];
                                 }];
     
 }

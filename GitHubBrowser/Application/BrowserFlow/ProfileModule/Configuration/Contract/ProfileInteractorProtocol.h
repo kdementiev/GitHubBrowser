@@ -14,6 +14,7 @@
 
 @protocol ProfileInteractorDelegate <NSObject>
 
+- (void)userAuthorized;
 - (void)userNotAuthorized;
 
 - (void)userAvatarReceived:(UIImage *)image;
@@ -27,5 +28,7 @@
 
 - (void)prepare;
 - (void)fetchData;
+
+- (void)performSignOut;
 
 @end

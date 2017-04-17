@@ -10,15 +10,8 @@
 
 #import "GHAuthEntity.h"
 
-typedef enum : NSUInteger {
-    GitHubAPIAuthenticationTwoFactorNone,
-    GitHubAPIAuthenticationTwoFactorSMS,
-    GitHubAPIAuthenticationTwoFactorApplication,
-} GitHubAPIAuthenticationTwoFactorType;
-
-
 typedef void(^GitHubAPIAuthenticationResponseCallback)(BOOL success);
-typedef void(^GitHubAPIAuthenticationCredentialsResponseCallback)(GHAuthEntity *authEntity, GitHubAPIAuthenticationTwoFactorType type);
+typedef void(^GitHubAPIAuthenticationCredentialsResponseCallback)(GHAuthEntity *authEntity, NSError *error);
 
 
 @interface GitHubAPIAuthentication : NSObject

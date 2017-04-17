@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
+
 #import "ProfileModuleConfigurator.h"
 #import "SearchModuleConfigurator.h"
 
@@ -19,6 +21,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+#ifdef DEBUG
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    
+#ifdef DEBUG_NETWORKING
+    id<AFNetworkActivityLoggerProtocol> defaultLogger = [[AFNetworkActivityLogger sharedLogger].loggers anyObject];
+    [defaultLogger setLevel:AFLoggerLevelDebug];
+#endif
+    
+#endif
     
     UITabBarController *rootViewController = (UITabBarController *)self.window.rootViewController;
     NSArray<UIViewController *> *viewControllers = rootViewController.viewControllers;

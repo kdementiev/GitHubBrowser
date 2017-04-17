@@ -13,8 +13,9 @@
 #import "ProfileRouterProtocol.h"
 #import "ProfileModuleProtocol.h"
 
+#import "AuthenticationModuleProtocol.h"
 
-@protocol ProfilePresenterProtocol <ProfileViewDelegate, ProfileInteractorDelegate, ProfileModuleProtocol>
+@protocol ProfilePresenterProtocol <ProfileViewDelegate, ProfileInteractorDelegate, ProfileModuleProtocol, AuthenticationModuleDelegate>
 
 // Offers interfce to store information or events outside this module.
 @property (nonatomic, weak) id<ProfileModuleDelegate> output;

@@ -17,7 +17,7 @@ typedef enum : NSUInteger {
 } AuthenticationServiceResponseError;
 
 
-typedef void(^AuthServiceResponseCallback)(NSString * _Nullable authToken, AuthenticationServiceResponseError error);
+typedef void(^AuthServiceLoginResponseCallback)(NSString * _Nullable authToken, AuthenticationServiceResponseError error);
 
 /*!
  *  @disscussion Offers interface to interact with remote API to be used in auth way.
@@ -29,6 +29,7 @@ typedef void(^AuthServiceResponseCallback)(NSString * _Nullable authToken, Authe
  *  @param credentials AuthCredentials instance.
  *  @param callback User provided password.
  */
-- (void)loginWithCredentials:(nonnull AuthCredentials *)credentials response:(nonnull AuthServiceResponseCallback)callback;
+- (void)loginWithCredentials:(nonnull AuthCredentials *)credentials response:(nonnull AuthServiceLoginResponseCallback)callback;
+
 
 @end

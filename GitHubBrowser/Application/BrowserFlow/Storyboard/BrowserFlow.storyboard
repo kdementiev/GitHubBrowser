@@ -63,10 +63,24 @@
                                     <color key="textColor" red="0.27601413600000002" green="0.38838447729999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPq-vF-ueL">
+                                    <rect key="frame" x="8" y="32" width="26" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="26" id="AEb-9N-38N"/>
+                                        <constraint firstAttribute="height" constant="26" id="W2a-Zx-gMl"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.27601413600000002" green="0.38838447729999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="gh-logout-btn"/>
+                                    <connections>
+                                        <action selector="onLogoutAction:" destination="6p1-h5-7eV" eventType="touchUpInside" id="q4t-fT-nb8"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="hPq-vF-ueL" firstAttribute="leading" secondItem="vsI-Mm-3Dd" secondAttribute="leading" constant="8" id="A93-gC-Pb5"/>
                                 <constraint firstItem="rdc-NU-eDM" firstAttribute="top" secondItem="xOq-ag-KXJ" secondAttribute="bottom" constant="8" id="AWo-gc-CmC"/>
+                                <constraint firstItem="hPq-vF-ueL" firstAttribute="top" secondItem="vsI-Mm-3Dd" secondAttribute="top" constant="32" id="JXh-8C-Ibj"/>
                                 <constraint firstItem="rdc-NU-eDM" firstAttribute="centerX" secondItem="xOq-ag-KXJ" secondAttribute="centerX" id="PvX-Hf-dgy"/>
                                 <constraint firstItem="xOq-ag-KXJ" firstAttribute="top" secondItem="vsI-Mm-3Dd" secondAttribute="top" constant="32" id="Qhr-oe-sU5"/>
                                 <constraint firstItem="xOq-ag-KXJ" firstAttribute="centerX" secondItem="vsI-Mm-3Dd" secondAttribute="centerX" id="iLx-bW-SAK"/>
@@ -255,6 +269,7 @@
     <resources>
         <image name="gh-icon" width="28" height="28"/>
         <image name="gh-logo-small" width="120" height="44"/>
+        <image name="gh-logout-btn" width="36" height="36"/>
         <image name="gh-no-avatar" width="100" height="100"/>
         <image name="top-shadow" width="5" height="7"/>
     </resources>

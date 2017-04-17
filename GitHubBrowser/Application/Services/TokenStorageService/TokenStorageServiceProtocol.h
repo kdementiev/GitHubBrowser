@@ -11,6 +11,8 @@
 @protocol TokenStorageServiceProtocol <NSObject>
 
 - (void)saveTokenToSecureStorage:(nullable NSString *)token;
+- (void)removeTokenFromSecureStorage;
+
 - (nullable NSString *)fetchTokenFromSecureStorage;
 
 @end

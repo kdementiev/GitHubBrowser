@@ -35,12 +35,25 @@
         [_self.output userNotAuthorized];
     }];
     
+    //
+    [self.output userAuthorized];
+    
     // Fetch initial data.
     [self fetchData];
 }
 
 - (void)fetchData {
     
+    [self gh_fetchUserProfile];
+    [self gh_fetchUserRepositories];
+}
+
+- (void)performSignOut {
+    // Remove token from storage.
+    [self.tokenStorage removeTokenFromSecureStorage];
+    
+    // Notify with sign-out finished.
+    [self.output userNotAuthorized];
 }
 
 - (void)gh_fetchUserProfile {

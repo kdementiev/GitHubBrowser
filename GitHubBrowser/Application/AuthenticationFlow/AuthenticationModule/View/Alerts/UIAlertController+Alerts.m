@@ -23,7 +23,7 @@
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = NSLocalizedString(@"Code", nil);
         
-        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.borderStyle = UITextBorderStyleNone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     }];
     

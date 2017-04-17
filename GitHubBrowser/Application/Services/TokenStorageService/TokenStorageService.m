@@ -35,6 +35,10 @@
     
 }
 
+- (void)removeTokenFromSecureStorage {
+    [SAMKeychain deletePasswordForService:_serviceName account:_serviceName];
+}
+
 - (NSString *)fetchTokenFromSecureStorage {
     return [SAMKeychain passwordForService:_serviceName account:_serviceName];
 }

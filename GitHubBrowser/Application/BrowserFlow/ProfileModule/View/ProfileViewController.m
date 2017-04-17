@@ -45,6 +45,8 @@
     _contentProvider = contentProvider;
     self.tableView.dataSource = contentProvider;
     
+    [self.tableView reloadData];
+    
     //
     [self.refreshControl endRefreshing];
 }
@@ -94,6 +96,10 @@
 
 - (IBAction)onRefreshAction:(id)sender {
     [self.output userWantsLatestData];
+}
+
+- (IBAction)onLogoutAction:(id)sender {
+    [self.output userWantsToSignOut];
 }
 
 #pragma mark - UnauthorizedContentProviderDelegate -

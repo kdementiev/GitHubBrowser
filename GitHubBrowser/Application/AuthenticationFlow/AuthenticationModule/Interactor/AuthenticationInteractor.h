@@ -12,11 +12,13 @@
 
 // Entity layer.
 #import "AuthenticationServiceProtocol.h"
+#import "TokenStorageServiceProtocol.h"
 #import "CredentialsValidatorProtocol.h"
 
 @interface AuthenticationInteractor : NSObject<AuthenticationInteractorProtocol>
 
 @property (nonatomic) id<AuthenticationServiceProtocol> authService;
+@property (nonatomic) id<TokenStorageServiceProtocol> tokenStorage;
 @property (nonatomic) id<CredentialsValidatorProtocol> credentialsValidator;
 
 @end

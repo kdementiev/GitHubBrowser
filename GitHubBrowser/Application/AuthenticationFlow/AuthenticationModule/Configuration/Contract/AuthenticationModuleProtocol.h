@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol AuthenticationModuleDelegate <NSObject>
-
+- (void)userSuccessfullySignedIn;
 @end
 
 @protocol AuthenticationModuleProtocol <NSObject>

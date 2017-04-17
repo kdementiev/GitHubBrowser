@@ -62,6 +62,9 @@ NSString * const GitHubAPINetworkingInfoPlistSecret = @"Secret";
         NSURL *baseURL = [NSURL URLWithString:domain];
         self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
         
+        // We need JSON in requests.
+        self.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+        
         // Prepare caching
         [self gh_prepareChachingPolicy];
     }
@@ -129,7 +132,11 @@ NSString * const GitHubAPINetworkingInfoPlistSecret = @"Secret";
                             [self gh_mapAndNotifyWithClass:resultClass content:responseObject task:task callback:callback];
                         }
                         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                            callback(error, nil, nil);
+                            
+                            NSHTTPURLResponse *response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
+                            NSDictionary *headers = [response allHeaderFields];
+                            
+                            callback(error, nil, headers);
                         }];
     return task;
 }
