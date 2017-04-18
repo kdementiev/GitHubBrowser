@@ -48,7 +48,7 @@
     [cell setLanguage:repository.language];
     
     [cell setStars:repository.starsCount];
-    [cell setColorPosition: indexPath.row / (CGFloat)_repositories.count];
+    [cell setColorPosition: (indexPath.row + 1) / (CGFloat)_repositories.count];
     
     return cell;
 }
