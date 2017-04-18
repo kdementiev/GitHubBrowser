@@ -12,6 +12,7 @@
 		7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */; };
 		7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */; };
 		7411E7FE1EA50C5F001D28FF /* UIAlertController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */; };
+		7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */; };
 		746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10A1EA558AF0040C8E3 /* GHTestCase.m */; };
 		746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */; };
 		746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */; };
@@ -84,6 +85,7 @@
 		7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ErrorState.m"; sourceTree = "<group>"; };
 		7411E7FC1EA50C5F001D28FF /* UIAlertController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alerts.h"; sourceTree = "<group>"; };
 		7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alerts.m"; sourceTree = "<group>"; };
+		7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_bad_credentials_response_401.json; sourceTree = "<group>"; };
 		746FC1091EA558AF0040C8E3 /* GHTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTestCase.h; sourceTree = "<group>"; };
 		746FC10A1EA558AF0040C8E3 /* GHTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTestCase.m; sourceTree = "<group>"; };
 		746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIAuthenticationTests.m; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			children = (
 				746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */,
 				746FC1111EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json */,
+				7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */,
 			);
 			path = responses;
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 			files = (
 				746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */,
 				746FC1121EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json in Resources */,
+				7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

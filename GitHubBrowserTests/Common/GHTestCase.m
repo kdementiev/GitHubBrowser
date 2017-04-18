@@ -11,6 +11,9 @@
 #import <OHHTTPStubs/OHHTTPStubs.h>
 #import <OHHTTPStubs/OHPathHelpers.h>
 
+#import <OHHTTPStubs/NSURLRequest+HTTPBodyTesting.h>
+
+
 NSInteger const GHTestCaseSuccessResponseCode = 200;
 NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
 
@@ -25,14 +28,24 @@ NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
 }
 
 - (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status {
-    [self simulateResponseWithJSON:fileName route:route status:status headers: @{@"Content-Type":@"application/json"}];
+    [self simulateResponseWithJSON:fileName route:route status:status headers: @{@"Content-Type":@"application/json"} request:nil];
 }
 
-- (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status headers:(NSDictionary *)headers {
+- (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status headers:(NSDictionary *)headers request:(GHTestCaseNetworkingRequestCallback)callback {
     
     [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
         return !route ? YES : [request.URL.absoluteString containsString:route];
+        
     } withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
+        
+        if (callback) {
+            
+            NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:request.OHHTTPStubs_HTTPBody
+                                                                     options:kNilOptions
+                                                                       error:nil];
+            
+            callback(request.URL.absoluteString, request.allHTTPHeaderFields, jsonDict);
+        }
         
         NSString* fixture = OHPathForFile(fileName, self.class);
         return [OHHTTPStubsResponse responseWithFileAtPath:fixture

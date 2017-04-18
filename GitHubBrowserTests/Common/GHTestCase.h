@@ -8,11 +8,13 @@
 
 #import <XCTest/XCTest.h>
 
+typedef void(^GHTestCaseNetworkingRequestCallback)(NSString *route, NSDictionary *headers, NSDictionary *body);
+
 @interface GHTestCase : XCTestCase
 
 - (void)simulateSuccessResponseWithJSON:(NSString*)fileName;
 - (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status;
-- (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status headers:(NSDictionary *)headers;
+- (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status headers:(NSDictionary *)headers request:(GHTestCaseNetworkingRequestCallback)callback;
 
 - (void)waitForExpectations;
 

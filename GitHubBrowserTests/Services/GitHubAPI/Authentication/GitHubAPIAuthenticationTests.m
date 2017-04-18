@@ -23,21 +23,51 @@
 - (void)setUp {
     [super setUp];
     
+    // Prepare GitHub auth service
     self.authService = [GitHubAuthenticationService new];
     
-    self.credentials = [AuthCredentials authCredentialsWithUser:@"test" password:@"test" otpCode:nil];
+    // Prepare credentials.
+    self.credentials = [AuthCredentials authCredentialsWithUser:@"test" password:@"test" otpCode:@"1234"];
 }
 
 - (void)tearDown {
-    
     [super tearDown];
+}
+
+- (void)testCredentialsMapping {
+    
+    XCTestExpectation *requestExpectation = [self expectationWithDescription:@"Request expectation."];
+    
+    [self simulateResponseWithJSON:@""
+                             route:nil
+                            status:200
+                           headers:nil
+                           request:^(NSString *route, NSDictionary *headers, NSDictionary *body) {
+                               
+                               NSString *authValue = [headers valueForKey:@"Authorization"];
+                               XCTAssertNotNil(authValue, @"No required field: Authorization");
+                               XCTAssertTrue([authValue isEqualToString:@"Basic dGVzdDp0ZXN0"], @"Invalid Authorization header content.");
+                               
+                               NSString *otpValue = [headers valueForKey:@"X-GitHub-OTP"];
+                               XCTAssertNotNil(otpValue, @"No required field: X-GitHub-OTP");
+                               XCTAssertTrue([otpValue isEqualToString:self.credentials.otpCode], @"Invalid X-GitHub-OTP header content.");
+                               
+                               [requestExpectation fulfill];
+                           }];
+    
+    
+    [_authService loginWithCredentials:_credentials
+                              response:^(NSString * _Nullable authToken, AuthenticationServiceResponseError error) {  
+                              }];
+    
+    [self waitForExpectations];
 }
 
 - (void)testLoginDefaultFlow {
     
     [self simulateSuccessResponseWithJSON:@"guthub_auth_default_response_200.json"];
     
-    XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response received."];
+    XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
     
     [_authService loginWithCredentials:_credentials
                               response:^(NSString * _Nullable authToken, AuthenticationServiceResponseError error) {
@@ -58,15 +88,36 @@
     [self simulateResponseWithJSON:@"guthub_auth_otp_response_401.json"
                              route:@"authorizations/clients"
                             status:401
-                           headers:@{@"X-GitHub-OTP": @"required; sms"}];
+                           headers:@{@"X-GitHub-OTP": @"required; sms"}
+                           request:nil];
     
-    XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response received."];
+    XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
     
     [_authService loginWithCredentials:_credentials
                               response:^(NSString * _Nullable authToken, AuthenticationServiceResponseError error) {
                                   
                                   XCTAssertNil(authToken, @"authToken must be nil.");
                                   XCTAssertEqual(error, AuthenticationServiceResponseErrorOTPRequired, @"Invalid response state.");
+                                  
+                                  [responseExpectation fulfill];
+                              }];
+    
+    [self waitForExpectations];
+}
+
+- (void)testLoginBadCredentialsError {
+    
+    [self simulateResponseWithJSON:@"guthub_auth_bad_credentials_response_401.json"
+                             route:@"authorizations/clients"
+                            status:401];
+    
+    XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
+    
+    [_authService loginWithCredentials:_credentials
+                              response:^(NSString * _Nullable authToken, AuthenticationServiceResponseError error) {
+                                  
+                                  XCTAssertNil(authToken, @"authToken must be nil.");
+                                  XCTAssertEqual(error, AuthenticationServiceResponseErrorBadCredentials, @"Invalid response state.");
                                   
                                   [responseExpectation fulfill];
                               }];
