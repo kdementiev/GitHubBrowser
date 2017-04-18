@@ -108,4 +108,22 @@
     [self waitForExpectations];
 }
 
+- (void)testSearchOperationCancelation {
+    
+    [self simulateSuccessResponseWithJSON:@"github_search_response_200.json"];
+    
+    SearchNetworkingSearchResultsCallback responseBlock = ^(NSArray<RepositoryRecord *> * _Nullable repositories) {
+        XCTFail(@"Task was not canceled.");
+    };
+    
+    // Fire request.
+    AsyncOperation *operation = [_searchService searchRepositoriesWithText:@"" response:responseBlock];
+    
+    // Cancel async operation.
+    [operation cancelOperation];
+    
+    // We need to wait for stub.
+    sleep(3);
+}
+
 @end
