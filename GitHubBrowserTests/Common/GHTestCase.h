@@ -16,6 +16,8 @@ typedef void(^GHTestCaseNetworkingRequestCallback)(NSString *route, NSDictionary
 - (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status;
 - (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status headers:(NSDictionary *)headers request:(GHTestCaseNetworkingRequestCallback)callback;
 
+- (void)clearSimulations;
+
 - (void)waitForExpectations;
 
 @end

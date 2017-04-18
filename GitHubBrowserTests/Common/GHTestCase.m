@@ -23,6 +23,13 @@ NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
     [super setUp];
 }
 
+- (void)tearDown {
+    [super tearDown];
+    
+    // Remove all stubs.
+    [self clearSimulations];
+}
+
 - (void)simulateSuccessResponseWithJSON:(NSString*)fileName {
     [self simulateResponseWithJSON:fileName route:nil status:GHTestCaseSuccessResponseCode];
 }
@@ -56,6 +63,10 @@ NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
                                                 statusCode:(int)status
                                                    headers:headers];
     }];
+}
+
+- (void)clearSimulations {
+    [OHHTTPStubs removeAllStubs];
 }
 
 - (void)waitForExpectations {

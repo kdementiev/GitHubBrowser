@@ -34,7 +34,6 @@
     [super tearDown];
 }
 
-
 - (void)testLoginDefaultFlow {
     
     [self simulateSuccessResponseWithJSON:@"guthub_auth_default_response_200.json"];
