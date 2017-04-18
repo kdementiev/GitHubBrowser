@@ -15,7 +15,6 @@
 @property (nonatomic) NSString *avatarUrl;
 
 @property (nonatomic) NSInteger publicRepositoriesCount;
-@property (nonatomic) NSInteger starsCount;
 @property (nonatomic) NSInteger followersCount;
 @property (nonatomic) NSInteger followingCount;
 

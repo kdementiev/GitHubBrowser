@@ -10,4 +10,15 @@
 
 @implementation GHUserEntity
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return [JSONKeyMapper baseMapper:[JSONKeyMapper mapperForSnakeCase]
+           withModelToJSONExceptions:@{
+                                       @"userId": @"id"
+                                       }];
+}
+
 @end

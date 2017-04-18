@@ -30,10 +30,7 @@
     }
     
     // Provide token to networking service.
-    __weak typeof(self) _self = self;
-    [self.profileNetworking prepareWithUserToken:token unauthorized:^{
-        [_self.output userNotAuthorized];
-    }];
+    [self.profileNetworking prepareWithUserToken:token];
     
     //
     [self.output userAuthorized];
@@ -43,8 +40,10 @@
 }
 
 - (void)fetchData {
-    
+    // Try to fetch user profile.
     [self gh_fetchUserProfile];
+    
+    // Try to fetch user repositories.
     [self gh_fetchUserRepositories];
 }
 
@@ -61,14 +60,16 @@
     __weak typeof(self) _self = self;
     
     [self.profileNetworking fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
-        if (userProfile) {
-            
-            // Notify presenter layer with user profile.
-            [_self.output userProfileReveived:userProfile];
-            
-            // Fetch user avatar.
-            [_self gh_fetchUserAvatar:userProfile.avatarUrl];
+        if (!userProfile) {
+            [_self gh_notifyWithUserNotAuthorized];
+            return;
         }
+        
+        // Notify presenter layer with user profile.
+        [_self.output userProfileReveived:userProfile];
+        
+        // Fetch user avatar.
+        [_self gh_fetchUserAvatar:userProfile.avatarUrl];
     }];
     
 }
@@ -77,6 +78,12 @@
     
     __weak typeof(self) _self = self;
     [self.profileNetworking fetchUserRepositories:^(NSArray<RepositoryRecord *> * _Nullable repositories) {
+        
+        if (!repositories) {
+            [_self gh_notifyWithUserNotAuthorized];
+            return;
+        }
+        
         [_self.output userRepositoriesReceived:repositories];
     }];
 }
@@ -102,6 +109,10 @@
         
         
     } cancellationToken:_avatarCancelationToken.token];
+}
+
+- (void)gh_notifyWithUserNotAuthorized {
+    [self.output userNotAuthorized];
 }
 
 @end

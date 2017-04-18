@@ -112,5 +112,9 @@ typedef void(^AuthServiceResponseCallback)(BOOL success);
     return [NSString stringWithFormat:GitHubAuthBaseHeaderFormat, base64Token];
 }
 
+- (void)gh_clearHeaders {
+    
+}
+
 
 @end

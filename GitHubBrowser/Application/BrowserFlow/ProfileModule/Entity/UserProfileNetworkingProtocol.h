@@ -11,7 +11,6 @@
 #import "UserProfileRecord.h"
 #import "RepositoryRecord.h"
 
-typedef void(^UserProfileNetworkingUnauthorizedResponseCallback)();
 typedef void(^UserProfileNetworkingUserProfileResponseCallback)(UserProfileRecord * _Nullable userProfile);
 typedef void(^UserProfileNetworkingRepositoriesResponseCallback)(NSArray<RepositoryRecord *> * _Nullable repositories);
 
@@ -24,9 +23,8 @@ typedef void(^UserProfileNetworkingRepositoriesResponseCallback)(NSArray<Reposit
 /*!
  *  @disscussion Offers inerface to prepare with token and handle auth state.
  *  @param token User Auth2 token.
- *  @param callback Block will be called if service will recieve unauthorized state.
  */
-- (void)prepareWithUserToken:(nonnull NSString *)token unauthorized:(nonnull UserProfileNetworkingUnauthorizedResponseCallback)callback;
+- (void)prepareWithUserToken:(nonnull NSString *)token;
 
 /*!
  *  @disscussion Offers interface to get user profile from remote server.

@@ -16,6 +16,7 @@
 
 #import "TokenStorageService.h"
 #import "MediaContentService.h"
+#import "GitHubUserProfileService.h"
 
 @implementation ProfileModuleContainer
 @end
@@ -41,6 +42,7 @@
     // Prepare with services.
     interactor.tokenStorage = [TokenStorageService new];
     interactor.mediaProvider = [MediaContentService new];
+    interactor.profileNetworking = [GitHubUserProfileService new];
     
     //
     [router prepareWithViewController:view];
