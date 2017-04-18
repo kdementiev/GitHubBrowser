@@ -90,10 +90,6 @@
     CGFloat bottomInset = self.tabBarController.tabBar.bounds.size.height;
     
     self.tableView.contentInset = UIEdgeInsetsMake(topInset, 0, bottomInset, 0);
-    
-    // Allow self-sizing for cells.
-    self.tableView.estimatedRowHeight = 82;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
  
 #pragma - Presenter Layer Feedback -

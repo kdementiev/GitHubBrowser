@@ -45,6 +45,9 @@
     
     [cell setRepositoryName:repository.name];
     [cell setRepositoryDescription:repository.desc?:NSLocalizedString(@"No description.", nil)];
+    [cell setLanguage:repository.language];
+    
+    [cell setStars:repository.starsCount];
     [cell setColorPosition: indexPath.row / (CGFloat)_repositories.count];
     
     return cell;

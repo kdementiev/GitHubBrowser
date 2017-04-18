@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *languageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *starsLabel;
 
 @property (nonatomic) IBInspectable UIColor *topColor;
 @property (nonatomic) IBInspectable UIColor *bottomColor;
@@ -29,6 +31,14 @@
 
 - (void)setRepositoryDescription:(NSString *)description {
     self.descriptionLabel.text = description;
+}
+
+- (void)setLanguage:(NSString *)language {
+    self.languageLabel.text = language;
+}
+
+- (void)setStars:(NSInteger)stars {
+    self.starsLabel.text = [NSString stringWithFormat:@"%li", (long)stars];
 }
 
 - (void)setColorPosition:(CGFloat)position {

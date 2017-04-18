@@ -12,6 +12,9 @@
 
 - (void)setRepositoryName:(NSString *)name;
 - (void)setRepositoryDescription:(NSString *)description;
+- (void)setLanguage:(NSString *)language;
+
+- (void)setStars:(NSInteger)stars;
 - (void)setColorPosition:(CGFloat)position;
 
 @end
