@@ -13,10 +13,11 @@ target 'GitHubBrowser' do
   pod 'Bolts'
   
   pod 'JSONModel'
-  pod 'SDWebImage'
   pod 'EasySegues'
-  
   pod 'SAMKeychain'
+  
+  pod 'UIColorInterpolation'
+  pod 'SDWebImage'
 
   target 'GitHubBrowserTests' do
     inherit! :search_paths

@@ -10,4 +10,15 @@
 
 @implementation GHRepositoryEntity
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return [JSONKeyMapper baseMapper:[JSONKeyMapper mapperForSnakeCase]
+           withModelToJSONExceptions:@{
+                                       @"desc": @"description"
+                                       }];
+}
+
 @end

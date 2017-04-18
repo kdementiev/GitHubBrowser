@@ -172,9 +172,26 @@ NSString * const GitHubAPINetworkingInfoPlistSecret = @"Secret";
     NSHTTPURLResponse *response = ((NSHTTPURLResponse *)[task response]);
     NSDictionary *headers = [response allHeaderFields];
     
-    NSError *error;
-    id responseInstance = [[class alloc] initWithDictionary:responseObject error:&error];
-    callback(error, responseInstance, headers);
+    id responseInstance;
+    
+    if ([responseObject isKindOfClass:[NSArray class]]) {
+        responseInstance = [self gh_deserializeArray:responseObject forClass:class];
+    } else {
+        responseInstance = [[class alloc] initWithDictionary:responseObject error:nil];
+    }
+    
+    callback(nil, responseInstance, headers);
+}
+
+- (NSArray *)gh_deserializeArray:(NSArray<NSDictionary *> *)array forClass:(Class)class {
+    NSMutableArray *objects = [NSMutableArray array];
+    
+    [array enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        id instance = [[class alloc] initWithDictionary:obj error:nil];
+        [objects addObject:instance];
+    }];
+    
+    return [objects copy];
 }
 
 @end

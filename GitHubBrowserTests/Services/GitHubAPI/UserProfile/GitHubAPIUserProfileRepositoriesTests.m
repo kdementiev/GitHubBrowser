@@ -24,7 +24,7 @@
 
 - (void)testRepositoriesFetchingSuccess {
     
-    [self simulateResponseWithJSON:@"github_profile_fetch_response_401.json" route:@"user/repos" status:200];
+    [self simulateResponseWithJSON:@"github_repos_fetch_response_200.json" route:@"user/repos" status:200];
     
     XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
     [self.userProfileService fetchUserRepositories:^(NSArray<RepositoryRecord *> * _Nullable repositories) {
@@ -33,7 +33,7 @@
         XCTAssertTrue([repositories isKindOfClass:[NSArray class]], @"Invalid response object type.");
         XCTAssertEqual(repositories.count, 7, @"Incorrect repositories count");
         
-        RepositoryRecord *repositoryRecord = [repositories objectAtIndex:3];
+        RepositoryRecord *repositoryRecord = [repositories objectAtIndex:2];
         XCTAssertTrue([repositoryRecord isKindOfClass:[RepositoryRecord class]], @"Invalid reposirtory instance type.");
         
         XCTAssertTrue([repositoryRecord.name isEqualToString:@"GitHubBrowser"], @"");

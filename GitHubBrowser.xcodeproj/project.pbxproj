@@ -11,7 +11,7 @@
 		7411E7EF1EA5031F001D28FF /* AuthCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7E91EA5031F001D28FF /* AuthCredentials.m */; };
 		7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */; };
 		7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */; };
-		7411E7FE1EA50C5F001D28FF /* UIAlertController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */; };
+		7411E7FE1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7FD1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m */; };
 		7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */; };
 		7432BA001EA6280C0036B530 /* GitHubAuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432B9FE1EA6280C0036B530 /* GitHubAuthenticationService.m */; };
 		7432BA031EA628340036B530 /* GitHubUserProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA021EA628340036B530 /* GitHubUserProfileService.m */; };
@@ -22,6 +22,8 @@
 		7432BA131EA63B720036B530 /* UserProfileRecord+GitHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA121EA63B720036B530 /* UserProfileRecord+GitHub.m */; };
 		7432BA191EA63CE30036B530 /* GHUserProfileTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */; };
 		7432BA1B1EA640100036B530 /* github_repos_fetch_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */; };
+		7432BA1E1EA645B80036B530 /* RepositoryRecord+GitHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA1D1EA645B80036B530 /* RepositoryRecord+GitHub.m */; };
+		7432BA221EA659520036B530 /* UIAlertController+ProfileAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA211EA659520036B530 /* UIAlertController+ProfileAlerts.m */; };
 		746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10A1EA558AF0040C8E3 /* GHTestCase.m */; };
 		746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */; };
 		746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */; };
@@ -90,8 +92,8 @@
 		7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCredentialsValidator.m; sourceTree = "<group>"; };
 		7411E7F81EA50AC2001D28FF /* UITextField+ErrorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ErrorState.h"; sourceTree = "<group>"; };
 		7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ErrorState.m"; sourceTree = "<group>"; };
-		7411E7FC1EA50C5F001D28FF /* UIAlertController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alerts.h"; sourceTree = "<group>"; };
-		7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alerts.m"; sourceTree = "<group>"; };
+		7411E7FC1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+AuthenticationAlerts.h"; sourceTree = "<group>"; };
+		7411E7FD1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+AuthenticationAlerts.m"; sourceTree = "<group>"; };
 		7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_bad_credentials_response_401.json; sourceTree = "<group>"; };
 		7432B9FD1EA6280C0036B530 /* GitHubAuthenticationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubAuthenticationService.h; sourceTree = "<group>"; };
 		7432B9FE1EA6280C0036B530 /* GitHubAuthenticationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAuthenticationService.m; sourceTree = "<group>"; };
@@ -106,6 +108,10 @@
 		7432BA171EA63CE30036B530 /* GHUserProfileTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUserProfileTestCase.h; sourceTree = "<group>"; };
 		7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUserProfileTestCase.m; sourceTree = "<group>"; };
 		7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_repos_fetch_response_200.json; sourceTree = "<group>"; };
+		7432BA1C1EA645B80036B530 /* RepositoryRecord+GitHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RepositoryRecord+GitHub.h"; sourceTree = "<group>"; };
+		7432BA1D1EA645B80036B530 /* RepositoryRecord+GitHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RepositoryRecord+GitHub.m"; sourceTree = "<group>"; };
+		7432BA201EA659520036B530 /* UIAlertController+ProfileAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ProfileAlerts.h"; sourceTree = "<group>"; };
+		7432BA211EA659520036B530 /* UIAlertController+ProfileAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ProfileAlerts.m"; sourceTree = "<group>"; };
 		746FC1091EA558AF0040C8E3 /* GHTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTestCase.h; sourceTree = "<group>"; };
 		746FC10A1EA558AF0040C8E3 /* GHTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTestCase.m; sourceTree = "<group>"; };
 		746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIAuthenticationTests.m; sourceTree = "<group>"; };
@@ -259,8 +265,8 @@
 		7411E7FB1EA50C2D001D28FF /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
-				7411E7FC1EA50C5F001D28FF /* UIAlertController+Alerts.h */,
-				7411E7FD1EA50C5F001D28FF /* UIAlertController+Alerts.m */,
+				7411E7FC1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.h */,
+				7411E7FD1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 			children = (
 				7432BA111EA63B720036B530 /* UserProfileRecord+GitHub.h */,
 				7432BA121EA63B720036B530 /* UserProfileRecord+GitHub.m */,
+				7432BA1C1EA645B80036B530 /* RepositoryRecord+GitHub.h */,
+				7432BA1D1EA645B80036B530 /* RepositoryRecord+GitHub.m */,
 			);
 			path = Migrations;
 			sourceTree = "<group>";
@@ -320,6 +328,15 @@
 				7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */,
 			);
 			path = DefaultTestCase;
+			sourceTree = "<group>";
+		};
+		7432BA1F1EA658FA0036B530 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA201EA659520036B530 /* UIAlertController+ProfileAlerts.h */,
+				7432BA211EA659520036B530 /* UIAlertController+ProfileAlerts.m */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		746FC1001EA558310040C8E3 /* Interactors */ = {
@@ -472,6 +489,7 @@
 		74835C331EA26DC300BCC2B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7432BA1F1EA658FA0036B530 /* Alerts */,
 				74835C8F1EA27F2B00BCC2B5 /* Cells */,
 				74A7B0E31EA377EE008B61BE /* ContentProviders */,
 				74835C901EA27F2B00BCC2B5 /* ProfileHeader */,
@@ -1118,6 +1136,7 @@
 				74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */,
 				74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */,
 				74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */,
+				7432BA221EA659520036B530 /* UIAlertController+ProfileAlerts.m in Sources */,
 				74C16BAC1E9FF92500A93A44 /* main.m in Sources */,
 				74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */,
 				74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */,
@@ -1136,6 +1155,7 @@
 				74835C651EA26E9800BCC2B5 /* SearchModuleConfigurator.m in Sources */,
 				74835C3A1EA26DC300BCC2B5 /* ProfileViewController.m in Sources */,
 				74A7B12F1EA4CC4F008B61BE /* NoDataContentProvider.m in Sources */,
+				7432BA1E1EA645B80036B530 /* RepositoryRecord+GitHub.m in Sources */,
 				74835C391EA26DC300BCC2B5 /* ProfileRouter.m in Sources */,
 				74A7B12C1EA4CB9D008B61BE /* InfoMessageTableViewCell.m in Sources */,
 				7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */,
@@ -1145,7 +1165,7 @@
 				74A7B1291EA4C370008B61BE /* MediaContentService.m in Sources */,
 				74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */,
 				74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */,
-				7411E7FE1EA50C5F001D28FF /* UIAlertController+Alerts.m in Sources */,
+				7411E7FE1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m in Sources */,
 				74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

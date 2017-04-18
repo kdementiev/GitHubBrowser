@@ -104,10 +104,7 @@
         }
         
         self.avatarCancelationToken = nil;
-        
         return nil;
-        
-        
     } cancellationToken:_avatarCancelationToken.token];
 }
 

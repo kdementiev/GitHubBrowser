@@ -30,11 +30,15 @@
 }
 
 - (void)userWantsToSignOut {
-    [self.interactor performSignOut];
+    [self.view showSignOutAlert];
 }
 
 - (void)userWantsToSignIn {
     [self.router navigateToAuthorizationScreenWithDelegate:self];
+}
+
+- (void)userDidAcceptSignOut {
+    [self.interactor performSignOut];
 }
 
 - (void)userWantsLatestData {
@@ -44,7 +48,12 @@
 #pragma mark - Interactor Layer Feedback -
 
 - (void)userAuthorized {
+    
+    // Request No Content state to our view.
     [self.view showNoContentState];
+    
+    // Show activity
+    [self.view showActivity];
 }
 
 - (void)userNotAuthorized {

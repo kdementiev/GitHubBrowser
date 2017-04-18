@@ -10,10 +10,10 @@
 
 typedef void(^UIAlertControllerTwoFactorCodeCallback)(NSString *code);
 
-@interface UIAlertController (Alerts)
+@interface UIAlertController (AuthenticationAlerts)
 
 + (instancetype)twoFactorAlertWithDoneAction:(UIAlertControllerTwoFactorCodeCallback)callback;
 
-+ (instancetype)errorAlertWithMessage:(NSString *)message;
++ (instancetype)authErrorAlertWithMessage:(NSString *)message;
 
 @end

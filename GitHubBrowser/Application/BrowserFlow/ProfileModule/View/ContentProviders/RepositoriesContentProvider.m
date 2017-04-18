@@ -13,7 +13,9 @@
 #import "RepositoryRecord.h"
 
 @interface RepositoriesContentProvider ()
+
 @property (nonatomic) NSArray<RepositoryRecord *> *repositories;
+
 @end
 
 
@@ -42,7 +44,8 @@
     RepositoryTableViewCell *cell = [RepositoryTableViewCell reusableCell:tableView];
     
     [cell setRepositoryName:repository.name];
-    [cell setRepositoryDescription:repository.desc];
+    [cell setRepositoryDescription:repository.desc?:NSLocalizedString(@"No description.", nil)];
+    [cell setColorPosition: indexPath.row / (CGFloat)_repositories.count];
     
     return cell;
 }

@@ -16,6 +16,11 @@
 #import "UnauthorizedContentProvider.h"
 #import "NoDataContentProvider.h"
 
+#import "UserProfileRecord.h"
+
+// Alerts
+#import "UIAlertController+ProfileAlerts.h"
+
 /*!
  *
  */
@@ -23,6 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet UserProfileHeaderView *userProfileHeaderView;
 @property (nonatomic) id<UITableViewDataSource> contentProvider;
+
+@property (weak, nonatomic) IBOutlet UIView *footerView;
 
 @end
 
@@ -42,13 +49,36 @@
 }
 
 - (void)setContentProvider:(id<UITableViewDataSource>)contentProvider {
-    _contentProvider = contentProvider;
-    self.tableView.dataSource = contentProvider;
     
-    [self.tableView reloadData];
+    // Set and save current content provider.
+    self.tableView.dataSource = _contentProvider = contentProvider;
+    
+    //
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     
     //
     [self.refreshControl endRefreshing];
+}
+
+- (void)gh_activateUnauthorizedState {
+    
+    // Disable scroll.
+    self.tableView.scrollEnabled = NO;
+    
+    // Hide footer with data.
+    self.footerView.hidden = YES;
+    
+    // Reset profile view state.
+    [self.userProfileHeaderView resetState];
+}
+
+- (void)gh_activateAuthorizedState {
+    
+    // Disable scroll.
+    self.tableView.scrollEnabled = YES;
+    
+    // Hide footer with data.
+    self.footerView.hidden = NO;
 }
 
 #pragma mark - Appearance Helpers - 
@@ -62,21 +92,30 @@
     self.tableView.contentInset = UIEdgeInsetsMake(topInset, 0, bottomInset, 0);
     
     // Allow self-sizing for cells.
-    self.tableView.estimatedRowHeight = 86;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 82;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
-
+ 
 #pragma - Presenter Layer Feedback -
+
+- (void)showActivity {
+    [self.refreshControl beginRefreshing];
+}
 
 - (void)showUnauthorizedState {
     // TODO: Create unauthorized content provider
     self.contentProvider = [UnauthorizedContentProvider contentProviderWithDelegate:self];
-    self.tableView.bounces = NO;
+    
+    // Move to unauthorized state
+    [self gh_activateUnauthorizedState];
 }
 
 - (void)showNoContentState {
     // TODO: Create no data content provider
     self.contentProvider = [NoDataContentProvider new];
+    
+    // Move to authorized state.
+    [self gh_activateAuthorizedState];
 }
 
 - (void)showUserAvatar:(UIImage *)avatar {
@@ -90,6 +129,17 @@
 
 - (void)showUserProfile:(UserProfileRecord *)userProfile {
     // TODO: Apply user profile to UserProfileHeaderView
+    
+    [self.userProfileHeaderView setUserName:userProfile.userName];
+}
+
+- (void)showSignOutAlert {
+    
+    UIAlertController *alertController = [UIAlertController signOutAlertWithResponse:^{
+        [self.output userDidAcceptSignOut];
+    }];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - User Input -
@@ -98,7 +148,7 @@
     [self.output userWantsLatestData];
 }
 
-- (IBAction)onLogoutAction:(id)sender {
+- (IBAction)onSignOutAction:(id)sender {
     [self.output userWantsToSignOut];
 }
 

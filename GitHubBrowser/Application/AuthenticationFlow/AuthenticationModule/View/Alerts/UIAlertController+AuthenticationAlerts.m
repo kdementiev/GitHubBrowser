@@ -6,10 +6,10 @@
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import "UIAlertController+Alerts.h"
+#import "UIAlertController+AuthenticationAlerts.h"
 
 
-@implementation UIAlertController (Alerts)
+@implementation UIAlertController (AuthenticationAlerts)
 
 + (instancetype)twoFactorAlertWithDoneAction:(UIAlertControllerTwoFactorCodeCallback)callback {
     
@@ -40,7 +40,7 @@
     return alertController;
 }
 
-+ (instancetype)errorAlertWithMessage:(NSString *)message {
++ (instancetype)authErrorAlertWithMessage:(NSString *)message {
     
     NSString *title = NSLocalizedString(@"Authentication Error", nil);
     

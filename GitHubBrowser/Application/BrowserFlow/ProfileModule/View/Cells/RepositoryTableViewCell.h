@@ -12,5 +12,6 @@
 
 - (void)setRepositoryName:(NSString *)name;
 - (void)setRepositoryDescription:(NSString *)description;
+- (void)setColorPosition:(CGFloat)position;
 
 @end

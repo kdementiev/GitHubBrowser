@@ -10,6 +10,9 @@
 
 @interface UserProfileHeaderView : UIView
 
+- (void)setUserName:(NSString *)userName;
 - (void)setUserAvararImage:(UIImage *)image;
+
+- (void)resetState;
 
 @end

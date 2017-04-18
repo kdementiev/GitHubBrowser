@@ -8,10 +8,16 @@
 
 #import "RepositoryTableViewCell.h"
 
+#import <UIColorInterpolation/UIColor+Interpolation.h>
+
+
 @interface RepositoryTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+@property (nonatomic) IBInspectable UIColor *topColor;
+@property (nonatomic) IBInspectable UIColor *bottomColor;
 
 @end
 
@@ -23,6 +29,10 @@
 
 - (void)setRepositoryDescription:(NSString *)description {
     self.descriptionLabel.text = description;
+}
+
+- (void)setColorPosition:(CGFloat)position {
+    self.contentView.backgroundColor = [_topColor colorByInterpolatingWith:_bottomColor factor:position];
 }
 
 @end

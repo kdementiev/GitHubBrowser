@@ -34,34 +34,6 @@
     [super tearDown];
 }
 
-- (void)testCredentialsMapping {
-    
-    XCTestExpectation *requestExpectation = [self expectationWithDescription:@"Request expectation."];
-    
-    [self simulateResponseWithJSON:@""
-                             route:nil
-                            status:200
-                           headers:nil
-                           request:^(NSString *route, NSDictionary *headers, NSDictionary *body) {
-                               
-                               NSString *authValue = [headers valueForKey:@"Authorization"];
-                               XCTAssertNotNil(authValue, @"No required field: Authorization");
-                               XCTAssertTrue([authValue isEqualToString:@"Basic dGVzdDp0ZXN0"], @"Invalid Authorization header content.");
-                               
-                               NSString *otpValue = [headers valueForKey:@"X-GitHub-OTP"];
-                               XCTAssertNotNil(otpValue, @"No required field: X-GitHub-OTP");
-                               XCTAssertTrue([otpValue isEqualToString:self.credentials.otpCode], @"Invalid X-GitHub-OTP header content.");
-                               
-                               [requestExpectation fulfill];
-                           }];
-    
-    
-    [_authService loginWithCredentials:_credentials
-                              response:^(NSString * _Nullable authToken, AuthenticationServiceResponseError error) {  
-                              }];
-    
-    [self waitForExpectations];
-}
 
 - (void)testLoginDefaultFlow {
     
@@ -72,6 +44,7 @@
     [_authService loginWithCredentials:_credentials
                               response:^(NSString * _Nullable authToken, AuthenticationServiceResponseError error) {
                                   
+                                  //
                                   XCTAssertNotNil(authToken, @"authToken must not be nil.");
                                   XCTAssertEqual(error, AuthenticationServiceResponseErrorNone, @"Invalid response state.");
                                   
@@ -89,7 +62,18 @@
                              route:@"authorizations/clients"
                             status:401
                            headers:@{@"X-GitHub-OTP": @"required; sms"}
-                           request:nil];
+                           request:^(NSString *route, NSDictionary *headers, NSDictionary *body) {
+                               
+                               // Test credentials
+                               NSString *authValue = [headers valueForKey:@"Authorization"];
+                               XCTAssertNotNil(authValue, @"No required field: Authorization");
+                               XCTAssertTrue([authValue isEqualToString:@"Basic dGVzdDp0ZXN0"], @"Invalid Authorization header content.");
+                               
+                               NSString *otpValue = [headers valueForKey:@"X-GitHub-OTP"];
+                               XCTAssertNotNil(otpValue, @"No required field: X-GitHub-OTP");
+                               XCTAssertTrue([otpValue isEqualToString:self.credentials.otpCode], @"Invalid X-GitHub-OTP header content.");
+                               
+                           }];
     
     XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
     

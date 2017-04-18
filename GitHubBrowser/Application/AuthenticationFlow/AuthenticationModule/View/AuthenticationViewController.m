@@ -9,7 +9,7 @@
 #import "AuthenticationViewController.h"
 
 #import "UITextField+ErrorState.h"
-#import "UIAlertController+Alerts.h"
+#import "UIAlertController+AuthenticationAlerts.h"
 
 @interface AuthenticationViewController () <UITextFieldDelegate>
 
@@ -171,7 +171,7 @@
 }
 
 - (void)gh_showErrorAlertWithMessage:(NSString *)message {
-    UIAlertController *alertController = [UIAlertController errorAlertWithMessage:message];
+    UIAlertController *alertController = [UIAlertController authErrorAlertWithMessage:message];
     [self presentViewController:alertController animated:YES completion:nil];
 }
 

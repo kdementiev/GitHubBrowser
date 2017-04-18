@@ -9,14 +9,16 @@
 #import "GitHubUserProfileService.h"
 
 #import "GitHubAPINetworking.h"
+
 #import "GHUserEntity.h"
+#import "GHRepositoryEntity.h"
 
 #import "UserProfileRecord+GitHub.h"
-
+#import "RepositoryRecord+GitHub.h"
 
 // Routes
 NSString * const GitHubAPIUserProfileRoute = @"user";
-NSString * const GitHubAPIUserRepositoriesRoute = @"user/repos/";
+NSString * const GitHubAPIUserRepositoriesRoute = @"user/repos";
 
 // Query params
 NSString * const GitHubAPIAccessTokenQueryParamName = @"access_token";
@@ -72,10 +74,39 @@ NSString * const GitHubAPIAccessTokenQueryParamName = @"access_token";
     
     NSAssert(callback != nil, @"You must provide response callback.");
     
+    [gitHubNetworking performGET:GitHubAPIUserRepositoriesRoute
+                          params:self.requiredFieldsDict
+                           class:[GHRepositoryEntity class]
+                        response:^(NSError *error, id responseObject, NSDictionary *headers) {
+                            
+                            NSMutableArray<RepositoryRecord *> *repositories;
+                            
+                            if (responseObject) {
+                                repositories = [NSMutableArray array];
+                                
+                                NSArray<GHRepositoryEntity *> *gitHubRepositories = responseObject;
+                                [gitHubRepositories enumerateObjectsUsingBlock:^(GHRepositoryEntity * _Nonnull repository, NSUInteger idx, BOOL * _Nonnull stop) {
+                                    RepositoryRecord *repositoryRecord = [RepositoryRecord repositoryRecordWithGitHubRepository:repository];
+                                    [repositories addObject:repositoryRecord];
+                                }];
+                            }
+                            
+                            callback([repositories copy]);
+                        }];
+    
 }
 
-//- (NSString *)gh_routeWithToken:(NSString *)route {
-////    return [NSString stringWithFormat:@"?authToken=%@", GitHubAPIUserProfileRoute];
-//}
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

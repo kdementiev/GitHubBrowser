@@ -20,6 +20,7 @@
 
 - (void)userWantsToSignIn;
 - (void)userWantsToSignOut;
+- (void)userDidAcceptSignOut;
 
 - (void)userWantsLatestData;
 
@@ -34,8 +35,12 @@
 - (void)showUnauthorizedState;
 - (void)showNoContentState;
 
+- (void)showActivity;
+
 - (void)showUserAvatar:(UIImage *)avatar;
 - (void)showUserProfile:(UserProfileRecord *)userProfile;
 - (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories;
+
+- (void)showSignOutAlert;
 
 @end

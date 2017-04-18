@@ -37,7 +37,7 @@
         if (t.isCancelled) {
             [operation cancel];
         }
-        return nil;
+        return t;
     }];
 }
 

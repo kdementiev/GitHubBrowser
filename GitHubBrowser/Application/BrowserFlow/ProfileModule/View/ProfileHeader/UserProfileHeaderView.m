@@ -23,7 +23,7 @@
     _avatarImageView.image = image;
     
     [UIView animateKeyframesWithDuration:1.0f
-                                   delay:1.0f
+                                   delay:0.2f
                                  options:UIViewKeyframeAnimationOptionCalculationModeCubic
                               animations:^{
                                   
@@ -38,6 +38,15 @@
                               }
                               completion:nil];
     
+}
+
+- (void)setUserName:(NSString *)userName {
+    _userNameLabel.text = userName;
+}
+
+- (void)resetState {
+    [self setUserName:nil];
+    [self setUserAvararImage: [UIImage imageNamed:@"gh-no-avatar"] ];
 }
 
 @end

@@ -15,7 +15,7 @@
 
 
 NSInteger const GHTestCaseSuccessResponseCode = 200;
-NSTimeInterval const GHTestCaseExpectationsTimeout = 2.0;
+NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
 
 @implementation GHTestCase
 
