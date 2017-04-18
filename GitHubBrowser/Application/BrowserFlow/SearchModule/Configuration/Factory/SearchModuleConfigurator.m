@@ -9,11 +9,13 @@
 
 #import "SearchModuleConfigurator.h"
 
-
 #import "SearchInteractor.h"
 #import "SearchPresenter.h"
 #import "SearchRouter.h"
 
+// Services
+#import "GitHubSearchService.h"
+#import "LocalStorageService.h"
 
 @implementation SearchModuleContainer
 @end
@@ -34,7 +36,10 @@
     presenter.router = router;
 
     view.output = presenter;
+    
     interactor.output = presenter;
+    interactor.historyLocalStorage = [LocalStorageService new];
+    interactor.searchNetworking = [GitHubSearchService new];
 
     [router prepareWithViewController:view];
     

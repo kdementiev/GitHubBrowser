@@ -8,9 +8,11 @@
 
 #import "ProfileInteractor.h"
 
+#import "AsyncOperation.h"
+
 @interface ProfileInteractor ()
 
-@property (nonatomic) BFCancellationTokenSource *avatarCancelationToken;
+@property (nonatomic) AsyncOperation *avatarFetchingOperation;
 
 @end
 
@@ -53,6 +55,9 @@
     
     // Notify with sign-out finished.
     [self.output userNotAuthorized];
+    
+    // Cancel avatar loading.
+    [_avatarFetchingOperation cancelOperation];
 }
 
 - (void)gh_fetchUserProfile {
@@ -90,22 +95,18 @@
 
 - (void)gh_fetchUserAvatar:(NSString *)link {
     
-    if (_avatarCancelationToken) {
-        [_avatarCancelationToken cancel];
-    }
+    [_avatarFetchingOperation cancelOperation];
+
+    __weak typeof(self) _self = self;
+    _avatarFetchingOperation = [self.mediaProvider fetchImageMediaFromLink:link
+                                                                  response:^(UIImage * _Nullable image) {
+                                                                      if (image) {
+                                                                          [_self.output userAvatarReceived:image];
+                                                                      }
+                                                                      
+                                                                      _avatarFetchingOperation = nil;
+                                                                  }];
     
-    self.avatarCancelationToken = [BFCancellationTokenSource cancellationTokenSource];
-    
-    BFTask<UIImage *> *imageTask = [self.mediaProvider fetchImageMediaFromLink:link];
-    [imageTask continueWithBlock:^id _Nullable(BFTask<UIImage *> * _Nonnull t) {
-        
-        if (t.result) {
-            [self.output userAvatarReceived:t.result];
-        }
-        
-        self.avatarCancelationToken = nil;
-        return nil;
-    } cancellationToken:_avatarCancelationToken.token];
 }
 
 - (void)gh_notifyWithUserNotAuthorized {

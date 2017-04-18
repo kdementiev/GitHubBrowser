@@ -10,8 +10,6 @@ target 'GitHubBrowser' do
   pod 'AFNetworking'
   pod 'AFNetworkActivityLogger', :git => 'https://github.com/AFNetworking/AFNetworkActivityLogger.git', :branch => '3_0_0'
   
-  pod 'Bolts'
-  
   pod 'JSONModel'
   pod 'EasySegues'
   pod 'SAMKeychain'

@@ -10,6 +10,13 @@
 
 #import "SearchInteractorProtocol.h"
 
+// Services that used by interactor.
+#import "SearchNetworkingProtocol.h"
+#import "SearchHistoryLocalStorageProtocol.h"
+
 @interface SearchInteractor : NSObject<SearchInteractorProtocol>
+
+@property (nonatomic) id<SearchNetworkingProtocol> searchNetworking;
+@property (nonatomic) id<SearchHistoryLocalStorageProtocol> historyLocalStorage;
 
 @end

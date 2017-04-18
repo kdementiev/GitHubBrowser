@@ -6,12 +6,18 @@
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <Bolts/Bolts.h>
+#import "AsyncOperation.h"
+
+@class UIImage;
+
+typedef void(^MediaContentServiceImageResponseCallback)(UIImage * _Nullable image);
 
 
 @protocol MediaContentServiceProtocol <NSObject>
 
-- (nonnull BFTask<UIImage *> *)fetchImageMediaFromLink:(nonnull NSString*)link;
+/*!
+ *  @disscussion Offered method provide ability for image download, cancelation and caching.
+ */
+- (nonnull AsyncOperation *)fetchImageMediaFromLink:(nonnull NSString*)link response:(nonnull MediaContentServiceImageResponseCallback)callback;
 
 @end

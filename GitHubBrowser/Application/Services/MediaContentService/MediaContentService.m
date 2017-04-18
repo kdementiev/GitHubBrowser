@@ -9,36 +9,27 @@
 #import "MediaContentService.h"
 
 #import <SDWebImage/SDWebImageManager.h>
+#import "MediaAsyncOperationAdapted.h"
+
 
 @implementation MediaContentService
 
-- (nonnull BFTask<UIImage *> *)fetchImageMediaFromLink:(nonnull NSString*)link {
+- (nonnull AsyncOperation *)fetchImageMediaFromLink:(nonnull NSString*)link response:(nonnull MediaContentServiceImageResponseCallback)callback {
     
     NSAssert(link != nil, @"Link must not be nil. Please provide correct link.");
+
     
-    BFTaskCompletionSource<UIImage *> *taskComplition = [BFTaskCompletionSource taskCompletionSource];
-    
-    SDInternalCompletionBlock loadCallback = ^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
-        
-        if (image) {
-            [taskComplition setResult:image];
-        } else {
-            [taskComplition setError:error];
-        }
+    SDInternalCompletionBlock completeBlock = ^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+        callback(image);
     };
     
     NSURL *imageURL = [NSURL URLWithString:link];
     id<SDWebImageOperation> operation = [[SDWebImageManager sharedManager] loadImageWithURL:imageURL
                                                                                     options:SDWebImageHighPriority
                                                                                    progress:nil
-                                                                                  completed:loadCallback];
+                                                                                  completed:completeBlock];
     
-    return [taskComplition.task continueWithBlock:^id _Nullable(BFTask<UIImage *> * _Nonnull t) {
-        if (t.isCancelled) {
-            [operation cancel];
-        }
-        return t;
-    }];
+    return [MediaAsyncOperationAdapted asyncOperationWithMediaOperation:operation];
 }
 
 @end

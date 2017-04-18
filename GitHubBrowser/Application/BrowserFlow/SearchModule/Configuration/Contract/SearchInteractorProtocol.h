@@ -8,9 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@class RepositoryRecord;
+
 @protocol SearchInteractorDelegate <NSObject>
+
+- (void)searchHistoryFetched:(NSArray<NSString *> *)historyList;
+- (void)searchResultsReceived:(NSArray<RepositoryRecord *> *)repositories;
+
 @end
 
 @protocol SearchInteractorProtocol <NSObject>
 @property (nonatomic, weak) id<SearchInteractorDelegate> output;
+
+- (void)fetchSearchHistory;
+
+- (void)searchRepositoriesWithText:(NSString *)text;
+- (void)cancelSearch;
+
 @end
