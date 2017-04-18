@@ -11,7 +11,6 @@
 @interface UserProfileRecord : NSObject
 
 @property (nonatomic) NSString *userName;
-
 @property (nonatomic) NSString *avatarUrl;
 
 @property (nonatomic) NSInteger publicRepositoriesCount;

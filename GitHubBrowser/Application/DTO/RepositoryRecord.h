@@ -13,4 +13,7 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *desc;
 
+@property (nonatomic) NSString *language;
+@property (nonatomic) NSInteger starsCount;
+
 @end

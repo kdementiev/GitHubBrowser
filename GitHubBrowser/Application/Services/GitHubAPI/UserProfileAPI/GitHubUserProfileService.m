@@ -11,6 +11,9 @@
 #import "GitHubAPINetworking.h"
 #import "GHUserEntity.h"
 
+#import "UserProfileRecord+GitHub.h"
+
+
 // Routes
 NSString * const GitHubAPIUserProfileRoute = @"user";
 NSString * const GitHubAPIUserRepositoriesRoute = @"user/repos/";
@@ -58,13 +61,11 @@ NSString * const GitHubAPIAccessTokenQueryParamName = @"access_token";
                             
                             if (responseObject) {
                                 GHUserEntity *userEntity = responseObject;
-                                
-                                
+                                userProfile = [UserProfileRecord userProfileRecordWithGitHubUser:userEntity];
                             }
                             
                             callback(userProfile);
                         }];
-    
 }
 
 - (void)fetchUserRepositories:(nonnull UserProfileNetworkingRepositoriesResponseCallback)callback {

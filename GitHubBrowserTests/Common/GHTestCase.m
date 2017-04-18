@@ -15,7 +15,7 @@
 
 
 NSInteger const GHTestCaseSuccessResponseCode = 200;
-NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
+NSTimeInterval const GHTestCaseExpectationsTimeout = 2.0;
 
 @implementation GHTestCase
 
@@ -40,9 +40,13 @@ NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
         
         if (callback) {
             
-            NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:request.OHHTTPStubs_HTTPBody
-                                                                     options:kNilOptions
-                                                                       error:nil];
+            NSDictionary* jsonDict;
+            
+            if (request.OHHTTPStubs_HTTPBody) {
+                jsonDict = [NSJSONSerialization JSONObjectWithData:request.OHHTTPStubs_HTTPBody
+                                                           options:kNilOptions
+                                                             error:nil];
+            }
             
             callback(request.URL.absoluteString, request.allHTTPHeaderFields, jsonDict);
         }

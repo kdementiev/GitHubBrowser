@@ -6,31 +6,44 @@
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import "GHTestCase.h"
+#import "GHUserProfileTestCase.h"
 
-#import "GitHubUserProfileService.h"
-
-
-@interface GitHubAPIUserProfileFetchingTests : GHTestCase
-
-@property (nonatomic) GitHubUserProfileService *userProfileService;
-
+@interface GitHubAPIUserProfileFetchingTests : GHUserProfileTestCase
+@property (nonatomic) NSString *token;
 @end
 
 @implementation GitHubAPIUserProfileFetchingTests
 
 - (void)setUp {
     [super setUp];
-    
-    
-    self.userProfileService = [GitHubUserProfileService new];
-    
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.token = @"TestToken";
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+}
+
+- (void)testTokenIntegration {
+    
+    [self.userProfileService prepareWithUserToken:_token];
+    
+    XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Request expectation."];
+    [self simulateResponseWithJSON:@""
+                             route:nil
+                            status:200
+                           headers:nil
+                           request:^(NSString *route, NSDictionary *headers, NSDictionary *body) {
+                               
+                               NSString *tokenQuery = [NSString stringWithFormat:@"access_token=%@", _token];
+                               XCTAssertTrue([route containsString:tokenQuery], @"No token in request url found.");
+                               
+                               [responseExpectation fulfill];
+                           }];
+    
+    [self.userProfileService fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
+    }];
+    
+    [self waitForExpectations];
 }
 
 - (void)testUserProfileFetchingSuccess {
@@ -38,7 +51,7 @@
     [self simulateSuccessResponseWithJSON:@"github_profile_fetch_response_200.json"];
     
     XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
-    [_userProfileService fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
+    [self.userProfileService fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
         
         XCTAssertNotNil(userProfile, @"Invalid response instance.");
         XCTAssertTrue([userProfile isKindOfClass:[UserProfileRecord class]], @"Inavalid response instance type.");
@@ -56,24 +69,22 @@
     
     
     [self waitForExpectations];
-    
 }
 
 - (void)testUserProfileFetchingUnauthorized {
     
-    [self simulateResponseWithJSON:@"github_profile_fetch_response_401.json" route:nil status:401];
+    [self simulateResponseWithJSON:@"github_fetch_response_401.json" route:nil status:401];
     
     XCTestExpectation *responseExpectation = [self expectationWithDescription:@"Response expectation."];
-    [_userProfileService fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
+    [self.userProfileService fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
 
         XCTAssertNil(userProfile, @"Response object must be nil.");
-        
+    
         [responseExpectation fulfill];
     }];
     
     
     [self waitForExpectations];
-    
 }
 
 @end

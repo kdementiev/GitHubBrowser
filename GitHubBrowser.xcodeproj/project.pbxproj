@@ -18,7 +18,10 @@
 		7432BA081EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */; };
 		7432BA0A1EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */; };
 		7432BA0D1EA636880036B530 /* github_profile_fetch_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA0C1EA636880036B530 /* github_profile_fetch_response_200.json */; };
-		7432BA0F1EA637F30036B530 /* github_profile_fetch_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA0E1EA637F30036B530 /* github_profile_fetch_response_401.json */; };
+		7432BA0F1EA637F30036B530 /* github_fetch_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA0E1EA637F30036B530 /* github_fetch_response_401.json */; };
+		7432BA131EA63B720036B530 /* UserProfileRecord+GitHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA121EA63B720036B530 /* UserProfileRecord+GitHub.m */; };
+		7432BA191EA63CE30036B530 /* GHUserProfileTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */; };
+		7432BA1B1EA640100036B530 /* github_repos_fetch_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */; };
 		746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10A1EA558AF0040C8E3 /* GHTestCase.m */; };
 		746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */; };
 		746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */; };
@@ -97,7 +100,12 @@
 		7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileFetchingTests.m; sourceTree = "<group>"; };
 		7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileRepositoriesTests.m; sourceTree = "<group>"; };
 		7432BA0C1EA636880036B530 /* github_profile_fetch_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_profile_fetch_response_200.json; sourceTree = "<group>"; };
-		7432BA0E1EA637F30036B530 /* github_profile_fetch_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_profile_fetch_response_401.json; sourceTree = "<group>"; };
+		7432BA0E1EA637F30036B530 /* github_fetch_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_fetch_response_401.json; sourceTree = "<group>"; };
+		7432BA111EA63B720036B530 /* UserProfileRecord+GitHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserProfileRecord+GitHub.h"; sourceTree = "<group>"; };
+		7432BA121EA63B720036B530 /* UserProfileRecord+GitHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserProfileRecord+GitHub.m"; sourceTree = "<group>"; };
+		7432BA171EA63CE30036B530 /* GHUserProfileTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUserProfileTestCase.h; sourceTree = "<group>"; };
+		7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUserProfileTestCase.m; sourceTree = "<group>"; };
+		7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_repos_fetch_response_200.json; sourceTree = "<group>"; };
 		746FC1091EA558AF0040C8E3 /* GHTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTestCase.h; sourceTree = "<group>"; };
 		746FC10A1EA558AF0040C8E3 /* GHTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTestCase.m; sourceTree = "<group>"; };
 		746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIAuthenticationTests.m; sourceTree = "<group>"; };
@@ -278,6 +286,7 @@
 		7432BA061EA6356F0036B530 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				7432BA161EA63CCB0036B530 /* DefaultTestCase */,
 				7432BA0B1EA635CD0036B530 /* responses */,
 				7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */,
 				7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */,
@@ -289,9 +298,28 @@
 			isa = PBXGroup;
 			children = (
 				7432BA0C1EA636880036B530 /* github_profile_fetch_response_200.json */,
-				7432BA0E1EA637F30036B530 /* github_profile_fetch_response_401.json */,
+				7432BA0E1EA637F30036B530 /* github_fetch_response_401.json */,
+				7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */,
 			);
 			path = responses;
+			sourceTree = "<group>";
+		};
+		7432BA101EA63B460036B530 /* Migrations */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA111EA63B720036B530 /* UserProfileRecord+GitHub.h */,
+				7432BA121EA63B720036B530 /* UserProfileRecord+GitHub.m */,
+			);
+			path = Migrations;
+			sourceTree = "<group>";
+		};
+		7432BA161EA63CCB0036B530 /* DefaultTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA171EA63CE30036B530 /* GHUserProfileTestCase.h */,
+				7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */,
+			);
+			path = DefaultTestCase;
 			sourceTree = "<group>";
 		};
 		746FC1001EA558310040C8E3 /* Interactors */ = {
@@ -656,6 +684,7 @@
 		74A7B0FB1EA3918B008B61BE /* GitHubAPI */ = {
 			isa = PBXGroup;
 			children = (
+				7432BA101EA63B460036B530 /* Migrations */,
 				7432B9FC1EA6280C0036B530 /* AuthenticationAPI */,
 				7432B9FF1EA6280C0036B530 /* UserProfileAPI */,
 				74A7B1341EA4E02A008B61BE /* Contract */,
@@ -971,7 +1000,8 @@
 			files = (
 				746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */,
 				7432BA0D1EA636880036B530 /* github_profile_fetch_response_200.json in Resources */,
-				7432BA0F1EA637F30036B530 /* github_profile_fetch_response_401.json in Resources */,
+				7432BA0F1EA637F30036B530 /* github_fetch_response_401.json in Resources */,
+				7432BA1B1EA640100036B530 /* github_repos_fetch_response_200.json in Resources */,
 				746FC1121EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json in Resources */,
 				7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */,
 			);
@@ -1111,6 +1141,7 @@
 				7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */,
 				74835C691EA26E9800BCC2B5 /* SearchViewController.m in Sources */,
 				74A7B1101EA3F18A008B61BE /* GHUserEntity.m in Sources */,
+				7432BA131EA63B720036B530 /* UserProfileRecord+GitHub.m in Sources */,
 				74A7B1291EA4C370008B61BE /* MediaContentService.m in Sources */,
 				74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */,
 				74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */,
@@ -1124,6 +1155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */,
+				7432BA191EA63CE30036B530 /* GHUserProfileTestCase.m in Sources */,
 				7432BA081EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m in Sources */,
 				7432BA0A1EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m in Sources */,
 				746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */,
