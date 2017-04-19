@@ -11,7 +11,16 @@
 @implementation UITableViewCell (Usability)
 
 + (instancetype)reusableCell:(UITableView *)tableView {
-    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    
+    NSString *cellIdentifier = NSStringFromClass([self class]);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!cell) {
+        [[self class] registerCell:tableView];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    }
+    
+    return cell;
 }
 
 + (void)registerCell:(UITableView *)tableView {

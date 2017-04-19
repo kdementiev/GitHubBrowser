@@ -6,7 +6,12 @@
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "GHUserEntity.h"
+
+
+@protocol GHRepositoryEntity
+@end
+
 
 @interface GHRepositoryEntity : JSONModel
 
@@ -15,5 +20,7 @@
 
 @property (nonatomic) NSString *language;
 @property (nonatomic) NSInteger stargazersCount;
+
+@property (nonatomic) GHUserEntity *owner;
 
 @end

@@ -13,6 +13,8 @@
 + (instancetype)repositoryRecordWithGitHubRepository:(GHRepositoryEntity *)repositoryEntity {
     RepositoryRecord *repository = [RepositoryRecord new];
     
+    repository.ownerName = repositoryEntity.owner.login;
+    
     repository.name = repositoryEntity.name;
     repository.desc = repositoryEntity.desc;
     

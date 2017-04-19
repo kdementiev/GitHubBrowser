@@ -14,6 +14,8 @@
 - (void)setRepositoryDescription:(NSString *)description;
 - (void)setLanguage:(NSString *)language;
 
+- (void)setAuthorName:(NSString *)author;
+
 - (void)setStars:(NSInteger)stars;
 - (void)setColorPosition:(CGFloat)position;
 

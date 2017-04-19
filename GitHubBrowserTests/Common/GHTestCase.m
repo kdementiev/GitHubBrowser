@@ -15,7 +15,7 @@
 
 
 NSInteger const GHTestCaseSuccessResponseCode = 200;
-NSTimeInterval const GHTestCaseExpectationsTimeout = 2.0;
+NSTimeInterval const GHTestCaseExpectationsTimeout = 3.0;
 
 @implementation GHTestCase
 
@@ -35,7 +35,7 @@ NSTimeInterval const GHTestCaseExpectationsTimeout = 2.0;
 }
 
 - (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status {
-    [self simulateResponseWithJSON:fileName route:route status:status headers: @{@"Content-Type":@"application/json"} request:nil];
+    [self simulateResponseWithJSON:fileName route:route status:status headers:nil request:nil];
 }
 
 - (void)simulateResponseWithJSON:(NSString *)fileName route:(NSString *)route status:(NSUInteger)status headers:(NSDictionary *)headers request:(GHTestCaseNetworkingRequestCallback)callback {
@@ -57,11 +57,14 @@ NSTimeInterval const GHTestCaseExpectationsTimeout = 2.0;
             
             callback(request.URL.absoluteString, request.allHTTPHeaderFields, jsonDict);
         }
+
+        NSMutableDictionary *requiredHeaders = [NSMutableDictionary dictionaryWithObject:@"application/json" forKey:@"Content-Type"];
+        [requiredHeaders addEntriesFromDictionary:headers];
         
         NSString* fixture = OHPathForFile(fileName, self.class);
         return [OHHTTPStubsResponse responseWithFileAtPath:fixture
                                                 statusCode:(int)status
-                                                   headers:headers];
+                                                   headers:requiredHeaders];
     }];
 }
 

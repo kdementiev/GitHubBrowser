@@ -12,9 +12,9 @@
 #import "UserProfileHeaderView.h"
 
 // Content providers
-#import "RepositoriesContentProvider.h"
-#import "UnauthorizedContentProvider.h"
-#import "NoDataContentProvider.h"
+#import "RepositoriesDataSource.h"
+#import "UnauthorizedStateDataSource.h"
+#import "NoDataStateDataSource.h"
 
 #import "UserProfileRecord.h"
 
@@ -24,12 +24,12 @@
 /*!
  *
  */
-@interface ProfileViewController () <UnauthorizedContentProviderDelegate>
+@interface ProfileViewController () <UnauthorizedStateDataSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UserProfileHeaderView *userProfileHeaderView;
-@property (nonatomic) id<UITableViewDataSource> contentProvider;
-
 @property (weak, nonatomic) IBOutlet UIView *footerView;
+
+@property (nonatomic) id<UITableViewDataSource> contentProvider;
 
 @end
 
@@ -53,10 +53,11 @@
     // Set and save current content provider.
     self.tableView.dataSource = _contentProvider = contentProvider;
     
-    //
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    // Reload table view animated.
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                  withRowAnimation:UITableViewRowAnimationFade];
     
-    //
+    // Disable refresh control.
     [self.refreshControl endRefreshing];
 }
 
@@ -90,6 +91,9 @@
     CGFloat bottomInset = self.tabBarController.tabBar.bounds.size.height;
     
     self.tableView.contentInset = UIEdgeInsetsMake(topInset, 0, bottomInset, 0);
+    
+    self.tableView.estimatedRowHeight = 82;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
  
 #pragma - Presenter Layer Feedback -
@@ -99,8 +103,8 @@
 }
 
 - (void)showUnauthorizedState {
-    // TODO: Create unauthorized content provider
-    self.contentProvider = [UnauthorizedContentProvider contentProviderWithDelegate:self];
+    // Move to unauthorized state data source.
+    self.contentProvider = [UnauthorizedStateDataSource dataSourceWithDelegate:self];
     
     // Move to unauthorized state
     [self gh_activateUnauthorizedState];
@@ -108,7 +112,7 @@
 
 - (void)showNoContentState {
     // TODO: Create no data content provider
-    self.contentProvider = [NoDataContentProvider new];
+    self.contentProvider = [NoDataStateDataSource new];
     
     // Move to authorized state.
     [self gh_activateAuthorizedState];
@@ -120,7 +124,7 @@
 
 - (void)showRepositories:(NSArray<RepositoryRecord *> *)repositories {
     // TODO: Create repositories content provider.
-    self.contentProvider = [RepositoriesContentProvider contentProviderWithRepositories:repositories];
+    self.contentProvider = [RepositoriesDataSource dataSourceWithRepositories:repositories];
 }
 
 - (void)showUserProfile:(UserProfileRecord *)userProfile {

@@ -1,5 +1,5 @@
 //
-//  NoDataContentProvider.h
+//  NoDataStateDataSource.h
 //  GitHubBrowser
 //
 //  Created by Konstantin Dementiev on 4/17/17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NoDataContentProvider : NSObject<UITableViewDataSource>
+@interface NoDataStateDataSource : NSObject<UITableViewDataSource>
 
 @end

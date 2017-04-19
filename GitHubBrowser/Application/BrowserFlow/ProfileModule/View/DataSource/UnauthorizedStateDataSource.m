@@ -1,29 +1,26 @@
 //
-//  UnauthorizedContentProvider.m
+//  UnauthorizedStateDataSource.m
 //  GitHubBrowser
 //
 //  Created by Konstantin Dementiev on 4/16/17.
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import "UnauthorizedContentProvider.h"
+#import "UnauthorizedStateDataSource.h"
 
 #import "UITableViewCell+Usability.h"
 #import "UnauthorizedTableViewCell.h"
 
 
-@interface UnauthorizedContentProvider ()
-
-@property (nonatomic, weak) id<UnauthorizedContentProviderDelegate> delegate;
-
+@interface UnauthorizedStateDataSource ()
+@property (nonatomic, weak) id<UnauthorizedStateDataSourceDelegate> delegate;
 @end
 
+@implementation UnauthorizedStateDataSource
 
-@implementation UnauthorizedContentProvider
-
-+ (id<UITableViewDataSource>)contentProviderWithDelegate:(id<UnauthorizedContentProviderDelegate>)delegate {
++ (id<UITableViewDataSource>)dataSourceWithDelegate:(id<UnauthorizedStateDataSourceDelegate>)delegate {
     
-    UnauthorizedContentProvider *contentProvider = [UnauthorizedContentProvider new];
+    UnauthorizedStateDataSource *contentProvider = [UnauthorizedStateDataSource new];
     contentProvider.delegate = delegate;
     return contentProvider;
 }

@@ -10,6 +10,8 @@
 
 @interface RepositoryRecord : NSObject
 
+@property (nonatomic) NSString *ownerName;
+
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *desc;
 

@@ -1,17 +1,17 @@
 //
-//  NoDataContentProvider.m
+//  NoDataStateDataSource.m
 //  GitHubBrowser
 //
 //  Created by Konstantin Dementiev on 4/17/17.
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import "NoDataContentProvider.h"
+#import "NoDataStateDataSource.h"
 
 #import "UITableViewCell+Usability.h"
 #import "InfoMessageTableViewCell.h"
 
-@implementation NoDataContentProvider
+@implementation NoDataStateDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;

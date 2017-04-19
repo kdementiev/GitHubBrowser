@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *languageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *starsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *authorLable;
 
 @property (nonatomic) IBInspectable UIColor *topColor;
 @property (nonatomic) IBInspectable UIColor *bottomColor;
@@ -35,6 +36,10 @@
 
 - (void)setLanguage:(NSString *)language {
     self.languageLabel.text = language;
+}
+
+- (void)setAuthorName:(NSString *)author {
+    self.authorLable.text = author;
 }
 
 - (void)setStars:(NSInteger)stars {

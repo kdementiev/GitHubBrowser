@@ -35,7 +35,7 @@
                            headers:nil
                            request:^(NSString *route, NSDictionary *headers, NSDictionary *body) {
                                NSString *query = [[route componentsSeparatedByString:@"?"] lastObject];
-                               XCTAssertTrue([query isEqualToString:@"?q=GitHubBrowser"], @"Invalid request query.");
+                               XCTAssertTrue([query isEqualToString:@"q=GitHubBrowser"], @"Invalid request query.");
                            }];
     
     

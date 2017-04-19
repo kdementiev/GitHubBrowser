@@ -8,7 +8,12 @@
 
 #import "SearchViewController.h"
 
+#import "RepositoriesDataSource.h"
+
 @interface SearchViewController () <UISearchBarDelegate, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) id<UITableViewDataSource> contentProvider;
 
 @end
 
@@ -19,8 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //
+    self.tableView.estimatedRowHeight = 82;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     // Notify that view ready.
     [self.output viewReadyForInteractions];
+}
+
+- (void)setContentProvider:(id<UITableViewDataSource>)contentProvider {
+    
+    // Set and save current content provider.
+    self.tableView.dataSource = _contentProvider = contentProvider;
+    
+    // Reload table view animated.
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                  withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - View Controls -
@@ -38,7 +57,7 @@
 }
 
 - (void)showSearchResults:(NSArray<RepositoryRecord *> *)repositories {
-    
+    self.contentProvider = [RepositoriesDataSource dataSourceWithRepositories:repositories];
 }
 
 #pragma mark - UISearchBarDelegate -
@@ -49,10 +68,20 @@
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     
-    [self.output userWantsToCancelSearch];
+    [self gh_notifyWithUserWantsToCancelSearch];
     
     [searchBar resignFirstResponder];
     searchBar.text = nil;
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchTex {
+    [self gh_notifyWithUserWantsToCancelSearch];
+}
+
+#pragma mark - Notify Helpers -
+
+- (void)gh_notifyWithUserWantsToCancelSearch {
+    [self.output userWantsToCancelSearch];
 }
 
 @end
