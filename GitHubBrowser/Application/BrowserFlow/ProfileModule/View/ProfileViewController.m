@@ -43,6 +43,10 @@
     
     // Prepate table view insets.
     [self gh_prepareTableViewAppearance];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     // Notify presenter layer to fetch some data.
     [self.output viewReadyForInteractions];
