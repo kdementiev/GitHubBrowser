@@ -13,6 +13,8 @@
 
 #import "RepositoryRecord.h"
 
+NSInteger const RepositoryCellEstimatedHeight = 82;
+
 @interface RepositoriesDataSource ()
 @property (nonatomic) NSArray<RepositoryRecord *> *repositories;
 @end

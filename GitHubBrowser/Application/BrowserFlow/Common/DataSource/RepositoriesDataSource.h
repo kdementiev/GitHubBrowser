@@ -11,6 +11,7 @@
 
 @class RepositoryRecord;
 
+extern NSInteger RepositoryCellEstimatedHeight;
 
 @interface RepositoriesDataSource : NSObject<TableViewContentProviderProtocol>
 

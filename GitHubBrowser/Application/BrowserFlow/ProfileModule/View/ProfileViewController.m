@@ -92,7 +92,7 @@
     
     self.tableView.contentInset = UIEdgeInsetsMake(topInset, 0, bottomInset, 0);
     
-    self.tableView.estimatedRowHeight = 82;
+    self.tableView.estimatedRowHeight = RepositoryCellEstimatedHeight;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
  

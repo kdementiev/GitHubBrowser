@@ -33,7 +33,7 @@
     [super viewDidLoad];
 
     //
-    self.tableView.estimatedRowHeight = 82;
+    self.tableView.estimatedRowHeight = RepositoryCellEstimatedHeight;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     // Notify that view ready.
