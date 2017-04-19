@@ -213,18 +213,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZg-iS-s2n">
-                                                    <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                                    <rect key="frame" x="8" y="12" width="304" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.27601413600000002" green="0.38838447729999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.32549019610000002" green="0.6588235294" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="qZg-iS-s2n" firstAttribute="top" secondItem="inc-eB-L0b" secondAttribute="top" constant="8" id="BEK-01-cqX"/>
+                                                <constraint firstItem="qZg-iS-s2n" firstAttribute="top" secondItem="inc-eB-L0b" secondAttribute="top" constant="12" id="BEK-01-cqX"/>
                                                 <constraint firstItem="qZg-iS-s2n" firstAttribute="leading" secondItem="inc-eB-L0b" secondAttribute="leading" constant="8" id="YCt-or-lGn"/>
                                                 <constraint firstAttribute="trailing" secondItem="qZg-iS-s2n" secondAttribute="trailing" constant="8" id="gqL-2R-yic"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qZg-iS-s2n" secondAttribute="bottom" priority="750" constant="8" id="w6s-GZ-Zec"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qZg-iS-s2n" secondAttribute="bottom" priority="750" constant="12" id="w6s-GZ-Zec"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

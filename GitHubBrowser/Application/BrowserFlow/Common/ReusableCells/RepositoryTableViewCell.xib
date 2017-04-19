@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DTH-mK-SZI" id="A8b-iD-hBA">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="81.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="top-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="5xM-dh-zeo">
@@ -27,24 +28,35 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No description." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3Y-Hb-owd">
                         <rect key="frame" x="8" y="32" width="398" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.91949901820000002" green="0.91949901820000002" blue="0.91949901820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2Z-lX-Acg">
                         <rect key="frame" x="8" y="66" width="46" height="12"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.1975671141" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                        </variation>
                     </label>
                     <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gh-star-small" translatesAutoresizingMaskIntoConstraints="NO" id="3hf-Bl-Vfp">
                         <rect key="frame" x="66" y="66" width="12" height="12"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="12" id="0bO-ZG-J7L"/>
-                            <constraint firstAttribute="height" constant="12" id="hnA-9C-jL4"/>
+                            <constraint firstAttribute="width" constant="12" id="0bO-ZG-J7L">
+                                <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                            </constraint>
+                            <constraint firstAttribute="width" secondItem="3hf-Bl-Vfp" secondAttribute="height" multiplier="1:1" id="8u0-QA-OKG"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-8I-DUe">
@@ -52,12 +64,18 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.1975671141" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-xc-Dgn">
                         <rect key="frame" x="376" y="66" width="30" height="12"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="10"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="12"/>
+                        </variation>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.32549019610000002" green="0.6588235294" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,7 +85,7 @@
                     <constraint firstAttribute="trailing" secondItem="dPN-xc-Dgn" secondAttribute="trailing" constant="8" id="Htb-O2-5dg"/>
                     <constraint firstItem="gtQ-EV-GnY" firstAttribute="top" secondItem="A8b-iD-hBA" secondAttribute="top" constant="12" id="On7-iS-cVD"/>
                     <constraint firstItem="L2Z-lX-Acg" firstAttribute="leading" secondItem="y3Y-Hb-owd" secondAttribute="leading" id="Pz3-Lg-nlE"/>
-                    <constraint firstAttribute="bottom" secondItem="gtQ-EV-GnY" secondAttribute="bottom" priority="750" constant="50" id="RwY-TM-TpS"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gtQ-EV-GnY" secondAttribute="bottom" priority="750" constant="50" id="RwY-TM-TpS"/>
                     <constraint firstItem="y3Y-Hb-owd" firstAttribute="leading" secondItem="gtQ-EV-GnY" secondAttribute="leading" id="Snw-na-Qe5"/>
                     <constraint firstItem="y3Y-Hb-owd" firstAttribute="top" secondItem="gtQ-EV-GnY" secondAttribute="bottom" id="b82-sJ-KiE"/>
                     <constraint firstItem="0VP-8I-DUe" firstAttribute="centerY" secondItem="3hf-Bl-Vfp" secondAttribute="centerY" id="h33-8q-2aG"/>
