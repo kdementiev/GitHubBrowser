@@ -71,7 +71,6 @@
     
     // Our job done, go back to profile.
     [self.router navigateBack];
-    
 }
 
 - (void)authenticationFailedWithBadCredentials {
