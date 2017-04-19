@@ -32,7 +32,7 @@ typedef enum : NSUInteger {
 
 - (void)prepare {
     
-    if (_state != ProfileInteractorStateNotPrepared) {
+    if (_state == ProfileInteractorStateAuthorized) {
         return;
     }
     
