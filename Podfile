@@ -10,8 +10,12 @@ target 'GitHubBrowser' do
   pod 'AFNetworking'
   pod 'AFNetworkActivityLogger', :git => 'https://github.com/AFNetworking/AFNetworkActivityLogger.git', :branch => '3_0_0'
   
-  pod 'Mantle'
+  pod 'JSONModel'
   pod 'EasySegues'
+  pod 'SAMKeychain'
+  
+  pod 'UIColorInterpolation'
+  pod 'SDWebImage'
 
   target 'GitHubBrowserTests' do
     inherit! :search_paths

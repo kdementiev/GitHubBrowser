@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 
+#import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
+
+#import "ProfileModuleConfigurator.h"
+#import "SearchModuleConfigurator.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,6 +21,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+#ifdef DEBUG
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    
+#ifdef DEBUG_NETWORKING
+    id<AFNetworkActivityLoggerProtocol> defaultLogger = [[AFNetworkActivityLogger sharedLogger].loggers anyObject];
+    [defaultLogger setLevel:AFLoggerLevelDebug];
+#endif
+    
+#endif
+    
+    UITabBarController *rootViewController = (UITabBarController *)self.window.rootViewController;
+    NSArray<UIViewController *> *viewControllers = rootViewController.viewControllers;
+    
+    // Prepare profile module.
+    id<ProfileViewProtocol> profileView = (id<ProfileViewProtocol>)[viewControllers firstObject];
+    [ProfileModuleConfigurator configureteModuleWithView:profileView delegate:nil];
+    
+    // Prepare search module.
+    id<SearchViewProtocol> searchView = (id<SearchViewProtocol>)[viewControllers lastObject];
+    [SearchModuleConfigurator configureteModuleWithView:searchView delegate:nil];
+
+    
     // Override point for customization after application launch.
     return YES;
 }

@@ -8,12 +8,81 @@
 
 /* Begin PBXBuildFile section */
 		1A1CDABEEA979DEF00A8E01F /* libPods-GitHubBrowserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4DCAEA37E18B5A30B34855 /* libPods-GitHubBrowserTests.a */; };
-		74C16B841E9E980600A93A44 /* GitHubBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */; };
+		7411E7EF1EA5031F001D28FF /* AuthCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7E91EA5031F001D28FF /* AuthCredentials.m */; };
+		7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */; };
+		7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */; };
+		7411E7FE1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7411E7FD1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m */; };
+		741FBCCF1EA7585000A38FFB /* UITableViewCell+Usability.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCC71EA7585000A38FFB /* UITableViewCell+Usability.m */; };
+		741FBCD11EA7585000A38FFB /* RepositoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCCD1EA7585000A38FFB /* RepositoryTableViewCell.m */; };
+		741FBCD21EA7585000A38FFB /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741FBCCE1EA7585000A38FFB /* RepositoryTableViewCell.xib */; };
+		741FBCE31EA759C300A38FFB /* NoDataStateDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCE01EA759C300A38FFB /* NoDataStateDataSource.m */; };
+		741FBCE41EA759C300A38FFB /* UnauthorizedStateDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCE21EA759C300A38FFB /* UnauthorizedStateDataSource.m */; };
+		741FBCE81EA759F400A38FFB /* RepositoriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCE71EA759F400A38FFB /* RepositoriesDataSource.m */; };
+		741FBCEC1EA75D8800A38FFB /* GHPageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCEB1EA75D8800A38FFB /* GHPageEntity.m */; };
+		741FBCEF1EA7600300A38FFB /* GHRepositoryPageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCEE1EA7600300A38FFB /* GHRepositoryPageEntity.m */; };
+		741FBCF21EA76B3500A38FFB /* SearchRepositoriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCF11EA76B3500A38FFB /* SearchRepositoriesDataSource.m */; };
+		741FBCF51EA7725C00A38FFB /* NotFoundStateContentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCF41EA7725C00A38FFB /* NotFoundStateContentProvider.m */; };
+		741FBCF81EA7745600A38FFB /* SearchHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCF71EA7745600A38FFB /* SearchHistoryDataSource.m */; };
+		741FBCFC1EA7750500A38FFB /* InfoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */; };
+		741FBCFF1EA7751800A38FFB /* QueryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */; };
+		741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */; };
+		741FBD081EA78EC900A38FFB /* SearchQueryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */; };
+		741FBD0B1EA79A8D00A38FFB /* ActivityStateDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */; };
+		741FBD0F1EA7A1F800A38FFB /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD0E1EA7A1F800A38FFB /* ActivityTableViewCell.m */; };
+		7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */; };
+		7432BA081EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */; };
+		7432BA0A1EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */; };
+		7432BA0D1EA636880036B530 /* github_profile_fetch_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA0C1EA636880036B530 /* github_profile_fetch_response_200.json */; };
+		7432BA0F1EA637F30036B530 /* github_fetch_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA0E1EA637F30036B530 /* github_fetch_response_401.json */; };
+		7432BA191EA63CE30036B530 /* GHUserProfileTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */; };
+		7432BA1B1EA640100036B530 /* github_repos_fetch_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */; };
+		7432BA221EA659520036B530 /* UIAlertController+ProfileAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA211EA659520036B530 /* UIAlertController+ProfileAlerts.m */; };
+		7432BA381EA66D5E0036B530 /* GitHubAuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA261EA66D5E0036B530 /* GitHubAuthenticationService.m */; };
+		7432BA391EA66D5E0036B530 /* GHAuthEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA291EA66D5E0036B530 /* GHAuthEntity.m */; };
+		7432BA3A1EA66D5E0036B530 /* GHRepositoryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA2B1EA66D5E0036B530 /* GHRepositoryEntity.m */; };
+		7432BA3B1EA66D5E0036B530 /* GHUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA2D1EA66D5E0036B530 /* GHUserEntity.m */; };
+		7432BA3C1EA66D5E0036B530 /* GitHubAPINetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA2F1EA66D5E0036B530 /* GitHubAPINetworking.m */; };
+		7432BA3D1EA66D5E0036B530 /* RepositoryRecord+GitHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA321EA66D5E0036B530 /* RepositoryRecord+GitHub.m */; };
+		7432BA3E1EA66D5E0036B530 /* UserProfileRecord+GitHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA341EA66D5E0036B530 /* UserProfileRecord+GitHub.m */; };
+		7432BA3F1EA66D5E0036B530 /* GitHubUserProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA371EA66D5E0036B530 /* GitHubUserProfileService.m */; };
+		7432BA451EA67F220036B530 /* AsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA441EA67F220036B530 /* AsyncOperation.m */; };
+		7432BA481EA6807E0036B530 /* MediaAsyncOperationAdapted.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA471EA6807E0036B530 /* MediaAsyncOperationAdapted.m */; };
+		7432BA4D1EA686E90036B530 /* LocalStorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA4C1EA686E90036B530 /* LocalStorageService.m */; };
+		7432BA511EA6875C0036B530 /* GitHubSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA501EA6875C0036B530 /* GitHubSearchService.m */; };
+		746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10A1EA558AF0040C8E3 /* GHTestCase.m */; };
+		746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */; };
+		746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */; };
+		746FC1121EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC1111EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json */; };
+		746FC1161EA6B1230040C8E3 /* GitHubAPISearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC1151EA6B1230040C8E3 /* GitHubAPISearchTests.m */; };
+		746FC1181EA6B39B0040C8E3 /* github_search_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC1171EA6B39B0040C8E3 /* github_search_response_200.json */; };
+		746FC11A1EA6B5AD0040C8E3 /* github_search_notfound_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC1191EA6B5AD0040C8E3 /* github_search_notfound_response_200.json */; };
+		746FC11C1EA6B6710040C8E3 /* github_search_invalid_response_422.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC11B1EA6B6710040C8E3 /* github_search_invalid_response_422.json */; };
+		74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */; };
+		74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */; };
+		74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */; };
+		74835C391EA26DC300BCC2B5 /* ProfileRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C321EA26DC300BCC2B5 /* ProfileRouter.m */; };
+		74835C3A1EA26DC300BCC2B5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C351EA26DC300BCC2B5 /* ProfileViewController.m */; };
+		74835C651EA26E9800BCC2B5 /* SearchModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C581EA26E9800BCC2B5 /* SearchModuleConfigurator.m */; };
+		74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C5B1EA26E9800BCC2B5 /* SearchInteractor.m */; };
+		74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C5E1EA26E9800BCC2B5 /* SearchPresenter.m */; };
+		74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C611EA26E9800BCC2B5 /* SearchRouter.m */; };
+		74835C691EA26E9800BCC2B5 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C641EA26E9800BCC2B5 /* SearchViewController.m */; };
+		74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C7D1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m */; };
+		74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C801EA2709F00BCC2B5 /* AuthenticationInteractor.m */; };
+		74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C831EA2709F00BCC2B5 /* AuthenticationPresenter.m */; };
+		74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C861EA2709F00BCC2B5 /* AuthenticationRouter.m */; };
+		74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */; };
+		74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */; };
+		74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */; };
+		74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F21EA38975008B61BE /* RepositoryRecord.m */; };
+		74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B0F51EA38982008B61BE /* UserProfileRecord.m */; };
+		74A7B1221EA4BE1E008B61BE /* TokenStorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B1211EA4BE1E008B61BE /* TokenStorageService.m */; };
+		74A7B1291EA4C370008B61BE /* MediaContentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B1281EA4C370008B61BE /* MediaContentService.m */; };
+		74A7B12C1EA4CB9D008B61BE /* InfoMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7B12B1EA4CB9D008B61BE /* InfoMessageTableViewCell.m */; };
 		74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA11E9FF92500A93A44 /* AppDelegate.m */; };
 		74C16BAC1E9FF92500A93A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C16BA31E9FF92500A93A44 /* main.m */; };
 		74C16BAD1E9FF92500A93A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BA51E9FF92500A93A44 /* Assets.xcassets */; };
 		74C16BAE1E9FF92500A93A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BA61E9FF92500A93A44 /* LaunchScreen.storyboard */; };
-		74C16BB01E9FF92500A93A44 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BAA1E9FF92500A93A44 /* Info.plist */; };
 		74C16BB81EA0040100A93A44 /* BrowserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BB71EA0040100A93A44 /* BrowserFlow.storyboard */; };
 		74C16BBA1EA0040D00A93A44 /* AuthenticationFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C16BB91EA0040D00A93A44 /* AuthenticationFlow.storyboard */; };
 		9206FDE4B3FDD4058DA86E98 /* libPods-GitHubBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C97CCF646312F01541605 /* libPods-GitHubBrowser.a */; };
@@ -32,11 +101,161 @@
 /* Begin PBXFileReference section */
 		0E8BCD6138C5AC3702CC9E89 /* Pods-GitHubBrowserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowserTests/Pods-GitHubBrowserTests.release.xcconfig"; sourceTree = "<group>"; };
 		1DBC2A5C72F91C8987DE364A /* Pods-GitHubBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		2CF179D05EC681AD2F7D8FE2 /* Pods-GitHubBrowserTests.debugnetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowserTests.debugnetworking.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowserTests/Pods-GitHubBrowserTests.debugnetworking.xcconfig"; sourceTree = "<group>"; };
 		330FCC17D085DB34A21E9039 /* Pods-GitHubBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		478399E39E82EBE0A2F46128 /* Pods-GitHubBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowserTests/Pods-GitHubBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7411E7E81EA5031F001D28FF /* AuthCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthCredentials.h; sourceTree = "<group>"; };
+		7411E7E91EA5031F001D28FF /* AuthCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthCredentials.m; sourceTree = "<group>"; };
+		7411E7EA1EA5031F001D28FF /* AuthenticationServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationServiceProtocol.h; sourceTree = "<group>"; };
+		7411E7EE1EA5031F001D28FF /* CredentialsValidatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsValidatorProtocol.h; sourceTree = "<group>"; };
+		7411E7F11EA50336001D28FF /* GitHubCredentialsValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCredentialsValidator.h; sourceTree = "<group>"; };
+		7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCredentialsValidator.m; sourceTree = "<group>"; };
+		7411E7F81EA50AC2001D28FF /* UITextField+ErrorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ErrorState.h"; sourceTree = "<group>"; };
+		7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ErrorState.m"; sourceTree = "<group>"; };
+		7411E7FC1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+AuthenticationAlerts.h"; sourceTree = "<group>"; };
+		7411E7FD1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+AuthenticationAlerts.m"; sourceTree = "<group>"; };
+		741FBCC61EA7585000A38FFB /* UITableViewCell+Usability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Usability.h"; sourceTree = "<group>"; };
+		741FBCC71EA7585000A38FFB /* UITableViewCell+Usability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Usability.m"; sourceTree = "<group>"; };
+		741FBCCC1EA7585000A38FFB /* RepositoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryTableViewCell.h; sourceTree = "<group>"; };
+		741FBCCD1EA7585000A38FFB /* RepositoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryTableViewCell.m; sourceTree = "<group>"; };
+		741FBCCE1EA7585000A38FFB /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		741FBCDF1EA759C300A38FFB /* NoDataStateDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDataStateDataSource.h; sourceTree = "<group>"; };
+		741FBCE01EA759C300A38FFB /* NoDataStateDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDataStateDataSource.m; sourceTree = "<group>"; };
+		741FBCE11EA759C300A38FFB /* UnauthorizedStateDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthorizedStateDataSource.h; sourceTree = "<group>"; };
+		741FBCE21EA759C300A38FFB /* UnauthorizedStateDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthorizedStateDataSource.m; sourceTree = "<group>"; };
+		741FBCE61EA759F400A38FFB /* RepositoriesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesDataSource.h; sourceTree = "<group>"; };
+		741FBCE71EA759F400A38FFB /* RepositoriesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesDataSource.m; sourceTree = "<group>"; };
+		741FBCEA1EA75D8800A38FFB /* GHPageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPageEntity.h; sourceTree = "<group>"; };
+		741FBCEB1EA75D8800A38FFB /* GHPageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPageEntity.m; sourceTree = "<group>"; };
+		741FBCED1EA7600300A38FFB /* GHRepositoryPageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepositoryPageEntity.h; sourceTree = "<group>"; };
+		741FBCEE1EA7600300A38FFB /* GHRepositoryPageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRepositoryPageEntity.m; sourceTree = "<group>"; };
+		741FBCF01EA76B3500A38FFB /* SearchRepositoriesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRepositoriesDataSource.h; sourceTree = "<group>"; };
+		741FBCF11EA76B3500A38FFB /* SearchRepositoriesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRepositoriesDataSource.m; sourceTree = "<group>"; };
+		741FBCF31EA7725C00A38FFB /* NotFoundStateContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotFoundStateContentProvider.h; sourceTree = "<group>"; };
+		741FBCF41EA7725C00A38FFB /* NotFoundStateContentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotFoundStateContentProvider.m; sourceTree = "<group>"; };
+		741FBCF61EA7745600A38FFB /* SearchHistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryDataSource.h; sourceTree = "<group>"; };
+		741FBCF71EA7745600A38FFB /* SearchHistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryDataSource.m; sourceTree = "<group>"; };
+		741FBCFA1EA7750500A38FFB /* InfoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoHeaderTableViewCell.h; sourceTree = "<group>"; };
+		741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoHeaderTableViewCell.m; sourceTree = "<group>"; };
+		741FBCFD1EA7751800A38FFB /* QueryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryTableViewCell.h; sourceTree = "<group>"; };
+		741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTableViewCell.m; sourceTree = "<group>"; };
+		741FBD021EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchHistoryStorage.xcdatamodel; sourceTree = "<group>"; };
+		741FBD061EA78EC900A38FFB /* SearchQueryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQueryEntity.h; sourceTree = "<group>"; };
+		741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQueryEntity.m; sourceTree = "<group>"; };
+		741FBD091EA79A8D00A38FFB /* ActivityStateDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityStateDataSource.h; sourceTree = "<group>"; };
+		741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityStateDataSource.m; sourceTree = "<group>"; };
+		741FBD0C1EA79F2C00A38FFB /* TableViewContentProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewContentProviderProtocol.h; sourceTree = "<group>"; };
+		741FBD0D1EA7A1F800A38FFB /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		741FBD0E1EA7A1F800A38FFB /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_bad_credentials_response_401.json; sourceTree = "<group>"; };
+		7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileFetchingTests.m; sourceTree = "<group>"; };
+		7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileRepositoriesTests.m; sourceTree = "<group>"; };
+		7432BA0C1EA636880036B530 /* github_profile_fetch_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_profile_fetch_response_200.json; sourceTree = "<group>"; };
+		7432BA0E1EA637F30036B530 /* github_fetch_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_fetch_response_401.json; sourceTree = "<group>"; };
+		7432BA171EA63CE30036B530 /* GHUserProfileTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUserProfileTestCase.h; sourceTree = "<group>"; };
+		7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUserProfileTestCase.m; sourceTree = "<group>"; };
+		7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_repos_fetch_response_200.json; sourceTree = "<group>"; };
+		7432BA201EA659520036B530 /* UIAlertController+ProfileAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ProfileAlerts.h"; sourceTree = "<group>"; };
+		7432BA211EA659520036B530 /* UIAlertController+ProfileAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ProfileAlerts.m"; sourceTree = "<group>"; };
+		7432BA251EA66D5E0036B530 /* GitHubAuthenticationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubAuthenticationService.h; sourceTree = "<group>"; };
+		7432BA261EA66D5E0036B530 /* GitHubAuthenticationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAuthenticationService.m; sourceTree = "<group>"; };
+		7432BA281EA66D5E0036B530 /* GHAuthEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHAuthEntity.h; sourceTree = "<group>"; };
+		7432BA291EA66D5E0036B530 /* GHAuthEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHAuthEntity.m; sourceTree = "<group>"; };
+		7432BA2A1EA66D5E0036B530 /* GHRepositoryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepositoryEntity.h; sourceTree = "<group>"; };
+		7432BA2B1EA66D5E0036B530 /* GHRepositoryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRepositoryEntity.m; sourceTree = "<group>"; };
+		7432BA2C1EA66D5E0036B530 /* GHUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUserEntity.h; sourceTree = "<group>"; };
+		7432BA2D1EA66D5E0036B530 /* GHUserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUserEntity.m; sourceTree = "<group>"; };
+		7432BA2E1EA66D5E0036B530 /* GitHubAPINetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubAPINetworking.h; sourceTree = "<group>"; };
+		7432BA2F1EA66D5E0036B530 /* GitHubAPINetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPINetworking.m; sourceTree = "<group>"; };
+		7432BA311EA66D5E0036B530 /* RepositoryRecord+GitHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RepositoryRecord+GitHub.h"; sourceTree = "<group>"; };
+		7432BA321EA66D5E0036B530 /* RepositoryRecord+GitHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RepositoryRecord+GitHub.m"; sourceTree = "<group>"; };
+		7432BA331EA66D5E0036B530 /* UserProfileRecord+GitHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserProfileRecord+GitHub.h"; sourceTree = "<group>"; };
+		7432BA341EA66D5E0036B530 /* UserProfileRecord+GitHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserProfileRecord+GitHub.m"; sourceTree = "<group>"; };
+		7432BA361EA66D5E0036B530 /* GitHubUserProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserProfileService.h; sourceTree = "<group>"; };
+		7432BA371EA66D5E0036B530 /* GitHubUserProfileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserProfileService.m; sourceTree = "<group>"; };
+		7432BA411EA66DDA0036B530 /* SearchNetworkingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNetworkingProtocol.h; sourceTree = "<group>"; };
+		7432BA431EA67F220036B530 /* AsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncOperation.h; sourceTree = "<group>"; };
+		7432BA441EA67F220036B530 /* AsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncOperation.m; sourceTree = "<group>"; };
+		7432BA461EA6807E0036B530 /* MediaAsyncOperationAdapted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAsyncOperationAdapted.h; sourceTree = "<group>"; };
+		7432BA471EA6807E0036B530 /* MediaAsyncOperationAdapted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaAsyncOperationAdapted.m; sourceTree = "<group>"; };
+		7432BA491EA684AE0036B530 /* SearchHistoryLocalStorageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryLocalStorageProtocol.h; sourceTree = "<group>"; };
+		7432BA4B1EA686E90036B530 /* LocalStorageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStorageService.h; sourceTree = "<group>"; };
+		7432BA4C1EA686E90036B530 /* LocalStorageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStorageService.m; sourceTree = "<group>"; };
+		7432BA4F1EA6875C0036B530 /* GitHubSearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubSearchService.h; sourceTree = "<group>"; };
+		7432BA501EA6875C0036B530 /* GitHubSearchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubSearchService.m; sourceTree = "<group>"; };
+		746FC1091EA558AF0040C8E3 /* GHTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTestCase.h; sourceTree = "<group>"; };
+		746FC10A1EA558AF0040C8E3 /* GHTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTestCase.m; sourceTree = "<group>"; };
+		746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIAuthenticationTests.m; sourceTree = "<group>"; };
+		746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_default_response_200.json; sourceTree = "<group>"; };
+		746FC1111EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_otp_response_401.json; sourceTree = "<group>"; };
+		746FC1151EA6B1230040C8E3 /* GitHubAPISearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPISearchTests.m; sourceTree = "<group>"; };
+		746FC1171EA6B39B0040C8E3 /* github_search_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_search_response_200.json; sourceTree = "<group>"; };
+		746FC1191EA6B5AD0040C8E3 /* github_search_notfound_response_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_search_notfound_response_200.json; sourceTree = "<group>"; };
+		746FC11B1EA6B6710040C8E3 /* github_search_invalid_response_422.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_search_invalid_response_422.json; sourceTree = "<group>"; };
+		74835C221EA26DC300BCC2B5 /* ProfileInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInteractorProtocol.h; sourceTree = "<group>"; };
+		74835C231EA26DC300BCC2B5 /* ProfileModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModuleProtocol.h; sourceTree = "<group>"; };
+		74835C241EA26DC300BCC2B5 /* ProfilePresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePresenterProtocol.h; sourceTree = "<group>"; };
+		74835C251EA26DC300BCC2B5 /* ProfileRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileRouterProtocol.h; sourceTree = "<group>"; };
+		74835C261EA26DC300BCC2B5 /* ProfileViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewProtocol.h; sourceTree = "<group>"; };
+		74835C281EA26DC300BCC2B5 /* ProfileModuleConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModuleConfigurator.h; sourceTree = "<group>"; };
+		74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleConfigurator.m; sourceTree = "<group>"; };
+		74835C2B1EA26DC300BCC2B5 /* ProfileInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInteractor.h; sourceTree = "<group>"; };
+		74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInteractor.m; sourceTree = "<group>"; };
+		74835C2E1EA26DC300BCC2B5 /* ProfilePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePresenter.h; sourceTree = "<group>"; };
+		74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePresenter.m; sourceTree = "<group>"; };
+		74835C311EA26DC300BCC2B5 /* ProfileRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileRouter.h; sourceTree = "<group>"; };
+		74835C321EA26DC300BCC2B5 /* ProfileRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileRouter.m; sourceTree = "<group>"; };
+		74835C341EA26DC300BCC2B5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		74835C351EA26DC300BCC2B5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		74835C511EA26E9800BCC2B5 /* SearchInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInteractorProtocol.h; sourceTree = "<group>"; };
+		74835C521EA26E9800BCC2B5 /* SearchModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModuleProtocol.h; sourceTree = "<group>"; };
+		74835C531EA26E9800BCC2B5 /* SearchPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPresenterProtocol.h; sourceTree = "<group>"; };
+		74835C541EA26E9800BCC2B5 /* SearchRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRouterProtocol.h; sourceTree = "<group>"; };
+		74835C551EA26E9800BCC2B5 /* SearchViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewProtocol.h; sourceTree = "<group>"; };
+		74835C571EA26E9800BCC2B5 /* SearchModuleConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModuleConfigurator.h; sourceTree = "<group>"; };
+		74835C581EA26E9800BCC2B5 /* SearchModuleConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModuleConfigurator.m; sourceTree = "<group>"; };
+		74835C5A1EA26E9800BCC2B5 /* SearchInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInteractor.h; sourceTree = "<group>"; };
+		74835C5B1EA26E9800BCC2B5 /* SearchInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchInteractor.m; sourceTree = "<group>"; };
+		74835C5D1EA26E9800BCC2B5 /* SearchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPresenter.h; sourceTree = "<group>"; };
+		74835C5E1EA26E9800BCC2B5 /* SearchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPresenter.m; sourceTree = "<group>"; };
+		74835C601EA26E9800BCC2B5 /* SearchRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRouter.h; sourceTree = "<group>"; };
+		74835C611EA26E9800BCC2B5 /* SearchRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRouter.m; sourceTree = "<group>"; };
+		74835C631EA26E9800BCC2B5 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		74835C641EA26E9800BCC2B5 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		74835C761EA2709F00BCC2B5 /* AuthenticationInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationInteractorProtocol.h; sourceTree = "<group>"; };
+		74835C771EA2709F00BCC2B5 /* AuthenticationModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationModuleProtocol.h; sourceTree = "<group>"; };
+		74835C781EA2709F00BCC2B5 /* AuthenticationPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationPresenterProtocol.h; sourceTree = "<group>"; };
+		74835C791EA2709F00BCC2B5 /* AuthenticationRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationRouterProtocol.h; sourceTree = "<group>"; };
+		74835C7A1EA2709F00BCC2B5 /* AuthenticationViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewProtocol.h; sourceTree = "<group>"; };
+		74835C7C1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationModuleConfigurator.h; sourceTree = "<group>"; };
+		74835C7D1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationModuleConfigurator.m; sourceTree = "<group>"; };
+		74835C7F1EA2709F00BCC2B5 /* AuthenticationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationInteractor.h; sourceTree = "<group>"; };
+		74835C801EA2709F00BCC2B5 /* AuthenticationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationInteractor.m; sourceTree = "<group>"; };
+		74835C821EA2709F00BCC2B5 /* AuthenticationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationPresenter.h; sourceTree = "<group>"; };
+		74835C831EA2709F00BCC2B5 /* AuthenticationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationPresenter.m; sourceTree = "<group>"; };
+		74835C851EA2709F00BCC2B5 /* AuthenticationRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationRouter.h; sourceTree = "<group>"; };
+		74835C861EA2709F00BCC2B5 /* AuthenticationRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationRouter.m; sourceTree = "<group>"; };
+		74835C881EA2709F00BCC2B5 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
+		74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
+		74835C941EA2814000BCC2B5 /* UnauthorizedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthorizedTableViewCell.h; sourceTree = "<group>"; };
+		74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthorizedTableViewCell.m; sourceTree = "<group>"; };
+		74835C971EA2851D00BCC2B5 /* UserProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileHeaderView.h; sourceTree = "<group>"; };
+		74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileHeaderView.m; sourceTree = "<group>"; };
+		74A7B0F11EA38975008B61BE /* RepositoryRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryRecord.h; sourceTree = "<group>"; };
+		74A7B0F21EA38975008B61BE /* RepositoryRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryRecord.m; sourceTree = "<group>"; };
+		74A7B0F41EA38982008B61BE /* UserProfileRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileRecord.h; sourceTree = "<group>"; };
+		74A7B0F51EA38982008B61BE /* UserProfileRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileRecord.m; sourceTree = "<group>"; };
+		74A7B11F1EA4BD6A008B61BE /* TokenStorageServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenStorageServiceProtocol.h; sourceTree = "<group>"; };
+		74A7B1201EA4BE1E008B61BE /* TokenStorageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenStorageService.h; sourceTree = "<group>"; };
+		74A7B1211EA4BE1E008B61BE /* TokenStorageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenStorageService.m; sourceTree = "<group>"; };
+		74A7B1241EA4C152008B61BE /* MediaContentServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaContentServiceProtocol.h; sourceTree = "<group>"; };
+		74A7B1271EA4C370008B61BE /* MediaContentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaContentService.h; sourceTree = "<group>"; };
+		74A7B1281EA4C370008B61BE /* MediaContentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaContentService.m; sourceTree = "<group>"; };
+		74A7B12A1EA4CB9D008B61BE /* InfoMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoMessageTableViewCell.h; sourceTree = "<group>"; };
+		74A7B12B1EA4CB9D008B61BE /* InfoMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoMessageTableViewCell.m; sourceTree = "<group>"; };
+		74A7B1351EA4F4E2008B61BE /* UserProfileNetworkingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileNetworkingProtocol.h; sourceTree = "<group>"; };
 		74C16B661E9E980600A93A44 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C16B7F1E9E980600A93A44 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubBrowserTests.m; sourceTree = "<group>"; };
 		74C16B851E9E980600A93A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C16BA01E9FF92500A93A44 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74C16BA11E9FF92500A93A44 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,6 +265,7 @@
 		74C16BAA1E9FF92500A93A44 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C16BB71EA0040100A93A44 /* BrowserFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrowserFlow.storyboard; sourceTree = "<group>"; };
 		74C16BB91EA0040D00A93A44 /* AuthenticationFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthenticationFlow.storyboard; sourceTree = "<group>"; };
+		ABCD91A52EF604D007725E8C /* Pods-GitHubBrowser.debugnetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubBrowser.debugnetworking.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubBrowser/Pods-GitHubBrowser.debugnetworking.xcconfig"; sourceTree = "<group>"; };
 		BE4DCAEA37E18B5A30B34855 /* libPods-GitHubBrowserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubBrowserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63C97CCF646312F01541605 /* libPods-GitHubBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,6 +290,675 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7411E7E71EA5031F001D28FF /* AuthenticationService */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7E81EA5031F001D28FF /* AuthCredentials.h */,
+				7411E7E91EA5031F001D28FF /* AuthCredentials.m */,
+				7411E7EA1EA5031F001D28FF /* AuthenticationServiceProtocol.h */,
+			);
+			path = AuthenticationService;
+			sourceTree = "<group>";
+		};
+		7411E7ED1EA5031F001D28FF /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7EE1EA5031F001D28FF /* CredentialsValidatorProtocol.h */,
+				7411E7F11EA50336001D28FF /* GitHubCredentialsValidator.h */,
+				7411E7F21EA50336001D28FF /* GitHubCredentialsValidator.m */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		7411E7F41EA509D3001D28FF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7F81EA50AC2001D28FF /* UITextField+ErrorState.h */,
+				7411E7F91EA50AC2001D28FF /* UITextField+ErrorState.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7411E7FB1EA50C2D001D28FF /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7FC1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.h */,
+				7411E7FD1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		741FBCC41EA7585000A38FFB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCC51EA7585000A38FFB /* Categories */,
+				741FBCE51EA759F400A38FFB /* DataSource */,
+				741FBCCB1EA7585000A38FFB /* ReusableCells */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		741FBCC51EA7585000A38FFB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCC61EA7585000A38FFB /* UITableViewCell+Usability.h */,
+				741FBCC71EA7585000A38FFB /* UITableViewCell+Usability.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		741FBCCB1EA7585000A38FFB /* ReusableCells */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCCC1EA7585000A38FFB /* RepositoryTableViewCell.h */,
+				741FBCCD1EA7585000A38FFB /* RepositoryTableViewCell.m */,
+				741FBCCE1EA7585000A38FFB /* RepositoryTableViewCell.xib */,
+			);
+			path = ReusableCells;
+			sourceTree = "<group>";
+		};
+		741FBCDE1EA759C300A38FFB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCDF1EA759C300A38FFB /* NoDataStateDataSource.h */,
+				741FBCE01EA759C300A38FFB /* NoDataStateDataSource.m */,
+				741FBCE11EA759C300A38FFB /* UnauthorizedStateDataSource.h */,
+				741FBCE21EA759C300A38FFB /* UnauthorizedStateDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		741FBCE51EA759F400A38FFB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCE61EA759F400A38FFB /* RepositoriesDataSource.h */,
+				741FBCE71EA759F400A38FFB /* RepositoriesDataSource.m */,
+				741FBD0C1EA79F2C00A38FFB /* TableViewContentProviderProtocol.h */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		741FBCE91EA75BD100A38FFB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCF01EA76B3500A38FFB /* SearchRepositoriesDataSource.h */,
+				741FBCF11EA76B3500A38FFB /* SearchRepositoriesDataSource.m */,
+				741FBCF31EA7725C00A38FFB /* NotFoundStateContentProvider.h */,
+				741FBCF41EA7725C00A38FFB /* NotFoundStateContentProvider.m */,
+				741FBCF61EA7745600A38FFB /* SearchHistoryDataSource.h */,
+				741FBCF71EA7745600A38FFB /* SearchHistoryDataSource.m */,
+				741FBD091EA79A8D00A38FFB /* ActivityStateDataSource.h */,
+				741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		741FBCF91EA774E300A38FFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCFA1EA7750500A38FFB /* InfoHeaderTableViewCell.h */,
+				741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */,
+				741FBCFD1EA7751800A38FFB /* QueryTableViewCell.h */,
+				741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */,
+				741FBD0D1EA7A1F800A38FFB /* ActivityTableViewCell.h */,
+				741FBD0E1EA7A1F800A38FFB /* ActivityTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		741FBD051EA78E9E00A38FFB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				741FBD061EA78EC900A38FFB /* SearchQueryEntity.h */,
+				741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7432BA061EA6356F0036B530 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA161EA63CCB0036B530 /* DefaultTestCase */,
+				7432BA0B1EA635CD0036B530 /* responses */,
+				7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */,
+				7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		7432BA0B1EA635CD0036B530 /* responses */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA0C1EA636880036B530 /* github_profile_fetch_response_200.json */,
+				7432BA0E1EA637F30036B530 /* github_fetch_response_401.json */,
+				7432BA1A1EA640100036B530 /* github_repos_fetch_response_200.json */,
+			);
+			path = responses;
+			sourceTree = "<group>";
+		};
+		7432BA161EA63CCB0036B530 /* DefaultTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA171EA63CE30036B530 /* GHUserProfileTestCase.h */,
+				7432BA181EA63CE30036B530 /* GHUserProfileTestCase.m */,
+			);
+			path = DefaultTestCase;
+			sourceTree = "<group>";
+		};
+		7432BA1F1EA658FA0036B530 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA201EA659520036B530 /* UIAlertController+ProfileAlerts.h */,
+				7432BA211EA659520036B530 /* UIAlertController+ProfileAlerts.m */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		7432BA231EA66D5E0036B530 /* GitHubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA241EA66D5E0036B530 /* AuthenticationAPI */,
+				7432BA351EA66D5E0036B530 /* UserProfileAPI */,
+				7432BA4E1EA6873B0036B530 /* SearchAPI */,
+				7432BA301EA66D5E0036B530 /* Migrations */,
+				7432BA271EA66D5E0036B530 /* Entities */,
+				7432BA2E1EA66D5E0036B530 /* GitHubAPINetworking.h */,
+				7432BA2F1EA66D5E0036B530 /* GitHubAPINetworking.m */,
+			);
+			path = GitHubAPI;
+			sourceTree = "<group>";
+		};
+		7432BA241EA66D5E0036B530 /* AuthenticationAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA251EA66D5E0036B530 /* GitHubAuthenticationService.h */,
+				7432BA261EA66D5E0036B530 /* GitHubAuthenticationService.m */,
+			);
+			path = AuthenticationAPI;
+			sourceTree = "<group>";
+		};
+		7432BA271EA66D5E0036B530 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA281EA66D5E0036B530 /* GHAuthEntity.h */,
+				7432BA291EA66D5E0036B530 /* GHAuthEntity.m */,
+				7432BA2A1EA66D5E0036B530 /* GHRepositoryEntity.h */,
+				7432BA2B1EA66D5E0036B530 /* GHRepositoryEntity.m */,
+				7432BA2C1EA66D5E0036B530 /* GHUserEntity.h */,
+				7432BA2D1EA66D5E0036B530 /* GHUserEntity.m */,
+				741FBCEA1EA75D8800A38FFB /* GHPageEntity.h */,
+				741FBCEB1EA75D8800A38FFB /* GHPageEntity.m */,
+				741FBCED1EA7600300A38FFB /* GHRepositoryPageEntity.h */,
+				741FBCEE1EA7600300A38FFB /* GHRepositoryPageEntity.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7432BA301EA66D5E0036B530 /* Migrations */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA311EA66D5E0036B530 /* RepositoryRecord+GitHub.h */,
+				7432BA321EA66D5E0036B530 /* RepositoryRecord+GitHub.m */,
+				7432BA331EA66D5E0036B530 /* UserProfileRecord+GitHub.h */,
+				7432BA341EA66D5E0036B530 /* UserProfileRecord+GitHub.m */,
+			);
+			path = Migrations;
+			sourceTree = "<group>";
+		};
+		7432BA351EA66D5E0036B530 /* UserProfileAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA361EA66D5E0036B530 /* GitHubUserProfileService.h */,
+				7432BA371EA66D5E0036B530 /* GitHubUserProfileService.m */,
+			);
+			path = UserProfileAPI;
+			sourceTree = "<group>";
+		};
+		7432BA401EA66D9C0036B530 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA411EA66DDA0036B530 /* SearchNetworkingProtocol.h */,
+				7432BA491EA684AE0036B530 /* SearchHistoryLocalStorageProtocol.h */,
+			);
+			name = Entity;
+			path = GitHubBrowser/Application/BrowserFlow/SearchModule/Entity;
+			sourceTree = SOURCE_ROOT;
+		};
+		7432BA421EA67EB70036B530 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA431EA67F220036B530 /* AsyncOperation.h */,
+				7432BA441EA67F220036B530 /* AsyncOperation.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7432BA4A1EA686DF0036B530 /* LocalStorageService */ = {
+			isa = PBXGroup;
+			children = (
+				741FBD051EA78E9E00A38FFB /* Entities */,
+				7432BA4B1EA686E90036B530 /* LocalStorageService.h */,
+				7432BA4C1EA686E90036B530 /* LocalStorageService.m */,
+				741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */,
+			);
+			path = LocalStorageService;
+			sourceTree = "<group>";
+		};
+		7432BA4E1EA6873B0036B530 /* SearchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA4F1EA6875C0036B530 /* GitHubSearchService.h */,
+				7432BA501EA6875C0036B530 /* GitHubSearchService.m */,
+			);
+			path = SearchAPI;
+			sourceTree = "<group>";
+		};
+		746FC1001EA558310040C8E3 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		746FC1011EA558310040C8E3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				746FC1021EA558310040C8E3 /* GitHubAPI */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		746FC1021EA558310040C8E3 /* GitHubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				746FC1131EA6B1010040C8E3 /* Search */,
+				7432BA061EA6356F0036B530 /* UserProfile */,
+				746FC1031EA5585F0040C8E3 /* Authentication */,
+			);
+			path = GitHubAPI;
+			sourceTree = "<group>";
+		};
+		746FC1031EA5585F0040C8E3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				746FC10E1EA55A550040C8E3 /* responses */,
+				746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		746FC1061EA5586E0040C8E3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				746FC1091EA558AF0040C8E3 /* GHTestCase.h */,
+				746FC10A1EA558AF0040C8E3 /* GHTestCase.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		746FC10E1EA55A550040C8E3 /* responses */ = {
+			isa = PBXGroup;
+			children = (
+				746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */,
+				746FC1111EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json */,
+				7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */,
+			);
+			path = responses;
+			sourceTree = "<group>";
+		};
+		746FC1131EA6B1010040C8E3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				746FC1141EA6B1010040C8E3 /* responses */,
+				746FC1151EA6B1230040C8E3 /* GitHubAPISearchTests.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		746FC1141EA6B1010040C8E3 /* responses */ = {
+			isa = PBXGroup;
+			children = (
+				746FC1171EA6B39B0040C8E3 /* github_search_response_200.json */,
+				746FC1191EA6B5AD0040C8E3 /* github_search_notfound_response_200.json */,
+				746FC11B1EA6B6710040C8E3 /* github_search_invalid_response_422.json */,
+			);
+			path = responses;
+			sourceTree = "<group>";
+		};
+		74835BC71EA26B3600BCC2B5 /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				74835C4F1EA26E9800BCC2B5 /* Configuration */,
+				74835C591EA26E9800BCC2B5 /* Interactor */,
+				74835C5C1EA26E9800BCC2B5 /* Presenter */,
+				7432BA401EA66D9C0036B530 /* Entity */,
+				74835C5F1EA26E9800BCC2B5 /* Router */,
+				74835C621EA26E9800BCC2B5 /* View */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		74835BC81EA26B3F00BCC2B5 /* AuthenticationModule */ = {
+			isa = PBXGroup;
+			children = (
+				74835C741EA2709F00BCC2B5 /* Configuration */,
+				74835C7E1EA2709F00BCC2B5 /* Interactor */,
+				74835C811EA2709F00BCC2B5 /* Presenter */,
+				74A7B1171EA49625008B61BE /* Entity */,
+				74835C841EA2709F00BCC2B5 /* Router */,
+				74835C871EA2709F00BCC2B5 /* View */,
+			);
+			path = AuthenticationModule;
+			sourceTree = "<group>";
+		};
+		74835C1F1EA26DC300BCC2B5 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				74835C201EA26DC300BCC2B5 /* Configuration */,
+				74835C2A1EA26DC300BCC2B5 /* Interactor */,
+				74835C2D1EA26DC300BCC2B5 /* Presenter */,
+				74A7B1331EA4DF35008B61BE /* Entity */,
+				74835C301EA26DC300BCC2B5 /* Router */,
+				74835C331EA26DC300BCC2B5 /* View */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		74835C201EA26DC300BCC2B5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74835C211EA26DC300BCC2B5 /* Contract */,
+				74835C271EA26DC300BCC2B5 /* Factory */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74835C211EA26DC300BCC2B5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				74835C221EA26DC300BCC2B5 /* ProfileInteractorProtocol.h */,
+				74835C231EA26DC300BCC2B5 /* ProfileModuleProtocol.h */,
+				74835C241EA26DC300BCC2B5 /* ProfilePresenterProtocol.h */,
+				74835C251EA26DC300BCC2B5 /* ProfileRouterProtocol.h */,
+				74835C261EA26DC300BCC2B5 /* ProfileViewProtocol.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		74835C271EA26DC300BCC2B5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74835C281EA26DC300BCC2B5 /* ProfileModuleConfigurator.h */,
+				74835C291EA26DC300BCC2B5 /* ProfileModuleConfigurator.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		74835C2A1EA26DC300BCC2B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74835C2B1EA26DC300BCC2B5 /* ProfileInteractor.h */,
+				74835C2C1EA26DC300BCC2B5 /* ProfileInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74835C2D1EA26DC300BCC2B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74835C2E1EA26DC300BCC2B5 /* ProfilePresenter.h */,
+				74835C2F1EA26DC300BCC2B5 /* ProfilePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74835C301EA26DC300BCC2B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74835C311EA26DC300BCC2B5 /* ProfileRouter.h */,
+				74835C321EA26DC300BCC2B5 /* ProfileRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74835C331EA26DC300BCC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA1F1EA658FA0036B530 /* Alerts */,
+				74835C8F1EA27F2B00BCC2B5 /* Cells */,
+				741FBCDE1EA759C300A38FFB /* DataSource */,
+				74835C901EA27F2B00BCC2B5 /* ProfileHeader */,
+				74835C341EA26DC300BCC2B5 /* ProfileViewController.h */,
+				74835C351EA26DC300BCC2B5 /* ProfileViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74835C4F1EA26E9800BCC2B5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74835C501EA26E9800BCC2B5 /* Contract */,
+				74835C561EA26E9800BCC2B5 /* Factory */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74835C501EA26E9800BCC2B5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				74835C511EA26E9800BCC2B5 /* SearchInteractorProtocol.h */,
+				74835C521EA26E9800BCC2B5 /* SearchModuleProtocol.h */,
+				74835C531EA26E9800BCC2B5 /* SearchPresenterProtocol.h */,
+				74835C541EA26E9800BCC2B5 /* SearchRouterProtocol.h */,
+				74835C551EA26E9800BCC2B5 /* SearchViewProtocol.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		74835C561EA26E9800BCC2B5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74835C571EA26E9800BCC2B5 /* SearchModuleConfigurator.h */,
+				74835C581EA26E9800BCC2B5 /* SearchModuleConfigurator.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		74835C591EA26E9800BCC2B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74835C5A1EA26E9800BCC2B5 /* SearchInteractor.h */,
+				74835C5B1EA26E9800BCC2B5 /* SearchInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74835C5C1EA26E9800BCC2B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74835C5D1EA26E9800BCC2B5 /* SearchPresenter.h */,
+				74835C5E1EA26E9800BCC2B5 /* SearchPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74835C5F1EA26E9800BCC2B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74835C601EA26E9800BCC2B5 /* SearchRouter.h */,
+				74835C611EA26E9800BCC2B5 /* SearchRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74835C621EA26E9800BCC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCF91EA774E300A38FFB /* Cells */,
+				741FBCE91EA75BD100A38FFB /* DataSource */,
+				74835C631EA26E9800BCC2B5 /* SearchViewController.h */,
+				74835C641EA26E9800BCC2B5 /* SearchViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74835C741EA2709F00BCC2B5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74835C751EA2709F00BCC2B5 /* Contract */,
+				74835C7B1EA2709F00BCC2B5 /* Factory */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74835C751EA2709F00BCC2B5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				74835C761EA2709F00BCC2B5 /* AuthenticationInteractorProtocol.h */,
+				74835C771EA2709F00BCC2B5 /* AuthenticationModuleProtocol.h */,
+				74835C781EA2709F00BCC2B5 /* AuthenticationPresenterProtocol.h */,
+				74835C791EA2709F00BCC2B5 /* AuthenticationRouterProtocol.h */,
+				74835C7A1EA2709F00BCC2B5 /* AuthenticationViewProtocol.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		74835C7B1EA2709F00BCC2B5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74835C7C1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.h */,
+				74835C7D1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		74835C7E1EA2709F00BCC2B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74835C7F1EA2709F00BCC2B5 /* AuthenticationInteractor.h */,
+				74835C801EA2709F00BCC2B5 /* AuthenticationInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74835C811EA2709F00BCC2B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74835C821EA2709F00BCC2B5 /* AuthenticationPresenter.h */,
+				74835C831EA2709F00BCC2B5 /* AuthenticationPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74835C841EA2709F00BCC2B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74835C851EA2709F00BCC2B5 /* AuthenticationRouter.h */,
+				74835C861EA2709F00BCC2B5 /* AuthenticationRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74835C871EA2709F00BCC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7FB1EA50C2D001D28FF /* Alerts */,
+				7411E7F41EA509D3001D28FF /* CustomViews */,
+				74835C881EA2709F00BCC2B5 /* AuthenticationViewController.h */,
+				74835C891EA2709F00BCC2B5 /* AuthenticationViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74835C8F1EA27F2B00BCC2B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				74835C941EA2814000BCC2B5 /* UnauthorizedTableViewCell.h */,
+				74835C951EA2814000BCC2B5 /* UnauthorizedTableViewCell.m */,
+				74A7B12A1EA4CB9D008B61BE /* InfoMessageTableViewCell.h */,
+				74A7B12B1EA4CB9D008B61BE /* InfoMessageTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		74835C901EA27F2B00BCC2B5 /* ProfileHeader */ = {
+			isa = PBXGroup;
+			children = (
+				74835C971EA2851D00BCC2B5 /* UserProfileHeaderView.h */,
+				74835C981EA2851D00BCC2B5 /* UserProfileHeaderView.m */,
+			);
+			path = ProfileHeader;
+			sourceTree = "<group>";
+		};
+		74A7B0EF1EA3893B008B61BE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B0F11EA38975008B61BE /* RepositoryRecord.h */,
+				74A7B0F21EA38975008B61BE /* RepositoryRecord.m */,
+				74A7B0F41EA38982008B61BE /* UserProfileRecord.h */,
+				74A7B0F51EA38982008B61BE /* UserProfileRecord.m */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		74A7B0F01EA38941008B61BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7432BA4A1EA686DF0036B530 /* LocalStorageService */,
+				7432BA231EA66D5E0036B530 /* GitHubAPI */,
+				74A7B1231EA4C144008B61BE /* MediaContentService */,
+				74A7B11E1EA4BD5A008B61BE /* TokenStorageService */,
+				74A7B0FD1EA3918B008B61BE /* NetworkingStatusService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		74A7B0FD1EA3918B008B61BE /* NetworkingStatusService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingStatusService;
+			sourceTree = "<group>";
+		};
+		74A7B1171EA49625008B61BE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7411E7E71EA5031F001D28FF /* AuthenticationService */,
+				7411E7ED1EA5031F001D28FF /* Validators */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		74A7B11E1EA4BD5A008B61BE /* TokenStorageService */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B11F1EA4BD6A008B61BE /* TokenStorageServiceProtocol.h */,
+				74A7B1201EA4BE1E008B61BE /* TokenStorageService.h */,
+				74A7B1211EA4BE1E008B61BE /* TokenStorageService.m */,
+			);
+			path = TokenStorageService;
+			sourceTree = "<group>";
+		};
+		74A7B1231EA4C144008B61BE /* MediaContentService */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B1241EA4C152008B61BE /* MediaContentServiceProtocol.h */,
+				74A7B1271EA4C370008B61BE /* MediaContentService.h */,
+				74A7B1281EA4C370008B61BE /* MediaContentService.m */,
+				7432BA461EA6807E0036B530 /* MediaAsyncOperationAdapted.h */,
+				7432BA471EA6807E0036B530 /* MediaAsyncOperationAdapted.m */,
+			);
+			path = MediaContentService;
+			sourceTree = "<group>";
+		};
+		74A7B1331EA4DF35008B61BE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				74A7B1351EA4F4E2008B61BE /* UserProfileNetworkingProtocol.h */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		74C16B5D1E9E980600A93A44 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +992,9 @@
 		74C16B821E9E980600A93A44 /* GitHubBrowserTests */ = {
 			isa = PBXGroup;
 			children = (
-				74C16B831E9E980600A93A44 /* GitHubBrowserTests.m */,
+				746FC1061EA5586E0040C8E3 /* Common */,
+				746FC1001EA558310040C8E3 /* Interactors */,
+				746FC1011EA558310040C8E3 /* Services */,
 				74C16B851E9E980600A93A44 /* Info.plist */,
 			);
 			path = GitHubBrowserTests;
@@ -112,8 +1003,11 @@
 		74C16B9F1E9FF92500A93A44 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				7432BA421EA67EB70036B530 /* Common */,
 				74C16BB11EA0039D00A93A44 /* AuthenticationFlow */,
 				74C16BB31EA0039D00A93A44 /* BrowserFlow */,
+				74A7B0EF1EA3893B008B61BE /* DTO */,
+				74A7B0F01EA38941008B61BE /* Services */,
 				74C16BA01E9FF92500A93A44 /* AppDelegate.h */,
 				74C16BA11E9FF92500A93A44 /* AppDelegate.m */,
 			);
@@ -141,6 +1035,7 @@
 		74C16BB11EA0039D00A93A44 /* AuthenticationFlow */ = {
 			isa = PBXGroup;
 			children = (
+				74835BC81EA26B3F00BCC2B5 /* AuthenticationModule */,
 				74C16BB21EA0039D00A93A44 /* Storyboard */,
 			);
 			path = AuthenticationFlow;
@@ -157,6 +1052,9 @@
 		74C16BB31EA0039D00A93A44 /* BrowserFlow */ = {
 			isa = PBXGroup;
 			children = (
+				741FBCC41EA7585000A38FFB /* Common */,
+				74835C1F1EA26DC300BCC2B5 /* ProfileModule */,
+				74835BC71EA26B3600BCC2B5 /* SearchModule */,
 				74C16BB41EA0039D00A93A44 /* Storyboard */,
 			);
 			path = BrowserFlow;
@@ -177,6 +1075,8 @@
 				1DBC2A5C72F91C8987DE364A /* Pods-GitHubBrowser.release.xcconfig */,
 				478399E39E82EBE0A2F46128 /* Pods-GitHubBrowserTests.debug.xcconfig */,
 				0E8BCD6138C5AC3702CC9E89 /* Pods-GitHubBrowserTests.release.xcconfig */,
+				ABCD91A52EF604D007725E8C /* Pods-GitHubBrowser.debugnetworking.xcconfig */,
+				2CF179D05EC681AD2F7D8FE2 /* Pods-GitHubBrowserTests.debugnetworking.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -280,7 +1180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C16BB01E9FF92500A93A44 /* Info.plist in Resources */,
+				741FBCD21EA7585000A38FFB /* RepositoryTableViewCell.xib in Resources */,
 				74C16BB81EA0040100A93A44 /* BrowserFlow.storyboard in Resources */,
 				74C16BAD1E9FF92500A93A44 /* Assets.xcassets in Resources */,
 				74C16BBA1EA0040D00A93A44 /* AuthenticationFlow.storyboard in Resources */,
@@ -292,6 +1192,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */,
+				746FC1181EA6B39B0040C8E3 /* github_search_response_200.json in Resources */,
+				7432BA0D1EA636880036B530 /* github_profile_fetch_response_200.json in Resources */,
+				7432BA0F1EA637F30036B530 /* github_fetch_response_401.json in Resources */,
+				7432BA1B1EA640100036B530 /* github_repos_fetch_response_200.json in Resources */,
+				746FC11C1EA6B6710040C8E3 /* github_search_invalid_response_422.json in Resources */,
+				746FC1121EA55F2D0040C8E3 /* guthub_auth_otp_response_401.json in Resources */,
+				746FC11A1EA6B5AD0040C8E3 /* github_search_notfound_response_200.json in Resources */,
+				7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +1219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		54A4E23ECAAA74D723F6DD64 /* [CP] Check Pods Manifest.lock */ = {
@@ -325,7 +1234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		847A4F50E5895D9FF84A0351 /* [CP] Embed Pods Frameworks */ = {
@@ -395,8 +1304,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7432BA511EA6875C0036B530 /* GitHubSearchService.m in Sources */,
+				74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */,
+				7432BA3E1EA66D5E0036B530 /* UserProfileRecord+GitHub.m in Sources */,
+				741FBCFF1EA7751800A38FFB /* QueryTableViewCell.m in Sources */,
+				741FBCF51EA7725C00A38FFB /* NotFoundStateContentProvider.m in Sources */,
+				74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */,
+				741FBCE41EA759C300A38FFB /* UnauthorizedStateDataSource.m in Sources */,
+				7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */,
+				7432BA3F1EA66D5E0036B530 /* GitHubUserProfileService.m in Sources */,
+				74835C8D1EA2709F00BCC2B5 /* AuthenticationRouter.m in Sources */,
+				741FBCCF1EA7585000A38FFB /* UITableViewCell+Usability.m in Sources */,
+				741FBCEC1EA75D8800A38FFB /* GHPageEntity.m in Sources */,
+				74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */,
+				741FBCFC1EA7750500A38FFB /* InfoHeaderTableViewCell.m in Sources */,
+				74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */,
+				7432BA3D1EA66D5E0036B530 /* RepositoryRecord+GitHub.m in Sources */,
+				7432BA221EA659520036B530 /* UIAlertController+ProfileAlerts.m in Sources */,
+				741FBCF81EA7745600A38FFB /* SearchHistoryDataSource.m in Sources */,
 				74C16BAC1E9FF92500A93A44 /* main.m in Sources */,
+				741FBCF21EA76B3500A38FFB /* SearchRepositoriesDataSource.m in Sources */,
+				74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */,
+				74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */,
+				74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */,
+				7432BA451EA67F220036B530 /* AsyncOperation.m in Sources */,
+				7432BA3B1EA66D5E0036B530 /* GHUserEntity.m in Sources */,
+				74835C381EA26DC300BCC2B5 /* ProfilePresenter.m in Sources */,
+				74A7B1221EA4BE1E008B61BE /* TokenStorageService.m in Sources */,
+				741FBCE31EA759C300A38FFB /* NoDataStateDataSource.m in Sources */,
+				741FBCE81EA759F400A38FFB /* RepositoriesDataSource.m in Sources */,
+				7432BA3C1EA66D5E0036B530 /* GitHubAPINetworking.m in Sources */,
+				741FBD081EA78EC900A38FFB /* SearchQueryEntity.m in Sources */,
+				741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */,
+				741FBD0F1EA7A1F800A38FFB /* ActivityTableViewCell.m in Sources */,
+				74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */,
+				7432BA381EA66D5E0036B530 /* GitHubAuthenticationService.m in Sources */,
+				7432BA391EA66D5E0036B530 /* GHAuthEntity.m in Sources */,
+				741FBCEF1EA7600300A38FFB /* GHRepositoryPageEntity.m in Sources */,
+				74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */,
+				741FBD0B1EA79A8D00A38FFB /* ActivityStateDataSource.m in Sources */,
+				74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */,
+				74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */,
+				7432BA3A1EA66D5E0036B530 /* GHRepositoryEntity.m in Sources */,
+				7411E7EF1EA5031F001D28FF /* AuthCredentials.m in Sources */,
+				74835C651EA26E9800BCC2B5 /* SearchModuleConfigurator.m in Sources */,
+				74835C3A1EA26DC300BCC2B5 /* ProfileViewController.m in Sources */,
+				741FBCD11EA7585000A38FFB /* RepositoryTableViewCell.m in Sources */,
+				74835C391EA26DC300BCC2B5 /* ProfileRouter.m in Sources */,
+				74A7B12C1EA4CB9D008B61BE /* InfoMessageTableViewCell.m in Sources */,
+				7411E7F31EA50336001D28FF /* GitHubCredentialsValidator.m in Sources */,
+				74835C691EA26E9800BCC2B5 /* SearchViewController.m in Sources */,
+				74A7B1291EA4C370008B61BE /* MediaContentService.m in Sources */,
+				74835C961EA2814000BCC2B5 /* UnauthorizedTableViewCell.m in Sources */,
+				74835C991EA2851D00BCC2B5 /* UserProfileHeaderView.m in Sources */,
+				7432BA481EA6807E0036B530 /* MediaAsyncOperationAdapted.m in Sources */,
+				7411E7FE1EA50C5F001D28FF /* UIAlertController+AuthenticationAlerts.m in Sources */,
 				74C16BAB1E9FF92500A93A44 /* AppDelegate.m in Sources */,
+				7432BA4D1EA686E90036B530 /* LocalStorageService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +1368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C16B841E9E980600A93A44 /* GitHubBrowserTests.m in Sources */,
+				746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */,
+				7432BA191EA63CE30036B530 /* GHUserProfileTestCase.m in Sources */,
+				7432BA081EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m in Sources */,
+				7432BA0A1EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m in Sources */,
+				746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */,
+				746FC1161EA6B1230040C8E3 /* GitHubAPISearchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +1399,89 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		746FC0FD1EA52CB50040C8E3 /* DebugNetworking */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugNetworking;
+		};
+		746FC0FE1EA52CB50040C8E3 /* DebugNetworking */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABCD91A52EF604D007725E8C /* Pods-GitHubBrowser.debugnetworking.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WWM485UMH5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DEBUG_NETWORKING,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/GitHubBrowser/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = education.GitHubBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = DebugNetworking;
+		};
+		746FC0FF1EA52CB50040C8E3 /* DebugNetworking */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF179D05EC681AD2F7D8FE2 /* Pods-GitHubBrowserTests.debugnetworking.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WWM485UMH5;
+				INFOPLIST_FILE = GitHubBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = education.GitHubBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubBrowser.app/GitHubBrowser";
+			};
+			name = DebugNetworking;
+		};
 		74C16B861E9E980600A93A44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -587,6 +1639,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74C16B861E9E980600A93A44 /* Debug */,
+				746FC0FD1EA52CB50040C8E3 /* DebugNetworking */,
 				74C16B871E9E980600A93A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -596,19 +1649,36 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74C16B891E9E980600A93A44 /* Debug */,
+				746FC0FE1EA52CB50040C8E3 /* DebugNetworking */,
 				74C16B8A1E9E980600A93A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C16B8B1E9E980600A93A44 /* Build configuration list for PBXNativeTarget "GitHubBrowserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74C16B8C1E9E980600A93A44 /* Debug */,
+				746FC0FF1EA52CB50040C8E3 /* DebugNetworking */,
 				74C16B8D1E9E980600A93A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				741FBD021EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodel */,
+			);
+			currentVersion = 741FBD021EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodel */;
+			path = SearchHistoryStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 74C16B5E1E9E980600A93A44 /* Project object */;
 }
