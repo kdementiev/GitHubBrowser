@@ -20,6 +20,14 @@
 		741FBCE81EA759F400A38FFB /* RepositoriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCE71EA759F400A38FFB /* RepositoriesDataSource.m */; };
 		741FBCEC1EA75D8800A38FFB /* GHPageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCEB1EA75D8800A38FFB /* GHPageEntity.m */; };
 		741FBCEF1EA7600300A38FFB /* GHRepositoryPageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCEE1EA7600300A38FFB /* GHRepositoryPageEntity.m */; };
+		741FBCF21EA76B3500A38FFB /* SearchRepositoriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCF11EA76B3500A38FFB /* SearchRepositoriesDataSource.m */; };
+		741FBCF51EA7725C00A38FFB /* NotFoundStateContentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCF41EA7725C00A38FFB /* NotFoundStateContentProvider.m */; };
+		741FBCF81EA7745600A38FFB /* SearchHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCF71EA7745600A38FFB /* SearchHistoryDataSource.m */; };
+		741FBCFC1EA7750500A38FFB /* InfoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */; };
+		741FBCFF1EA7751800A38FFB /* QueryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */; };
+		741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */; };
+		741FBD081EA78EC900A38FFB /* SearchQueryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */; };
+		741FBD0B1EA79A8D00A38FFB /* ActivityStateDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */; };
 		7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */; };
 		7432BA081EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */; };
 		7432BA0A1EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */; };
@@ -120,6 +128,21 @@
 		741FBCEB1EA75D8800A38FFB /* GHPageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPageEntity.m; sourceTree = "<group>"; };
 		741FBCED1EA7600300A38FFB /* GHRepositoryPageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepositoryPageEntity.h; sourceTree = "<group>"; };
 		741FBCEE1EA7600300A38FFB /* GHRepositoryPageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRepositoryPageEntity.m; sourceTree = "<group>"; };
+		741FBCF01EA76B3500A38FFB /* SearchRepositoriesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRepositoriesDataSource.h; sourceTree = "<group>"; };
+		741FBCF11EA76B3500A38FFB /* SearchRepositoriesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRepositoriesDataSource.m; sourceTree = "<group>"; };
+		741FBCF31EA7725C00A38FFB /* NotFoundStateContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotFoundStateContentProvider.h; sourceTree = "<group>"; };
+		741FBCF41EA7725C00A38FFB /* NotFoundStateContentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotFoundStateContentProvider.m; sourceTree = "<group>"; };
+		741FBCF61EA7745600A38FFB /* SearchHistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryDataSource.h; sourceTree = "<group>"; };
+		741FBCF71EA7745600A38FFB /* SearchHistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryDataSource.m; sourceTree = "<group>"; };
+		741FBCFA1EA7750500A38FFB /* InfoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoHeaderTableViewCell.h; sourceTree = "<group>"; };
+		741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoHeaderTableViewCell.m; sourceTree = "<group>"; };
+		741FBCFD1EA7751800A38FFB /* QueryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryTableViewCell.h; sourceTree = "<group>"; };
+		741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTableViewCell.m; sourceTree = "<group>"; };
+		741FBD021EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchHistoryStorage.xcdatamodel; sourceTree = "<group>"; };
+		741FBD061EA78EC900A38FFB /* SearchQueryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQueryEntity.h; sourceTree = "<group>"; };
+		741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQueryEntity.m; sourceTree = "<group>"; };
+		741FBD091EA79A8D00A38FFB /* ActivityStateDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityStateDataSource.h; sourceTree = "<group>"; };
+		741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityStateDataSource.m; sourceTree = "<group>"; };
 		7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_bad_credentials_response_401.json; sourceTree = "<group>"; };
 		7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileFetchingTests.m; sourceTree = "<group>"; };
 		7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileRepositoriesTests.m; sourceTree = "<group>"; };
@@ -353,8 +376,36 @@
 		741FBCE91EA75BD100A38FFB /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				741FBCF01EA76B3500A38FFB /* SearchRepositoriesDataSource.h */,
+				741FBCF11EA76B3500A38FFB /* SearchRepositoriesDataSource.m */,
+				741FBCF31EA7725C00A38FFB /* NotFoundStateContentProvider.h */,
+				741FBCF41EA7725C00A38FFB /* NotFoundStateContentProvider.m */,
+				741FBCF61EA7745600A38FFB /* SearchHistoryDataSource.h */,
+				741FBCF71EA7745600A38FFB /* SearchHistoryDataSource.m */,
+				741FBD091EA79A8D00A38FFB /* ActivityStateDataSource.h */,
+				741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		741FBCF91EA774E300A38FFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				741FBCFA1EA7750500A38FFB /* InfoHeaderTableViewCell.h */,
+				741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */,
+				741FBCFD1EA7751800A38FFB /* QueryTableViewCell.h */,
+				741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		741FBD051EA78E9E00A38FFB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				741FBD061EA78EC900A38FFB /* SearchQueryEntity.h */,
+				741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		7432BA061EA6356F0036B530 /* UserProfile */ = {
@@ -478,8 +529,10 @@
 		7432BA4A1EA686DF0036B530 /* LocalStorageService */ = {
 			isa = PBXGroup;
 			children = (
+				741FBD051EA78E9E00A38FFB /* Entities */,
 				7432BA4B1EA686E90036B530 /* LocalStorageService.h */,
 				7432BA4C1EA686E90036B530 /* LocalStorageService.m */,
+				741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */,
 			);
 			path = LocalStorageService;
 			sourceTree = "<group>";
@@ -734,6 +787,7 @@
 		74835C621EA26E9800BCC2B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				741FBCF91EA774E300A38FFB /* Cells */,
 				741FBCE91EA75BD100A38FFB /* DataSource */,
 				74835C631EA26E9800BCC2B5 /* SearchViewController.h */,
 				74835C641EA26E9800BCC2B5 /* SearchViewController.m */,
@@ -1246,6 +1300,8 @@
 				7432BA511EA6875C0036B530 /* GitHubSearchService.m in Sources */,
 				74835C671EA26E9800BCC2B5 /* SearchPresenter.m in Sources */,
 				7432BA3E1EA66D5E0036B530 /* UserProfileRecord+GitHub.m in Sources */,
+				741FBCFF1EA7751800A38FFB /* QueryTableViewCell.m in Sources */,
+				741FBCF51EA7725C00A38FFB /* NotFoundStateContentProvider.m in Sources */,
 				74835C8A1EA2709F00BCC2B5 /* AuthenticationModuleConfigurator.m in Sources */,
 				741FBCE41EA759C300A38FFB /* UnauthorizedStateDataSource.m in Sources */,
 				7411E7FA1EA50AC2001D28FF /* UITextField+ErrorState.m in Sources */,
@@ -1254,10 +1310,13 @@
 				741FBCCF1EA7585000A38FFB /* UITableViewCell+Usability.m in Sources */,
 				741FBCEC1EA75D8800A38FFB /* GHPageEntity.m in Sources */,
 				74A7B0F61EA38982008B61BE /* UserProfileRecord.m in Sources */,
+				741FBCFC1EA7750500A38FFB /* InfoHeaderTableViewCell.m in Sources */,
 				74835C681EA26E9800BCC2B5 /* SearchRouter.m in Sources */,
 				7432BA3D1EA66D5E0036B530 /* RepositoryRecord+GitHub.m in Sources */,
 				7432BA221EA659520036B530 /* UIAlertController+ProfileAlerts.m in Sources */,
+				741FBCF81EA7745600A38FFB /* SearchHistoryDataSource.m in Sources */,
 				74C16BAC1E9FF92500A93A44 /* main.m in Sources */,
+				741FBCF21EA76B3500A38FFB /* SearchRepositoriesDataSource.m in Sources */,
 				74835C361EA26DC300BCC2B5 /* ProfileModuleConfigurator.m in Sources */,
 				74835C661EA26E9800BCC2B5 /* SearchInteractor.m in Sources */,
 				74835C371EA26DC300BCC2B5 /* ProfileInteractor.m in Sources */,
@@ -1268,11 +1327,14 @@
 				741FBCE31EA759C300A38FFB /* NoDataStateDataSource.m in Sources */,
 				741FBCE81EA759F400A38FFB /* RepositoriesDataSource.m in Sources */,
 				7432BA3C1EA66D5E0036B530 /* GitHubAPINetworking.m in Sources */,
+				741FBD081EA78EC900A38FFB /* SearchQueryEntity.m in Sources */,
+				741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */,
 				74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */,
 				7432BA381EA66D5E0036B530 /* GitHubAuthenticationService.m in Sources */,
 				7432BA391EA66D5E0036B530 /* GHAuthEntity.m in Sources */,
 				741FBCEF1EA7600300A38FFB /* GHRepositoryPageEntity.m in Sources */,
 				74835C8C1EA2709F00BCC2B5 /* AuthenticationPresenter.m in Sources */,
+				741FBD0B1EA79A8D00A38FFB /* ActivityStateDataSource.m in Sources */,
 				74835C8E1EA2709F00BCC2B5 /* AuthenticationViewController.m in Sources */,
 				74835C8B1EA2709F00BCC2B5 /* AuthenticationInteractor.m in Sources */,
 				7432BA3A1EA66D5E0036B530 /* GHRepositoryEntity.m in Sources */,
@@ -1596,6 +1658,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				741FBD021EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodel */,
+			);
+			currentVersion = 741FBD021EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodel */;
+			path = SearchHistoryStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 74C16B5E1E9E980600A93A44 /* Project object */;
 }

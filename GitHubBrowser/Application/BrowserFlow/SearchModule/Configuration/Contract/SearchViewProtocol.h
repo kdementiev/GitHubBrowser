@@ -32,4 +32,6 @@
 - (void)showSearchHistory:(NSArray<NSString *> *)historyList;
 - (void)showSearchResults:(NSArray<RepositoryRecord *> *)repositories;
 
+- (void)showActivity;
+
 @end

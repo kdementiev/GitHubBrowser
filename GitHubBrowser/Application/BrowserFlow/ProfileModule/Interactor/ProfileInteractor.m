@@ -50,11 +50,15 @@
 }
 
 - (void)performSignOut {
+    [self gh_processUnauthorizedState];
+}
+
+- (void)gh_processUnauthorizedState {
     // Remove token from storage.
     [self.tokenStorage removeTokenFromSecureStorage];
     
     // Notify with sign-out finished.
-    [self.output userNotAuthorized];
+    [self gh_notifyWithUserNotAuthorized];
     
     // Cancel avatar loading.
     [_avatarFetchingOperation cancelOperation];
@@ -66,7 +70,7 @@
     
     [self.profileNetworking fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
         if (!userProfile) {
-            [_self gh_notifyWithUserNotAuthorized];
+            [_self gh_processUnauthorizedState];
             return;
         }
         
@@ -85,7 +89,7 @@
     [self.profileNetworking fetchUserRepositories:^(NSArray<RepositoryRecord *> * _Nullable repositories) {
         
         if (!repositories) {
-            [_self gh_notifyWithUserNotAuthorized];
+            [_self gh_processUnauthorizedState];
             return;
         }
         

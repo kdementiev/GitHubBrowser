@@ -20,7 +20,7 @@
 @implementation RepositoriesDataSource
 
 + (id<UITableViewDataSource>)dataSourceWithRepositories:(NSArray<RepositoryRecord *> *)repositories {
-    return [[RepositoriesDataSource alloc] initWithRepositories:repositories];
+    return [[self alloc] initWithRepositories:repositories];
 }
 
 - (instancetype)initWithRepositories:(NSArray<RepositoryRecord *> *)repositories

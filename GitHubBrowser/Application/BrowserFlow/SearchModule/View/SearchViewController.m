@@ -8,7 +8,12 @@
 
 #import "SearchViewController.h"
 
-#import "RepositoriesDataSource.h"
+#import "ActivityStateDataSource.h"
+#import "NotFoundStateContentProvider.h"
+
+#import "SearchRepositoriesDataSource.h"
+#import "SearchHistoryDataSource.h"
+
 
 @interface SearchViewController () <UISearchBarDelegate, UITableViewDelegate>
 
@@ -45,25 +50,31 @@
 #pragma mark - View Controls -
 
 - (void)showEmpty {
-    
+    self.contentProvider = nil;
 }
 
 - (void)showNotFound {
-    
+    self.contentProvider = [NotFoundStateContentProvider new];
 }
 
 - (void)showSearchHistory:(NSArray<NSString *> *)historyList {
-    
+    self.contentProvider = [SearchHistoryDataSource dataSourceWithQueriesList:historyList];
 }
 
 - (void)showSearchResults:(NSArray<RepositoryRecord *> *)repositories {
-    self.contentProvider = [RepositoriesDataSource dataSourceWithRepositories:repositories];
+    self.contentProvider = [SearchRepositoriesDataSource dataSourceWithRepositories:repositories];
+}
+
+- (void)showActivity {
+    self.contentProvider = [ActivityStateDataSource new];
 }
 
 #pragma mark - UISearchBarDelegate -
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.output userWantsToSearchWithText:searchBar.text];
+    
+    [searchBar resignFirstResponder];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -72,10 +83,6 @@
     
     [searchBar resignFirstResponder];
     searchBar.text = nil;
-}
-
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchTex {
-    [self gh_notifyWithUserWantsToCancelSearch];
 }
 
 #pragma mark - Notify Helpers -

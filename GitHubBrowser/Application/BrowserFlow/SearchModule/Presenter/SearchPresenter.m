@@ -23,10 +23,18 @@
 
 - (void)userWantsToSearchWithText:(NSString *)text {
     [self.interactor searchRepositoriesWithText:text];
+    
+    // Move view to activity state
+    [self.view showActivity];
 }
 
 - (void)userWantsToCancelSearch {
+    
+    // Cancel search operation.
     [self.interactor cancelSearch];
+    
+    // Try to get history.
+    [self.interactor fetchSearchHistory];
 }
 
 #pragma mark - Interactor Layer Feedback -
