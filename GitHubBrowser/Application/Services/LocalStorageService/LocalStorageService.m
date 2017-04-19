@@ -54,13 +54,24 @@ NSString * const LocalStorageServiceStorageName = @"SearchHistoryStorage";
 
 - (void)saveSearchQuery:(nonnull NSString *)query {
 
-    [self.searchHistoryContainer performBackgroundTask:^(NSManagedObjectContext * _Nonnull conext) {
+    [self.searchHistoryContainer performBackgroundTask:^(NSManagedObjectContext * _Nonnull context) {
         
-        SearchQueryEntity *queryEntity = [[SearchQueryEntity alloc] initWithContext:conext];
-        queryEntity.query = query;
+        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([SearchQueryEntity class])];
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"query == %@", query]];
         
         NSError *error;
-        if (![conext save:&error]) {
+        NSArray<SearchQueryEntity *> *result = [context executeFetchRequest:fetchRequest error:&error];
+        
+        if (result.count) {
+            NSLog(@"Duplicated query.");
+            return;
+        }
+        
+        SearchQueryEntity *queryEntity = [[SearchQueryEntity alloc] initWithContext:context];
+        queryEntity.query = query;
+        queryEntity.queryDate = [NSDate date];
+        
+        if (![context save:&error]) {
             NSLog(@"Error occured: %@", error);
         }
     }];
@@ -73,7 +84,10 @@ NSString * const LocalStorageServiceStorageName = @"SearchHistoryStorage";
     __weak typeof(self) _self = self;
     [self.searchHistoryContainer performBackgroundTask:^(NSManagedObjectContext * _Nonnull context) {
        
+        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"queryDate" ascending:NO];
+        
         NSFetchRequest *queriesRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([SearchQueryEntity class])];
+        [queriesRequest setSortDescriptors:@[descriptor]];
         
         NSError *error;
         NSArray<SearchQueryEntity *> *queries = [context executeFetchRequest:queriesRequest error:&error];

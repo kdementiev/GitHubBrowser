@@ -2,9 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SearchQueryEntity" representedClassName="SearchQueryEntity" syncable="YES">
         <attribute name="query" attributeType="String" syncable="YES"/>
-        <attribute name="queryDate" attributeType="Date" defaultDateTimeInterval="514297740" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="queryDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SearchQueryEntity" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="SearchQueryEntity" positionX="-1233" positionY="-234" width="128" height="73"/>
     </elements>
 </model>
