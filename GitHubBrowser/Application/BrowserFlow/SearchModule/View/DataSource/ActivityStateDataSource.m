@@ -8,7 +8,9 @@
 
 #import "ActivityStateDataSource.h"
 
-NSString * const ActivityStateDataSourceCellIdentifier = @"ActivityTableViewCell";
+#import "UITableViewCell+Usability.h"
+#import "ActivityTableViewCell.h"
+
 
 @implementation ActivityStateDataSource
 
@@ -17,7 +19,7 @@ NSString * const ActivityStateDataSourceCellIdentifier = @"ActivityTableViewCell
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView dequeueReusableCellWithIdentifier:ActivityStateDataSourceCellIdentifier];
+    return [ActivityTableViewCell reusableCell:tableView];
 }
 
 @end

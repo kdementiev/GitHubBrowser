@@ -7,13 +7,13 @@
 //
 
 
-#import <UIKit/UIKit.h>
-//#import "TableViewContentProviderProtocol.h"
+#import "TableViewContentProviderProtocol.h"
 
 @class RepositoryRecord;
 
-@interface RepositoriesDataSource : NSObject<UITableViewDataSource>
 
-+ (id<UITableViewDataSource>)dataSourceWithRepositories:(NSArray<RepositoryRecord *> *)repositories;
+@interface RepositoriesDataSource : NSObject<TableViewContentProviderProtocol>
+
++ (instancetype)dataSourceWithRepositories:(NSArray<RepositoryRecord *> *)repositories;
 
 @end

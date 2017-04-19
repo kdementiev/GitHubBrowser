@@ -6,8 +6,8 @@
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TableViewContentProviderProtocol.h"
 
-@interface ActivityStateDataSource : NSObject<UITableViewDataSource>
+@interface ActivityStateDataSource : NSObject<TableViewContentProviderProtocol>
 
 @end

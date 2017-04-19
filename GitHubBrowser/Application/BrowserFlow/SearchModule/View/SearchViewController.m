@@ -15,12 +15,15 @@
 #import "SearchHistoryDataSource.h"
 
 
-@interface SearchViewController () <UISearchBarDelegate, UITableViewDelegate>
+@interface SearchViewController () <UISearchBarDelegate, SearchHistoryDataSourceDelegate>
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) id<UITableViewDataSource> contentProvider;
+
+@property (nonatomic) id<TableViewContentProviderProtocol> contentProvider;
 
 @end
+
 
 @implementation SearchViewController
 
@@ -37,10 +40,11 @@
     [self.output viewReadyForInteractions];
 }
 
-- (void)setContentProvider:(id<UITableViewDataSource>)contentProvider {
+- (void)setContentProvider:(id<TableViewContentProviderProtocol>)contentProvider {
     
     // Set and save current content provider.
     self.tableView.dataSource = _contentProvider = contentProvider;
+    self.tableView.delegate = _contentProvider;
     
     // Reload table view animated.
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
@@ -58,7 +62,7 @@
 }
 
 - (void)showSearchHistory:(NSArray<NSString *> *)historyList {
-    self.contentProvider = [SearchHistoryDataSource dataSourceWithQueriesList:historyList];
+    self.contentProvider = [SearchHistoryDataSource dataSourceWithQueriesList:historyList delegate:self];
 }
 
 - (void)showSearchResults:(NSArray<RepositoryRecord *> *)repositories {
@@ -72,9 +76,7 @@
 #pragma mark - UISearchBarDelegate -
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [self.output userWantsToSearchWithText:searchBar.text];
-    
-    [searchBar resignFirstResponder];
+    [self gh_processAndNotifyWithUserWantsToSearchWithText:searchBar.text];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -85,10 +87,30 @@
     searchBar.text = nil;
 }
 
+#pragma mark - SearchHistoryDataSourceDelegate -
+
+- (void)onSearchQuerySelected:(NSString *)query {
+    
+    // Put chosed query to Search Bar text inpit.
+    self.searchBar.text = query;
+    
+    // Process search action
+    [self gh_processAndNotifyWithUserWantsToSearchWithText:query];
+}
+
 #pragma mark - Notify Helpers -
 
 - (void)gh_notifyWithUserWantsToCancelSearch {
     [self.output userWantsToCancelSearch];
+}
+
+- (void)gh_processAndNotifyWithUserWantsToSearchWithText:(NSString *)text {
+    
+    // Notify Presentation layer with user input.
+    [self.output userWantsToSearchWithText:text];
+    
+    // Get focus out of Search Bar.
+    [_searchBar resignFirstResponder];
 }
 
 @end

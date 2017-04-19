@@ -6,10 +6,15 @@
 //  Copyright © 2017 Konstantin Dementiev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TableViewContentProviderProtocol.h"
 
-@interface SearchHistoryDataSource : NSObject<UITableViewDataSource>
+@protocol SearchHistoryDataSourceDelegate <NSObject>
+- (void)onSearchQuerySelected:(NSString *)query;
 
-+ (id<UITableViewDataSource>)dataSourceWithQueriesList:(NSArray<NSString *> *)querie;
+@end
+
+@interface SearchHistoryDataSource : NSObject<TableViewContentProviderProtocol>
+
++ (instancetype)dataSourceWithQueriesList:(NSArray<NSString *> *)queries delegate:(id<SearchHistoryDataSourceDelegate>)delegate;
 
 @end

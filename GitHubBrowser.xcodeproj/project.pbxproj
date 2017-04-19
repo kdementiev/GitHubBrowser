@@ -28,6 +28,7 @@
 		741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD011EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld */; };
 		741FBD081EA78EC900A38FFB /* SearchQueryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */; };
 		741FBD0B1EA79A8D00A38FFB /* ActivityStateDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */; };
+		741FBD0F1EA7A1F800A38FFB /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 741FBD0E1EA7A1F800A38FFB /* ActivityTableViewCell.m */; };
 		7432B9FB1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json in Resources */ = {isa = PBXBuildFile; fileRef = 7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */; };
 		7432BA081EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */; };
 		7432BA0A1EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */; };
@@ -143,6 +144,9 @@
 		741FBD071EA78EC900A38FFB /* SearchQueryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQueryEntity.m; sourceTree = "<group>"; };
 		741FBD091EA79A8D00A38FFB /* ActivityStateDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityStateDataSource.h; sourceTree = "<group>"; };
 		741FBD0A1EA79A8D00A38FFB /* ActivityStateDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityStateDataSource.m; sourceTree = "<group>"; };
+		741FBD0C1EA79F2C00A38FFB /* TableViewContentProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewContentProviderProtocol.h; sourceTree = "<group>"; };
+		741FBD0D1EA7A1F800A38FFB /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		741FBD0E1EA7A1F800A38FFB /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		7432B9FA1EA61D900036B530 /* guthub_auth_bad_credentials_response_401.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guthub_auth_bad_credentials_response_401.json; sourceTree = "<group>"; };
 		7432BA071EA635AA0036B530 /* GitHubAPIUserProfileFetchingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileFetchingTests.m; sourceTree = "<group>"; };
 		7432BA091EA635BC0036B530 /* GitHubAPIUserProfileRepositoriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIUserProfileRepositoriesTests.m; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 			children = (
 				741FBCE61EA759F400A38FFB /* RepositoriesDataSource.h */,
 				741FBCE71EA759F400A38FFB /* RepositoriesDataSource.m */,
+				741FBD0C1EA79F2C00A38FFB /* TableViewContentProviderProtocol.h */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -395,6 +400,8 @@
 				741FBCFB1EA7750500A38FFB /* InfoHeaderTableViewCell.m */,
 				741FBCFD1EA7751800A38FFB /* QueryTableViewCell.h */,
 				741FBCFE1EA7751800A38FFB /* QueryTableViewCell.m */,
+				741FBD0D1EA7A1F800A38FFB /* ActivityTableViewCell.h */,
+				741FBD0E1EA7A1F800A38FFB /* ActivityTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1329,6 +1336,7 @@
 				7432BA3C1EA66D5E0036B530 /* GitHubAPINetworking.m in Sources */,
 				741FBD081EA78EC900A38FFB /* SearchQueryEntity.m in Sources */,
 				741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */,
+				741FBD0F1EA7A1F800A38FFB /* ActivityTableViewCell.m in Sources */,
 				74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */,
 				7432BA381EA66D5E0036B530 /* GitHubAuthenticationService.m in Sources */,
 				7432BA391EA66D5E0036B530 /* GHAuthEntity.m in Sources */,
