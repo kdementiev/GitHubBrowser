@@ -11,6 +11,8 @@
 #import "UserProfileRecord.h"
 #import "RepositoryRecord.h"
 
+#import "AsyncOperation.h"
+
 typedef void(^UserProfileNetworkingUserProfileResponseCallback)(UserProfileRecord * _Nullable userProfile);
 typedef void(^UserProfileNetworkingRepositoriesResponseCallback)(NSArray<RepositoryRecord *> * _Nullable repositories);
 
@@ -30,12 +32,12 @@ typedef void(^UserProfileNetworkingRepositoriesResponseCallback)(NSArray<Reposit
  *  @disscussion Offers interface to get user profile from remote server.
  *  @praram callback Response callback that will be called when data received from server.
  */
-- (void)fetchUserProfileWithResponse:(nonnull UserProfileNetworkingUserProfileResponseCallback)callback;
+- (nonnull AsyncOperation *)fetchUserProfileWithResponse:(nonnull UserProfileNetworkingUserProfileResponseCallback)callback;
 
 /*!
  *  @disscussion Offers interface to get user repositories from remote server.
  *  @praram callback Response callback that will be called when data received from server.
  */
-- (void)fetchUserRepositories:(nonnull UserProfileNetworkingRepositoriesResponseCallback)callback;
+- (nonnull AsyncOperation *)fetchUserRepositories:(nonnull UserProfileNetworkingRepositoriesResponseCallback)callback;
 
 @end

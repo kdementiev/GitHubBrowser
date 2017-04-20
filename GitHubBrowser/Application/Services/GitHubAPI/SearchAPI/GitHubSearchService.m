@@ -13,6 +13,8 @@
 
 #import "RepositoryRecord+GitHub.h"
 
+#import "NetworkingAsyncOperationAdapter.h"
+
 // Routes
 NSString * const GitHubAPISearchRepositoriesRoute = @"search/repositories";
 
@@ -25,26 +27,27 @@ NSString * const GitHubAPISeqrchQueryParamName = @"q";
 - (nonnull AsyncOperation *)searchRepositoriesWithText:(nonnull NSString *)text
                                               response:(nonnull SearchNetworkingSearchResultsCallback)callback {
 
-    [gitHubNetworking performGET:GitHubAPISearchRepositoriesRoute
-                          params:@{GitHubAPISeqrchQueryParamName: text}
-                           class:[GHRepositoryPageEntity class]
-                        response:^(NSError *error, id responseObject, NSDictionary *headers) {
-                            
-                            NSMutableArray<RepositoryRecord *> *repositories = [NSMutableArray array];
-                            
-                            if (responseObject) {
-                                GHRepositoryPageEntity *page = responseObject;
-
-                                [page.items enumerateObjectsUsingBlock:^(GHRepositoryEntity * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                                    RepositoryRecord *repository = [RepositoryRecord repositoryRecordWithGitHubRepository:obj];
-                                    [repositories addObject:repository];
-                                }];
-                            }
-                            
-                            callback(repositories);
-                        }];
+    NSURLSessionDataTask *dataTask;
+    dataTask = [gitHubNetworking performGET:GitHubAPISearchRepositoriesRoute
+                                     params:@{GitHubAPISeqrchQueryParamName: text}
+                                      class:[GHRepositoryPageEntity class]
+                                   response:^(NSError *error, id responseObject, NSDictionary *headers) {
+                                       
+                                       NSMutableArray<RepositoryRecord *> *repositories = [NSMutableArray array];
+                                       
+                                       if (responseObject) {
+                                           GHRepositoryPageEntity *page = responseObject;
+                                           
+                                           [page.items enumerateObjectsUsingBlock:^(GHRepositoryEntity * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                                               RepositoryRecord *repository = [RepositoryRecord repositoryRecordWithGitHubRepository:obj];
+                                               [repositories addObject:repository];
+                                           }];
+                                       }
+                                       
+                                       callback(repositories);
+                                   }];
     
-    return nil;
+    return [NetworkingAsyncOperationAdapter asyncOperationWithSessionDtaTask:dataTask];
 }
 
 @end
