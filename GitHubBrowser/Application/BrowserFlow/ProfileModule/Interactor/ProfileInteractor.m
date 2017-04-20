@@ -21,6 +21,9 @@ typedef enum : NSUInteger {
 
 @property (nonatomic) AsyncOperation *avatarFetchingOperation;
 
+@property (nonatomic) AsyncOperation *profileFetchingOperation;
+@property (nonatomic) AsyncOperation *repositoriesFetchingOperation;
+
 @property (nonatomic) ProfileInteractorState state;
 
 @end
@@ -55,6 +58,10 @@ typedef enum : NSUInteger {
 }
 
 - (void)fetchData {
+    
+    // Cancel all operations executed before.
+    [self gh_cancelAllTasks];
+    
     // Try to fetch user profile.
     [self gh_fetchUserProfile];
     
@@ -74,14 +81,16 @@ typedef enum : NSUInteger {
     [self gh_processWithNotAuthorizedState];
     
     // Cancel avatar loading.
-    [_avatarFetchingOperation cancelOperation];
+    [self gh_cancelAllTasks];
 }
 
 - (void)gh_fetchUserProfile {
     
     __weak typeof(self) _self = self;
-    
-    [self.profileNetworking fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
+    _profileFetchingOperation = [self.profileNetworking fetchUserProfileWithResponse:^(UserProfileRecord * _Nullable userProfile) {
+        
+        _self.profileFetchingOperation = nil;
+        
         if (!userProfile) {
             [_self gh_safelyMoveToUnauthorizedState];
             return;
@@ -99,7 +108,9 @@ typedef enum : NSUInteger {
 - (void)gh_fetchUserRepositories {
     
     __weak typeof(self) _self = self;
-    [self.profileNetworking fetchUserRepositories:^(NSArray<RepositoryRecord *> * _Nullable repositories) {
+    _repositoriesFetchingOperation = [self.profileNetworking fetchUserRepositories:^(NSArray<RepositoryRecord *> * _Nullable repositories) {
+        
+        _self.repositoriesFetchingOperation = nil;
         
         if (!repositories) {
             [_self gh_safelyMoveToUnauthorizedState];
@@ -117,11 +128,12 @@ typedef enum : NSUInteger {
     __weak typeof(self) _self = self;
     _avatarFetchingOperation = [self.mediaProvider fetchImageMediaFromLink:link
                                                                   response:^(UIImage * _Nullable image) {
+                                                                      
                                                                       if (image) {
                                                                           [_self.output userAvatarReceived:image];
                                                                       }
                                                                       
-                                                                      _avatarFetchingOperation = nil;
+                                                                      _self.avatarFetchingOperation = nil;
                                                                   }];
     
 }
@@ -143,6 +155,12 @@ typedef enum : NSUInteger {
     
     // Notify with event.
     [self.output userAuthorized];
+}
+
+- (void)gh_cancelAllTasks {
+    [_avatarFetchingOperation cancelOperation];
+    [_profileFetchingOperation cancelOperation];
+    [_repositoriesFetchingOperation cancelOperation];
 }
 
 @end

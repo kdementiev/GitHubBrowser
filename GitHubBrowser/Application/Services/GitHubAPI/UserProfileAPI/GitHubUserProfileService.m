@@ -16,6 +16,8 @@
 #import "UserProfileRecord+GitHub.h"
 #import "RepositoryRecord+GitHub.h"
 
+#import "NetworkingAsyncOperationAdapter.h"
+
 // Routes
 NSString * const GitHubAPIUserProfileRoute = @"user";
 NSString * const GitHubAPIUserRepositoriesRoute = @"user/repos";
@@ -50,50 +52,55 @@ NSString * const GitHubAPIAccessTokenQueryParamName = @"access_token";
     [self.requiredFieldsDict setValue:token forKey:GitHubAPIAccessTokenQueryParamName];
 }
 
-- (void)fetchUserProfileWithResponse:(nonnull UserProfileNetworkingUserProfileResponseCallback)callback {
+- (AsyncOperation *)fetchUserProfileWithResponse:(nonnull UserProfileNetworkingUserProfileResponseCallback)callback {
     
     NSAssert(callback != nil, @"You must provide response callback.");
     
-    [gitHubNetworking performGET:GitHubAPIUserProfileRoute
-                          params:self.requiredFieldsDict
-                           class:[GHUserEntity class]
-                        response:^(NSError *error, id responseObject, NSDictionary *headers) {
-                            
-                            UserProfileRecord *userProfile;
-                            
-                            if (responseObject) {
-                                GHUserEntity *userEntity = responseObject;
-                                userProfile = [UserProfileRecord userProfileRecordWithGitHubUser:userEntity];
-                            }
-                            
-                            callback(userProfile);
-                        }];
+    NSURLSessionDataTask *dataTask;
+    dataTask = [gitHubNetworking performGET:GitHubAPIUserProfileRoute
+                                     params:self.requiredFieldsDict
+                                      class:[GHUserEntity class]
+                                   response:^(NSError *error, id responseObject, NSDictionary *headers) {
+                                       
+                                       UserProfileRecord *userProfile;
+                                       
+                                       if (responseObject) {
+                                           GHUserEntity *userEntity = responseObject;
+                                           userProfile = [UserProfileRecord userProfileRecordWithGitHubUser:userEntity];
+                                       }
+                                       
+                                       callback(userProfile);
+                                   }];
+    
+    return [NetworkingAsyncOperationAdapter asyncOperationWithSessionDtaTask:dataTask];
 }
 
-- (void)fetchUserRepositories:(nonnull UserProfileNetworkingRepositoriesResponseCallback)callback {
+- (AsyncOperation *)fetchUserRepositories:(nonnull UserProfileNetworkingRepositoriesResponseCallback)callback {
     
     NSAssert(callback != nil, @"You must provide response callback.");
     
-    [gitHubNetworking performGET:GitHubAPIUserRepositoriesRoute
-                          params:self.requiredFieldsDict
-                           class:[GHRepositoryEntity class]
-                        response:^(NSError *error, id responseObject, NSDictionary *headers) {
-                            
-                            NSMutableArray<RepositoryRecord *> *repositories;
-                            
-                            if (responseObject) {
-                                repositories = [NSMutableArray array];
-                                
-                                NSArray<GHRepositoryEntity *> *gitHubRepositories = responseObject;
-                                [gitHubRepositories enumerateObjectsUsingBlock:^(GHRepositoryEntity * _Nonnull repository, NSUInteger idx, BOOL * _Nonnull stop) {
-                                    RepositoryRecord *repositoryRecord = [RepositoryRecord repositoryRecordWithGitHubRepository:repository];
-                                    [repositories addObject:repositoryRecord];
-                                }];
-                            }
-                            
-                            callback([repositories copy]);
-                        }];
+    NSURLSessionDataTask *dataTask;
+    dataTask = [gitHubNetworking performGET:GitHubAPIUserRepositoriesRoute
+                                     params:self.requiredFieldsDict
+                                      class:[GHRepositoryEntity class]
+                                   response:^(NSError *error, id responseObject, NSDictionary *headers) {
+                                       
+                                       NSMutableArray<RepositoryRecord *> *repositories;
+                                       
+                                       if (responseObject) {
+                                           repositories = [NSMutableArray array];
+                                           
+                                           NSArray<GHRepositoryEntity *> *gitHubRepositories = responseObject;
+                                           [gitHubRepositories enumerateObjectsUsingBlock:^(GHRepositoryEntity * _Nonnull repository, NSUInteger idx, BOOL * _Nonnull stop) {
+                                               RepositoryRecord *repositoryRecord = [RepositoryRecord repositoryRecordWithGitHubRepository:repository];
+                                               [repositories addObject:repositoryRecord];
+                                           }];
+                                       }
+                                       
+                                       callback([repositories copy]);
+                                   }];
     
+    return [NetworkingAsyncOperationAdapter asyncOperationWithSessionDtaTask:dataTask];
 }
 
 @end

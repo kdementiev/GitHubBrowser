@@ -49,6 +49,7 @@
 		7432BA481EA6807E0036B530 /* MediaAsyncOperationAdapted.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA471EA6807E0036B530 /* MediaAsyncOperationAdapted.m */; };
 		7432BA4D1EA686E90036B530 /* LocalStorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA4C1EA686E90036B530 /* LocalStorageService.m */; };
 		7432BA511EA6875C0036B530 /* GitHubSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432BA501EA6875C0036B530 /* GitHubSearchService.m */; };
+		745D214D1EA8B729003E95E2 /* NetworkingAsyncOperationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 745D214C1EA8B729003E95E2 /* NetworkingAsyncOperationAdapter.m */; };
 		746FC10B1EA558AF0040C8E3 /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10A1EA558AF0040C8E3 /* GHTestCase.m */; };
 		746FC10D1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */; };
 		746FC1101EA55BE10040C8E3 /* guthub_auth_default_response_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 746FC10F1EA55BE10040C8E3 /* guthub_auth_default_response_200.json */; };
@@ -183,6 +184,8 @@
 		7432BA4C1EA686E90036B530 /* LocalStorageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStorageService.m; sourceTree = "<group>"; };
 		7432BA4F1EA6875C0036B530 /* GitHubSearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubSearchService.h; sourceTree = "<group>"; };
 		7432BA501EA6875C0036B530 /* GitHubSearchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubSearchService.m; sourceTree = "<group>"; };
+		745D214B1EA8B728003E95E2 /* NetworkingAsyncOperationAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingAsyncOperationAdapter.h; sourceTree = "<group>"; };
+		745D214C1EA8B729003E95E2 /* NetworkingAsyncOperationAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingAsyncOperationAdapter.m; sourceTree = "<group>"; };
 		746FC1091EA558AF0040C8E3 /* GHTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTestCase.h; sourceTree = "<group>"; };
 		746FC10A1EA558AF0040C8E3 /* GHTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTestCase.m; sourceTree = "<group>"; };
 		746FC10C1EA55A2A0040C8E3 /* GitHubAPIAuthenticationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubAPIAuthenticationTests.m; sourceTree = "<group>"; };
@@ -457,6 +460,7 @@
 		7432BA231EA66D5E0036B530 /* GitHubAPI */ = {
 			isa = PBXGroup;
 			children = (
+				745D214A1EA8B709003E95E2 /* Common */,
 				7432BA241EA66D5E0036B530 /* AuthenticationAPI */,
 				7432BA351EA66D5E0036B530 /* UserProfileAPI */,
 				7432BA4E1EA6873B0036B530 /* SearchAPI */,
@@ -551,6 +555,15 @@
 				7432BA501EA6875C0036B530 /* GitHubSearchService.m */,
 			);
 			path = SearchAPI;
+			sourceTree = "<group>";
+		};
+		745D214A1EA8B709003E95E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				745D214B1EA8B728003E95E2 /* NetworkingAsyncOperationAdapter.h */,
+				745D214C1EA8B729003E95E2 /* NetworkingAsyncOperationAdapter.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		746FC1001EA558310040C8E3 /* Interactors */ = {
@@ -1338,6 +1351,7 @@
 				741FBD031EA78E6E00A38FFB /* SearchHistoryStorage.xcdatamodeld in Sources */,
 				741FBD0F1EA7A1F800A38FFB /* ActivityTableViewCell.m in Sources */,
 				74A7B0F31EA38975008B61BE /* RepositoryRecord.m in Sources */,
+				745D214D1EA8B729003E95E2 /* NetworkingAsyncOperationAdapter.m in Sources */,
 				7432BA381EA66D5E0036B530 /* GitHubAuthenticationService.m in Sources */,
 				7432BA391EA66D5E0036B530 /* GHAuthEntity.m in Sources */,
 				741FBCEF1EA7600300A38FFB /* GHRepositoryPageEntity.m in Sources */,
