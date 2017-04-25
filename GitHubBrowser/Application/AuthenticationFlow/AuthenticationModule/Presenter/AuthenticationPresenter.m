@@ -61,7 +61,7 @@
 
 - (void)invalidTwoFactorCode {
     [self.view showActivityState:NO];
-    [self.view showTwoFactorCodeInput];
+    [self.view showInvalidTwoFactorCodeMessage];
 }
 
 - (void)authenticationSuccessfullyPassed {
